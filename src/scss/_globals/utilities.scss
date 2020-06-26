@@ -73,7 +73,7 @@ textarea {
 	filter: blur(10px);
 	transition: filter 1s;
 
-	&.lazy-loaded {
+	&.lazyloaded {
 		filter: blur(0);
 	}
 }
@@ -102,5 +102,12 @@ textarea {
 
 	&-3 {
 		-webkit-line-clamp: 3;
+	}
+}
+
+.Core__titlePage {
+	h2 {
+		font-family: Averta-Black;
+		font-size: 1.875rem;
 	}
 }

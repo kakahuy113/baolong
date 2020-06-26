@@ -112,3 +112,19 @@
 .td-u {
 	text-decoration: underline;
 }
+
+.cl-xanh-1 {
+	color: map-get($mau, xanh-1);
+}
+
+.cl-xanh-2 {
+	color: map-get($mau, xanh-2);
+}
+
+.cl-vang {
+	color: map-get($mau, vang);
+}
+
+.cl-xam {
+	color: map-get($mau, xam);
+}

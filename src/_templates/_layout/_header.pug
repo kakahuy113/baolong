@@ -1,1 +1,47 @@
 header
+	.container
+		section.header__mainWrapper
+			// HEADER TOP
+			.header__top
+				ul.header__top--list
+					li.header__top--item
+						a.header__top--link(href="mailto:Insurance@Globalcancer.com") Insurance@Globalcancer.com
+					li.header__top--item
+						a.header__top--link(href="tel:+662 665 3600") +662 665 3600
+			// HEADER BOTTOM
+			.header__bottom
+				.header__bottom--logo
+					// LOGO height: 70px
+					a.logo--link(href="index.html")
+						img.lazyload.blur-up(data-src="./assets/logo.png", alt="BAO-LONG")
+				.navBarHamburger__mainWrapper.clearfix.mobile
+					span.navBarHamburger__strokeElement
+					span.navBarHamburger__strokeElement
+					span.navBarHamburger__strokeElement
+					span.navBarHamburger__strokeElement
+				nav.navBar__itemWrapper
+					.navBar--item
+						a.navBar--link(href="#") Global Cancer Care
+						.navBar--subMenu
+							.navBar--item
+								a.navBar--link(href="#") Sub 1
+							.navBar--item
+								a.navBar--link(href="#") Sub 2
+							.navBar--item
+								a.navBar--link(href="#") Sub 3
+					.navBar--item
+						a.navBar--link(href="#") UNG THƯ LÀ GÌ
+						.navBar--subMenu
+							.navBar--item
+								a.navBar--link(href="#") Sub 1
+							.navBar--item
+								a.navBar--link(href="#") Sub 2
+							.navBar--item
+								a.navBar--link(href="#") Sub 3
+					.navBar--item
+						a.navBar--link(href="#") MUA ONLINE
+					.navBar--item
+						a.navBar--link(href="#") LIÊN HỆ
+				.search
+					.btn
+						img.lazyload.blur-up(data-src="./assets/icons/search.svg", alt="SEARCH")

@@ -1,0 +1,11 @@
+.InsurancePrograms {
+	padding: 145px 0 111px;
+	background: #09327E;
+}
+
+.insurancePrograms__wrapper {
+	@media (min-width: 1440px) {
+		width: calc(100% - 122px);
+		margin: 0 auto;
+	}
+}
