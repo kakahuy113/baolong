@@ -26,6 +26,17 @@ const mainBanner = () => {
 	})
 }
 
+// ACTIVE HEADER WHEN SCROLL
+const activeHeader = () => {
+	$(window).scroll(function () {
+		if ($(this).scrollTop() > 150) {
+			$('header').addClass('scrolled');
+		} else {
+			$('header').removeClass('scrolled');
+		}
+	});
+}
+
 // INITALIZE SUBMENU
 const initializeSubMenu = () => {
 	const itemsBottomHeader = document.querySelectorAll(
@@ -60,9 +71,11 @@ document.addEventListener('DOMContentLoaded', () => {
 	initializeSubMenu();
 	// SHOW MENU MOBILE
 	showMenuMobile();
+	// ACTIVE HEADER WHEN SCROLL
+	activeHeader();
 });
 
-document.addEventListener('DOMContentLoaded', () => {});
+document.addEventListener('scroll', () => {});
 
 
 

@@ -1,3 +1,33 @@
 section.InsurancePrograms
 	.container
 		section.insurancePrograms__wrapper
+			.row
+				.col-lg-5
+					.insurancePrograms__Content
+						.Core__titlePage
+							h2.cl-vang.tt-u LỢI THẾ Global Cancer Care
+						.insurancePrograms--desc
+							p Đa dạng, hấp dẫn với nhiều lựa chọn
+								br
+								| phù hợp với mọi đối tượng khách hàng.
+				.col-lg-7
+					.insuranceProgram__Items
+						.insuranceProgram--list.row
+							-for(i=1;i<5;i++)
+								.col-sm-6.insuranceProgram--item
+									a.insuranceProgram--link(href="#")
+										.insuranceProgram--icon.ov-h
+											img.lazyload.blur-up(data-src="./assets/images/insurance-programs/icon-"+i+".png", alt="insurance-program-icon")
+										.insuranceProgram--title
+											h3 CHƯƠNG TRÌNH BẢO HIỂM
+										.insuranceProgram--desc
+											ul
+												li
+													span Hạn mức năm:
+													span 2.400.000.000VND
+												li
+													span Hạn mức trọn đời:
+													span 7.200.000.000VND
+												li
+													span Trung bình từ:
+													span 4.000.000đ

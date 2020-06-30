@@ -31,6 +31,8 @@
 
 	@media (max-width: 1024.98px) {
 		margin-top: 50px;
+		margin-right: -10px;
+		margin-left: -10px;
 	}
 
 	@media (max-width: 767.98px) {
@@ -54,6 +56,8 @@
 		-ms-flex: 0 0 50%;
 		flex: 0 0 50%;
 		max-width: 50%;
+		padding-right: 10px;
+		padding-left: 10px;
 
 		&:last-child {
 			margin-top: 30px;
@@ -125,6 +129,12 @@
 					top: 0;
 				}
 			}
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		&:after {
+			content: none;
 		}
 	}
 }
