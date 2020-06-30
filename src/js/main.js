@@ -26,6 +26,17 @@ const mainBanner = () => {
     })
 }
 
+// ACTIVE HEADER WHEN SCROLL
+const activeHeader = () => {
+    $(window).scroll(function() {
+        if ($(this).scrollTop() > 150) {
+            $('header').addClass('scrolled');
+        } else {
+            $('header').removeClass('scrolled');
+        }
+    });
+}
+
 // INITALIZE SUBMENU
 const initializeSubMenu = () => {
     const itemsBottomHeader = document.querySelectorAll(
@@ -87,7 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getMapContact();
 });
 
-document.addEventListener('DOMContentLoaded', () => {});
+document.addEventListener('scroll', () => {});
 
 
 
