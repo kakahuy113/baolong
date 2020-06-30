@@ -64,6 +64,15 @@ const searchOnMenu = () => {
         }
     });
 }
+const getMapContact = () => {
+    $('.fancybox').fancybox({
+        toolbar: false,
+        smallBtn: true,
+        iframe: {
+            preload: false
+        }
+    })
+}
 document.addEventListener('DOMContentLoaded', () => {
     Cookie();
     getSVGs();
@@ -75,6 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // SHOW MENU MOBILE
     showMenuMobile();
     searchOnMenu();
+    getMapContact();
 });
 
 document.addEventListener('DOMContentLoaded', () => {});

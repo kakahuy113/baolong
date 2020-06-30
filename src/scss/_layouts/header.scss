@@ -226,7 +226,7 @@ header {
 }
 
 .search--input {
-    display: flex;
+    display: none;
     opacity: 0;
     width: 65%;
     position: absolute;
@@ -266,6 +266,7 @@ header {
 }
 
 .active--search {
+    display: flex;
     opacity: 1;
 }
 

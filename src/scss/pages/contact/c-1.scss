@@ -1,5 +1,142 @@
 section.contact-page {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 679px;
+    padding: 100px 0;
+    margin-top: -53px;
+    background: #F1F0F0;
+    .map-bg {
+        position: absolute;
+        z-index: 0;
+        left: 35px;
+        bottom: 19px;
+    }
     .contact-inner {
-        height: 626px;
+        position: relative;
+        height: 423px;
+        display: flex;
+    }
+    .contact__left {
+        width: 50%;
+        .contact__left-inner {
+            width: 414px;
+            margin-left: auto;
+            margin-right: 40px;
+        }
+    }
+    .contact__left-item {
+        position: relative;
+        display: flex;
+        padding-left: 10px;
+        width: 100%;
+        border-radius: 10px;
+        padding: 28px 0;
+        background: #FFFFFF;
+        margin-bottom: 20px;
+        &:last-child {
+            margin-bottom: 0px !important;
+        }
+        .contact__left-content {
+            padding-left: 10px;
+            p.des__lt {
+                font-size: 16px;
+                font-family: Averta-Light;
+            }
+        }
+        a.contact__left-link {
+            position: absolute;
+            width: 83px;
+            background: #31B3E4;
+            height: 100%;
+            top: 0;
+            right: 0;
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+            span {
+                display: block;
+                padding: 24px 10px;
+                padding-bottom: 0px;
+                font-size: 16px;
+                font-family: Averta-Bold;
+                color: #FFFFFF;
+            }
+            img {
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+    .contact__left-title {
+        h2 {
+            font-size: 30px;
+            font-family: Averta-Bold;
+            color: map-get($mau, xam);
+            margin-bottom: 42px;
+        }
+    }
+    .contact__left-item-icon {
+        position: relative;
+        display: block;
+        align-self: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #F1F0F0;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    .contact__right {
+        width: 50%;
+        .contact__right-inner {
+            width: 593px;
+            border-radius: 10px;
+            background: #FFFFFF;
+            margin-left: 40px;
+            padding: 25px 50px;
+            .contact__right-title {
+                margin-bottom: 13px;
+                h3 {
+                    font-size: 20px;
+                    font-family: Averta-Bold;
+                    color: #777171;
+                }
+            }
+            .contact__right-desc {
+                margin-bottom: 24px;
+                p {
+                    font-size: 16px;
+                    font-family: Averta-Light;
+                    color: map-get($mau, xam);
+                }
+            }
+        }
+    }
+    .contact__right-form {
+        .group-form-ct {
+            input {
+                height: 43px;
+            }
+            input,
+            textarea {
+                width: 100%;
+                margin-bottom: 20px;
+                border-radius: 10px;
+            }
+        }
+        .contact__right-form-submit {
+            button {
+                width: 91px;
+                height: 31px;
+                background: map-get($mau, vang);
+                img {
+                    padding-right: 10px;
+                }
+            }
+        }
     }
 }
