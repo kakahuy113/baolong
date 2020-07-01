@@ -128,3 +128,27 @@
 .cl-xam {
 	color: map-get($mau, xam);
 }
+
+.cl-trang {
+	color: map-get($mau, trang);
+}
+
+.bg-xanh-1 {
+	background: map-get($mau, xanh-1);
+}
+
+.bg-xanh-2 {
+	background: map-get($mau, xanh-2);
+}
+
+.bg-vang {
+	background: map-get($mau, vang);
+}
+
+.bg-xam {
+	background: map-get($mau, xam);
+}
+
+.bg-trang {
+	background: map-get($mau, trang);
+}

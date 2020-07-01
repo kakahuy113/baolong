@@ -17,7 +17,7 @@
 
 .homeAboutProducts__wrapper {
 	@media (min-width: 1440px) {
-		width: calc(100% - 61px);
+		width: calc(100% - 138px);
 		margin-left: auto;
 	}
 }
@@ -53,7 +53,6 @@
 	.info__title {
 		cursor: pointer;
 		user-select: none;
-		background: map-get($mau, vang);
 		padding: 15px;
 		border-radius: 8px;
 
@@ -61,7 +60,6 @@
 			position: relative;
 			font-size: 1.25rem;
 			font-weight: 700;
-			color: #ffffff;
 			padding-right: 25px;
 
 			&:after {

@@ -3,30 +3,65 @@ section.HomeFormRegister
 		section.homeFormRegister__wrapper
 			.row
 				.col-lg-6
-					.homeFormRegister--title
-						h2.cl-vang.tt-u ĐIỀN THÔNG TIN ĐỂ THAM GIA BẢO HIỂM
-					.homeFormRegister--mainForm
-						.form-group
-							.input-group
-								.input-group-prepend
-									.input-group-icon
-										img.lazyload.blur-up(data-src="./assets/icons-form/user-xam-nhat.svg", alt="")
-								input.input-control(placeholder="HỌ TÊN")
-						.form-group
-							.input-group
-								.input-group-prepend
-									.input-group-icon
-										img.lazyload.blur-up(data-src="./assets/icons-form/date-xam-nhat.svg", alt="")
-								input.input-control(type="date" placeholder="NGÀY SINH")
-						.form-group
-							.input-group
-								.input-group-prepend
-									.input-group-icon
-										img.lazyload.blur-up(data-src="./assets/icons-form/mail-xam-nhat.svg", alt="")
-								input.input-control(placeholder="EMAIL")
-						.form-group
-							.input-group
-								.input-group-prepend
-									.input-group-icon
-										img.lazyload.blur-up(data-src="./assets/icons-form/phone-xam-nhat.svg", alt="")
-								input.input-control(placeholder="SỐ ĐIỆN THOẠI")
+					.homeFormRegisterMainForm__wrapper
+						.homeFormRegister__title
+							h2.cl-vang.tt-u.lcl.lcl-1 ĐIỀN THÔNG TIN ĐỂ THAM GIA BẢO HIỂM
+						.homeFormRegister__mainForm
+							.form-group
+								.input-group
+									.input-group-prepend
+										.input-group-icon
+											img.lazyload.blur-up(data-src="./assets/icons-form/user-xam-nhat.svg", alt="")
+									input.input-control(placeholder="HỌ TÊN")
+							.form-group
+								.input-group
+									.input-group-prepend
+										.input-group-icon
+											img.lazyload.blur-up(data-src="./assets/icons-form/date-xam-nhat.svg", alt="")
+									input.input-control.date-picker(type="date" placeholder="NGÀY SINH")
+							.form-group
+								.input-group
+									.input-group-prepend
+										.input-group-icon
+											img.lazyload.blur-up(data-src="./assets/icons-form/mail-xam-nhat.svg", alt="")
+									input.input-control(placeholder="EMAIL")
+							.form-group
+								.input-group
+									.input-group-prepend
+										.input-group-icon
+											img.lazyload.blur-up(data-src="./assets/icons-form/phone-xam-nhat.svg", alt="")
+									input.input-control(placeholder="SỐ ĐIỆN THOẠI")
+				.col-lg-6
+					.homeFormRegisterSubForm__wrapper
+						.homeFormRegister__btnAddMore.bg-vang
+							h5.tt-u.cl-trang.lcl.lcl-1 ĐĂNG KÝ CHO THÀNH VIÊN TRONG GIA ĐÌNH
+							.btn-icon.btn-icon-plus__vang.bg-trang
+						.homeFormRegister__membersRegister
+							.memberRegister--list.row
+								-for(i=1;i<6;i++)
+									.memberRegister--item.col-sm-4
+										.memberRegister--name.lcl.lcl-1 THÀNH VIÊN #{i}
+								.memberRegister--item.col-sm-4.active
+									.memberRegister--name.lcl.lcl-1.tt-u THÀNH VIÊN 6
+						.homeFormRegister__subForm
+							.subForm--memberRegisterName.cl-vang.tt-u.ta-c.lcl.lcl-1 THÀNH VIÊN 6
+							.form-group
+								.input-group.input-group-sm
+									.input-group-prepend
+										.input-group-icon
+											img.lazyload.blur-up(data-src="./assets/icons-form/user-xam-nhat.svg", alt="")
+									input.input-control.input(placeholder="HỌ TÊN")
+							.form-group
+								.input-group.input-group-sm
+									.input-group-prepend
+										.input-group-icon
+											img.lazyload.blur-up(data-src="./assets/icons-form/date-xam-nhat.svg", alt="")
+									input.input-control.input.date-picker(type="date" placeholder="NGÀY SINH")
+							.subForm--listBtn
+								.btn.btn--submitForm.bg-vang
+									img.icon.lazyload.blur-up(data-src="./assets/icons/icon-submit.svg", alt="")
+									h5.cl-trang HOÀN TẤT
+								.btn-icon.btn-icon-minus__trang.bg-vang
+			.block-btn-submitForm.ta-c
+				.btn.btn--submitForm.bg-xanh-2
+					h5.cl-trang XEM PHÍ BẢO HIỂM
