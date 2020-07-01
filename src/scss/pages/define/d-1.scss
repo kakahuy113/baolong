@@ -32,7 +32,7 @@ section.Define {
         margin-bottom: 34px;
         h3 {
             font-size: 20px;
-            font-family: Averta-Bold;
+            font-weight: bold;
             color: white;
             padding-left: 9px;
         }
@@ -50,7 +50,7 @@ section.Define {
                 padding-left: 19px;
                 border-bottom: solid #929292 .5px;
                 font-size: 18px;
-                font-family: Averta-Bold;
+                font-weight: bold;
                 margin-bottom: 10px;
                 &:last-child {
                     margin-bottom: 0;
@@ -76,7 +76,7 @@ section.Define {
         }
     }
     .define__content {
-        width: 1242px;
+        width: 100%;
         background: #F1F0F0;
         display: flex;
         margin-left: 40px;
@@ -110,13 +110,16 @@ section.Define {
     }
     .define__content-text {
         padding: 45px;
+        @media (max-width: 767.98px) {
+            padding: 20px;
+        }
         .define__text-title {
             margin-bottom: 20px;
             h4 {
                 position: relative;
                 display: inline-block;
                 font-size: 30px;
-                font-family: Averta-Bold;
+                font-weight: bold;
                 color: #09327E;
                 padding-bottom: 8.5px;
                 border-bottom: solid 1px #09327E;
@@ -135,13 +138,19 @@ section.Define {
     }
     .define__text-min {
         .pt--4 {
-            margin-top: 40px !important;
+            margin-top: 40px;
+            @media (max-width: 767.98px) {
+                margin-top: 20px;
+            }
         }
         .define__min-title {
             margin-bottom: 40px;
+            @media (max-width: 767.98px) {
+                margin-bottom: 20px;
+            }
             h4 {
                 font-size: 20px;
-                font-family: Averta-Bold;
+                font-weight: bold;
                 color: map-get($mau, xam);
             }
         }

@@ -3,9 +3,11 @@ extends _templates/_layout/_layout.pug
 block var
 	- let title = 'ƯNG THƯ LÀ GÌ ? | GLOBAL CANCER CARE';
 	- let bodyClass = 'define-page';
-
+	- let titlePageBanner_img = './assets/images/banners/titlePage_banner-3.png';
+	- let titlePageBanner_content = 'ƯNG THƯ LÀ GÌ ?';
 block loading
 block banner,breadcrumb
+	include _templates/_layout/_titlePage-banner
 block main
 	include _templates/define/d-1
 block scripts

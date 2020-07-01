@@ -132,6 +132,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	getMapContact();
 	// TAB
 	const tabAbout = new Tab(".About .tab-container");
+	const pageDefine = new Tab('.Define', '.tab-container');
 });
 
 document.addEventListener('scroll', () => {});
