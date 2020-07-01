@@ -118,6 +118,12 @@ section.contact-page {
         }
     }
     .contact__right-form {
+        textarea {
+            padding: 0 0;
+        }
+        .contact--sub {
+            margin-top: 40px;
+        }
         .mb--2 {
             margin-bottom: 20px;
         }

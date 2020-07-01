@@ -1,160 +1,158 @@
-section.Research {
-    .container-fluid {
-        padding: 0 0;
-    }
-}
-
-section.research__wrapper {
-    width: 100%;
-    background: white;
-    display: flex;
-    @media (max-width: 1024.98px) {
-        display: block;
-    }
-}
-
-.research__img {
-    @media (max-width: 1024.98px) {
-        width: 100%;
-        height: 400px;
-    }
-    position: relative;
-    ;
-    width: 50%;
-    height: 832px;
-    @media (max-width: 575.98px) {
-        height: 200px;
-    }
-    &::before {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to right, #ffffff00, #ffffffdc, #ffffff);
-        content: "";
-        top: 0;
-        right: 0;
-    }
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-}
-
-.research__content {
-    position: relative;
-    width: 50%;
-    padding-top: 130px;
-    @media (max-width: 1024.98px) {
-        width: 90%;
-        margin: 0 auto;
-        padding-top: 60px;
-    }
-    @media (max-width: 575.98px) {
-        padding-top: 25px;
-    }
-}
-
-.research__content-box {
-    width: 735px;
-    @media (max-width: 1439.98px) {
-        width: 650px;
-    }
-    @media (max-width: 1024.98px) {
-        width: 100%;
-    }
-}
-
-.research__content-title {
-    h3 {
-        font-size: 30px;
-        font-family: Averta-Bold;
-        color: map-get($mau, vang);
-        margin-bottom: 70px;
-        text-transform: uppercase;
-        @media (max-width: 1439.98px) {
-            font-size: 25px;
+    section.Research {
+        .container-fluid {
+            padding: 0 0;
         }
+    }
+    
+    section.research__wrapper {
+        width: 100%;
+        background: white;
+        display: flex;
         @media (max-width: 1024.98px) {
-            font-size: 30px;
-        }
-        @media (max-width: 574.98px) {
-            font-size: 18px;
+            display: block;
         }
     }
-}
-
-.research__content-item {
-    width: 100%;
-    background: #F1F0F0;
-    height: 420px;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px #000000;
-    padding: 45px 0;
-    padding-left: 73px;
-    padding-right: 95px;
-    @media (max-width: 575.98px) {
-        padding: 20px;
-        height: 100%;
-    }
-}
-
-.research__item {
-    position: relative;
-    &:first-child {
-        padding-bottom: 40px;
+    
+    .research__img {
+        @media (max-width: 1024.98px) {
+            width: 100%;
+            height: 400px;
+        }
+        position: relative;
+        ;
+        width: 50%;
+        height: 832px;
+        @media (max-width: 575.98px) {
+            height: 200px;
+        }
         &::before {
             position: absolute;
-            height: 1px;
             width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, #ffffff00, #ffffffdc, #ffffff);
             content: "";
-            bottom: 0;
+            top: 0;
             right: 0;
-            background: map-get($mau, xam);
         }
-        &::after {
-            position: absolute;
-            height: 11px;
-            width: 11px;
-            border-radius: 50%;
-            content: "";
-            bottom: -4%;
-            right: 0;
-            background: map-get($mau, xam);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
-    &:last-child {
-        padding-top: 40px;
-    }
-    h4 {
-        padding-right: 50px;
-        font-family: Averta-Bold;
-        font-size: 25px;
-        text-transform: uppercase;
-        color: map-get($mau, xam);
+    
+    .research__content {
+        position: relative;
+        width: 50%;
+        padding-top: 130px;
+        @media (max-width: 1024.98px) {
+            width: 90%;
+            margin: 0 auto;
+            padding-top: 60px;
+        }
         @media (max-width: 575.98px) {
-            font-size: 15px;
-            padding-right: 0;
+            padding-top: 25px;
         }
     }
-    .research__item-pdf {
-        span {
+    
+    .research__content-box {
+        width: 735px;
+        @media (max-width: 1439.98px) {
+            width: 650px;
+        }
+        @media (max-width: 1024.98px) {
+            width: 100%;
+        }
+    }
+    
+    .research__content-title {
+        h3 {
+            font-size: 30px;
+            font-family: Averta-Bold;
+            color: map-get($mau, vang);
+            margin-bottom: 70px;
+            text-transform: uppercase;
+            @media (max-width: 1439.98px) {
+                font-size: 25px;
+            }
+            @media (max-width: 1024.98px) {
+                font-size: 30px;
+            }
+            @media (max-width: 574.98px) {
+                font-size: 18px;
+            }
+        }
+    }
+    
+    .research__content-item {
+        width: 100%;
+        background: #F1F0F0;
+        height: 420px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px #000000;
+        padding: 45px 0;
+        padding-left: 73px;
+        padding-right: 95px;
+        @media (max-width: 575.98px) {
+            padding: 20px;
+            height: 100%;
+        }
+    }
+    
+    .research__item {
+        position: relative;
+        &:first-child {
+            padding-bottom: 40px;
+            &::before {
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                content: "";
+                bottom: 0;
+                right: 0;
+                background: map-get($mau, xam);
+            }
+            &::after {
+                position: absolute;
+                height: 11px;
+                width: 11px;
+                border-radius: 50%;
+                content: "";
+                bottom: -4%;
+                right: 0;
+                background: map-get($mau, xam);
+            }
+        }
+        &:last-child {
+            padding-top: 40px;
+        }
+        h4 {
+            padding-right: 50px;
+            font-family: Averta-Bold;
             font-size: 25px;
-            padding-left: 15px;
+            text-transform: uppercase;
             color: map-get($mau, xam);
             @media (max-width: 575.98px) {
-                // padding-left: 0;
                 font-size: 15px;
+                padding-right: 0;
             }
-            img {
-                margin-left: 15px;
+        }
+        .research__item-pdf {
+            span {
+                font-family: Averta-Light;
+                font-size: 20px;
+                padding-left: 15px;
+                color: map-get($mau, xam);
                 @media (max-width: 575.98px) {
-                    margin-left: 5px;
+                    // padding-left: 0;
+                    font-size: 15px;
                 }
-                svg {
-                    color: map-get($mau, xam);
+                img {
+                    margin-left: 15px;
+                    @media (max-width: 575.98px) {
+                        margin-left: 5px;
+                    }
                 }
             }
         }
     }
-}
