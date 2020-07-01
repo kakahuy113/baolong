@@ -35,6 +35,14 @@
 		z-index: 1;
 		pointer-events: none;
 	}
+
+	@media (max-width: 1024.98px) {
+		height: 500px;
+	}
+
+	@media (max-width: 575.98px) {
+		height: 350px;
+	}
 }
 
 .TitlePageBanners--content {
@@ -58,5 +66,34 @@
 		top: -20px;
 		border-radius: 5px;
 		background: rgba($color: #ffffff, $alpha: .9);
+		pointer-events: none;
+	}
+
+	h3 {
+		font-family: Averta-Bold;
+		font-size: 1.875rem;
+	}
+
+	@media (max-width: 1024.98px) {
+		top: 60%;
+		height: 70px;
+
+		h3 {
+			font-size: 1.125rem;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		padding: 0 15px;
+		height: 50px;
+
+		h3 {
+			font-size: 1rem;
+		}
+
+		&:after {
+			width: 36px;
+			height: 32px;
+		}
 	}
 }
