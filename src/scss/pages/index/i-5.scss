@@ -36,8 +36,17 @@
 .homeFormRegisterSubForm__wrapper,
 .homeFormRegisterMainForm__wrapper {
 	position: relative;
-	max-height: 615px;
 	height: 100%;
+
+	@media (min-width: 1025px) {
+		max-height: 615px;
+	}
+}
+
+.homeFormRegisterMainForm__wrapper {
+	@media (max-width: 1024.98px) {
+		margin-bottom: 25px;
+	}
 }
 
 .homeFormRegister__title {
@@ -50,6 +59,16 @@
 
 	@media (max-width: 1024.98px) {
 		margin-bottom: 25px;
+
+		h2 {
+			text-align: center;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		h2 {
+			font-size: 1.25rem;
+		}
 	}
 }
 
@@ -80,6 +99,21 @@
 		flex: 0 0 24px;
 		max-width: 24px;
 	}
+
+	@media (max-width: 1024.98px) {
+		margin-bottom: 25px;
+
+		h5 {
+			text-align: center;
+			font-size: 1rem;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		h5 {
+			font-size: .875rem;
+		}
+	}
 }
 
 .homeFormRegister__mainForm {
@@ -89,6 +123,24 @@
 
 	.form-group+.form-group {
 		margin-top: 42px;
+	}
+
+	@media (max-width: 1024.98px) {
+		padding: 45px 25px;
+
+		.form-group+.form-group {
+			margin-top: 25px;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		padding: 25px;
+	}
+}
+
+.homeFormRegister__membersRegister {
+	@media (max-width: 1024.98px) {
+		margin-bottom: 15px;
 	}
 }
 
@@ -169,6 +221,10 @@
 	}
 }
 
-.btn.btn--submitForm {
+.block-btn-submitForm {
 	margin-top: 60px;
+
+	@media (max-width: 1024.98px) {
+		margin-top: 35px;
+	}
 }

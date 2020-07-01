@@ -193,4 +193,45 @@ textarea {
 			color: rgba($color: #777171, $alpha: .5)
 		}
 	}
+
+	@media (max-width: 1024.98px) {
+		.input-control {
+			height: 50px;
+		}
+
+		.input-group {
+			.input-control {
+				padding-left: 65px;
+			}
+		}
+
+		.input-group-prepend {
+			width: 65px;
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.input-control {
+			height: 43px;
+			border-radius: 8px;
+		}
+
+		.input-group {
+			border-radius: 8px;
+
+			.input-control {
+				padding-left: 45px;
+			}
+		}
+
+		.input-group-prepend {
+			width: 45px;
+		}
+
+		.input-group-icon {
+			img {
+				width: 70%;
+			}
+		}
+	}
 }
