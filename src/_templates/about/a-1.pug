@@ -1,8 +1,14 @@
 section.About
 	.About--img
 		img.lazyload.blur-up(data-src="./assets/images/about/about-img.png", alt="")
-	.About__wrapper
-		.tab-container
-			ul.list-tab
-				li.item(toggle-for="item-1").acitve BẢO LONG
-				li.item(toggle-for="item-2") LUMA
+	.container
+		.About__wrapper
+			.tab-container
+				ul.list-tab.aboutTab--list
+					li.item.aboutTab--item(toggle-for="item-1") BẢO LONG
+					li.item.aboutTab--item(toggle-for="item-2") LUMA
+				.tab-content
+					.content(tab-id="item-1")
+						.aboutTab--title.cl-xanh-2.fw-700 BẢO HIỂM BẢO LONG
+					.content(tab-id="item-2")
+						.aboutTab--title.cl-xanh-2.fw-700 LUMA

@@ -3,6 +3,7 @@ import {
 	Loading
 } from './util/utilities';
 import Cookie from './lib/Cookie';
+import Tab from './lib/Tab';
 
 // MAIN BANNER WEBSITE
 const mainBanner = () => {
@@ -129,6 +130,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	// SHOW SEARCH
 	searchOnMenu();
 	getMapContact();
+	// TAB
+	const tabAbout = new Tab(".About .tab-container");
 });
 
 document.addEventListener('scroll', () => {});
