@@ -102,6 +102,16 @@ const initDatePicker = () => {
 	})
 }
 
+const getMapContact = () => {
+	$('.fancybox').fancybox({
+		toolbar: false,
+		smallBtn: true,
+		iframe: {
+			preload: false
+		}
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
@@ -118,6 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	activeHeader();
 	// SHOW SEARCH
 	searchOnMenu();
+	getMapContact();
 });
 
 document.addEventListener('scroll', () => {});

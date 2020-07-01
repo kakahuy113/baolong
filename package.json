@@ -76,6 +76,7 @@
 		"vinyl-source-stream": "^2.0.0"
 	},
 	"dependencies": {
+		"@fancyapps/fancybox": "^3.5.7",
 		"fancybox": "^3.0.1",
 		"flatpickr": "^4.6.3",
 		"image-map-resizer": "^1.0.10",
