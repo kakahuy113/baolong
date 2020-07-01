@@ -3,9 +3,12 @@ extends _templates/_layout/_layout.pug
 block var
 	- let title = 'Liên Hệ | GLOBAL CANCER CARE';
 	- let bodyClass = 'contact-page';
+	- let titlePageBanner_img = './assets/images/banners/titlePage_banner-5.png';
+	- let titlePageBanner_content = 'Liên Hệ';
 
 block loading
 block banner,breadcrumb
+	include _templates/_layout/_titlePage-banner
 block main
 	include _templates/contact/c-1
 block scripts
