@@ -35,19 +35,18 @@ section.contact-page
 					.contact__right-desc
 						p Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa....
 					form.contact__right-form(action="")
-						.row.form-group
-							.col-12
+						.row.form-group.mb--2
+							.col-12.input-group-sm
 								input.input-control(type="text",placeholder="Họ tên")
-						.row.form-group
-							.col-6
+						.row.form-group.mb--2
+							.col-6.input-group-sm
 								input.input-control(type="text",placeholder="Ngày sinh")
-							.col-6
+							.col-6.input-group-sm
 								input.input-control(type="text",placeholder="Email")
-						.row.form-group
+						.row.form-group.mb--2
 							.col-12
-								textarea.input-control(name="note", cols="30", rows="4",placeholder="Yêu cầu của bạn")
-						.contact__right-form-submit
-							button
-								|
-								img(src="./assets/images/contact/icons/2.png", alt="")
-								| Gửi
+								textarea.input-control.h-textarea(name="note", cols="30", rows="4",placeholder="Yêu cầu của bạn")
+						.subForm--listBtn
+							.btn.btn--submitForm.bg-vang.mt--0
+								img.icon.lazyload.blur-up(data-src="./assets/icons/icon-submit.svg", alt="")
+								h5.cl-trang GỬi
