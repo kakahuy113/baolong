@@ -1,4 +1,3 @@
-img(src="./assets/images/contact/head.jpg", alt="", width="100%")
 section.contact-page
 	img.map-bg(src="./assets/images/contact/background.png", alt="map")
 	.container-fluid
@@ -35,18 +34,16 @@ section.contact-page
 					.contact__right-desc
 						p.lcl.lcl-2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia corrupti, provident qui ducimus blanditiis facilis nam quis beatae molestias sequi alias nulla ratione enim incidunt distinctio sunt rerum cumque veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa....
 					form.contact__right-form(action="")
-						.row.form-group.mb--2
-							.col-12
-								input.input-control.input-control-sm(type="text",placeholder="Họ tên")
+						.form-group.mb--2
+							input.input-control.input-control-sm(type="text",placeholder="Họ tên")
 						.row.form-group.mb--2
 							.col-6
 								input.input-control.input-control-sm.input.date-picker(type="text",placeholder="Ngày sinh")
 							.col-6
 								input.input-control.input-control-sm(type="text",placeholder="Email")
-						.row.form-group.mb--2
-							.col-12
-								textarea.input-control.h-textarea(name="note", cols="30", rows="4",placeholder="Yêu cầu của bạn")
-						.subForm--listBtn
+						.form-group
+							textarea.input-control.h-textarea(name="note", cols="30", rows="4",placeholder="Yêu cầu của bạn")
+						.contact--sub
 							.btn.btn--submitForm.bg-vang.mt--0
 								img.icon.lazyload.blur-up(data-src="./assets/icons/icon-submit.svg", alt="")
 								h5.cl-trang GỬi
