@@ -53,6 +53,7 @@ section.Define {
                 font-size: 18px;
                 font-weight: bold;
                 margin-bottom: 10px;
+                color: map-get($mau, xam);
                 &:last-child {
                     margin-bottom: 0;
                 }
@@ -97,6 +98,9 @@ section.Define {
         width: 462px;
         height: 558px;
         background: map-get($mau, xam);
+        @media (max-width: 1499.98px) {
+            width: 300px;
+        }
         @media (max-width: 768.98px) {
             width: 100%;
             height: 768px;
@@ -117,6 +121,9 @@ section.Define {
         @media (max-width: 767.98px) {
             padding: 20px;
         }
+        @media (max-width: 1499.98px) {
+            padding: 20px;
+        }
         .define__text-title {
             margin-bottom: 20px;
             h4 {
@@ -133,7 +140,7 @@ section.Define {
                     height: 11px;
                     border-radius: 50%;
                     content: '';
-                    bottom: -10%;
+                    bottom: -6px;
                     left: 0;
                     background: #09327E;
                 }
@@ -155,6 +162,12 @@ section.Define {
             h4 {
                 font-size: 20px;
                 font-weight: bold;
+                color: map-get($mau, xam);
+            }
+        }
+        .define__min-content {
+            p {
+                font-size: 1rem;
                 color: map-get($mau, xam);
             }
         }
