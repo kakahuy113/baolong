@@ -83,8 +83,6 @@ section.compensation {
             font-size: 18px;
             font-family: Averta-Light;
             color: map-get($mau, xam);
-            max-height: 200px;
-            overflow-y: auto;
         }
     }
     .compensation__content-item {
@@ -93,46 +91,42 @@ section.compensation {
         border-radius: 10px;
         box-shadow: 0 3px 6px #0000001f;
         padding: 45px 70px;
-        overflow-y: auto;
-        max-height: 361px;
         @media (max-width: 575.98px) {
             padding: 20px;
-            max-height: 300px;
-        }
-    }
-    .compensation__item+.compensation__item {
-        &::before {
-            position: absolute;
-            height: 1px;
-            width: 100%;
-            content: "";
-            top: 0;
-            right: 0;
-            background: map-get($mau, xam);
-        }
-        &::after {
-            position: absolute;
-            height: 11px;
-            width: 11px;
-            border-radius: 50%;
-            content: "";
-            top: -6px;
-            right: 0;
-            background: map-get($mau, xam);
+            height: 100%;
         }
     }
     .compensation__item {
         position: relative;
         &:first-child {
-            padding-top: 0px !important;
-            margin-top: 0px !important;
+            padding-bottom: 40px;
+            @media (max-width: 575.98px) {
+                padding-bottom: 10px;
+            }
+            &::before {
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                content: "";
+                bottom: 0;
+                right: 0;
+                background: map-get($mau, xam);
+            }
+            &::after {
+                position: absolute;
+                height: 11px;
+                width: 11px;
+                border-radius: 50%;
+                content: "";
+                bottom: -4%;
+                right: 0;
+                background: map-get($mau, xam);
+            }
         }
-        &:nth-child(n+1) {
+        &:last-child {
             padding-top: 40px;
-            margin-top: 40px;
             @media (max-width: 575.98px) {
                 padding-top: 10px;
-                margin-top: 10px;
             }
         }
         h4 {
