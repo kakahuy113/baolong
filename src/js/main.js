@@ -116,7 +116,7 @@ const getMapContact = () => {
 const checkBanner = () => {
     let banner = document.querySelector("section.TitlePage__Banners");
     let slider_banner = document.querySelector("section.MainSlider__Banners");
-    if ((!banner) && (!slider_banner)) {
+    if ((!banner)) {
         // console.log("null");
     } else {
         document.querySelector("div.header__top").classList.add("template--2");
