@@ -246,13 +246,14 @@ header {
 }
 
 .search--input {
-    display: none;
+    display: flex;
     opacity: 0;
     width: 65%;
     position: absolute;
     transition: all .5s ease-in-out;
     right: 100px;
     bottom: 10px;
+    visibility: hidden;
     @media (max-width: 1199.98px) {
         right: 50px;
     }
@@ -266,12 +267,13 @@ header {
         width: 100%;
     }
     input {
-        width: 80%;
+        width: 100%;
         height: 50px;
         padding: 0 20px;
         font-size: 25px;
         border: solid 1px map-get($mau, xanh-1);
         outline: none;
+        border-radius: 25px;
         @media (max-width: 1024.98px) {
             font-size: 20px;
         }
@@ -281,21 +283,28 @@ header {
         }
     }
     button {
-        height: 50px;
-        width: 20%;
+        position: absolute;
+        right: 5px;
+        height: 40px;
+        width: 40px;
+        top: 50%;
+        transform: translateY(-50%);
         background: map-get($mau, xanh-1);
         border: none;
         outline: none;
         font-size: 25px;
         color: white;
+        border-radius: 25px;
         @media (max-width: 575.98px) {
             height: 25px;
             font-size: 15px;
+            right: 0px;
         }
     }
 }
 
 .active--search {
+    visibility: visible;
     display: flex;
     opacity: 1;
 }
