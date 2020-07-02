@@ -53,29 +53,34 @@ const initializeSubMenu = () => {
 
 // SHOW MENU MOBILE
 const showMenuMobile = () => {
-	const btn = document.querySelector('.navBarHamburger__mainWrapper');
-	const menu = document.querySelector('.navBar__itemWrapper');
-	if (btn) {
-		btn.addEventListener('click', () => {
-			btn.classList.toggle('active');
-			menu.classList.toggle('active');
+	const btnMenuMobile = document.querySelector('.navBarHamburger__mainWrapper');
+	const navBarMenuMobile = document.querySelector('.navBar__itemWrapper');
+	// CHECK BUTTON
+	if (btnMenuMobile) {
+		btnMenuMobile.addEventListener('click', () => {
+			btnMenuMobile.classList.toggle('active');
+			navBarMenuMobile.classList.toggle('active');
 		})
 	}
 }
 
 // SHOW SEARCH
 const searchOnMenu = () => {
-	$(".search .search--btn").click(function (e) {
-		e.preventDefault();
-		$(".search--form").toggleClass('active');
-		if ($(".search--form").hasClass("active")) {
-			$(".search .search--btn img").attr("src", "./assets/icons/close.svg");
-			$(".search .search--btn img").attr("data-src", "./assets/icons/close.svg");
-		} else {
-			$(".search .search--btn img").attr("src", "./assets/icons/search.svg");
-			$(".search .search--btn img").attr("data-src", "./assets/icons/search.svg");
-		}
-	});
+	const blockSearch = document.querySelector('.search--form');
+	const btnSearch = document.querySelector('.search--btn');
+	const icon = document.querySelector('.search--btn img');
+	// CHECK BUTTON
+	if (blockSearch) {
+		btnSearch.addEventListener('click', () => {
+			btnSearch.classList.toggle('isClose');
+			blockSearch.classList.toggle('active');
+			if (btnSearch.classList.contains('isClose')) {
+				icon.src = icon.getAttribute('data-src');
+			} else {
+				icon.src = icon.getAttribute('data-src-close');
+			}
+		})
+	}
 }
 
 // INIT DATE PICKER
@@ -114,13 +119,13 @@ const getMapContact = () => {
 
 // check banner => add class
 const checkBanner = () => {
-    let banner = document.querySelector("section.TitlePage__Banners");
-    let slider_banner = document.querySelector("section.MainSlider__Banners");
-    if ((!banner)) {
-        // console.log("null");
-    } else {
-        document.querySelector("div.header__top").classList.add("template--2");
-    }
+	let banner = document.querySelector("section.TitlePage__Banners");
+	let slider_banner = document.querySelector("section.MainSlider__Banners");
+	if ((!banner)) {
+		// console.log("null");
+	} else {
+		document.querySelector("div.header__top").classList.add("template--2");
+	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {

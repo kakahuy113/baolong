@@ -47,13 +47,13 @@ header {
 		.header__top--item {
 			&:first-child {
 				&::before {
-					background-image: url(../assets/icons/header-phone-trang.svg);
+					background-image: url(../assets/icons/header-mail-trang.svg);
 				}
 			}
 
 			&:last-child {
 				&::before {
-					background-image: url(../assets/icons/header-mail-trang.svg);
+					background-image: url(../assets/icons/header-phone-trang.svg);
 				}
 			}
 		}
@@ -86,13 +86,13 @@ header {
 		margin-left: auto;
 
 		&::before {
-			background-image: url(../assets/icons/header-phone-xam.svg);
+			background-image: url(../assets/icons/header-mail-xam.svg);
 		}
 	}
 
 	&:last-child {
 		&::before {
-			background-image: url(../assets/icons/header-mail-xam.svg);
+			background-image: url(../assets/icons/header-phone-xam.svg);
 		}
 	}
 }
@@ -301,17 +301,18 @@ header {
 			color: map-get($mau, xanh-2);
 		}
 	}
+
+	&.active {
+		color: map-get($mau, xanh-2);
+	}
 }
 
-.search {
+.search--btn {
+	cursor: pointer;
 	position: absolute;
 	right: 15px;
 	top: 50%;
 	transform: translateY(-50%);
-
-	.search--btn {
-		cursor: pointer;
-	}
 }
 
 .search--form {
@@ -336,7 +337,7 @@ header {
 	}
 
 	@media (max-width: 1024.98px) {
-		right: 110px;
+		right: 120px;
 		width: 40%;
 	}
 
