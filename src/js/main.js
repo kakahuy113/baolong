@@ -53,34 +53,34 @@ const initializeSubMenu = () => {
 
 // SHOW MENU MOBILE
 const showMenuMobile = () => {
-	const btnMenuMobile = document.querySelector('.navBarHamburger__mainWrapper');
-	const navBarMenuMobile = document.querySelector('.navBar__itemWrapper');
-	// CHECK BUTTON
-	if (btnMenuMobile) {
-		btnMenuMobile.addEventListener('click', () => {
-			btnMenuMobile.classList.toggle('active');
-			navBarMenuMobile.classList.toggle('active');
-		})
-	}
+    const btnMenuMobile = document.querySelector('.navBarHamburger__mainWrapper');
+    const navBarMenuMobile = document.querySelector('.navBar__itemWrapper');
+    // CHECK BUTTON
+    if (btnMenuMobile) {
+        btnMenuMobile.addEventListener('click', () => {
+            btnMenuMobile.classList.toggle('active');
+            navBarMenuMobile.classList.toggle('active');
+        })
+    }
 }
 
 // SHOW SEARCH
 const searchOnMenu = () => {
-	const blockSearch = document.querySelector('.search--form');
-	const btnSearch = document.querySelector('.search--btn');
-	const icon = document.querySelector('.search--btn img');
-	// CHECK BUTTON
-	if (blockSearch) {
-		btnSearch.addEventListener('click', () => {
-			btnSearch.classList.toggle('isClose');
-			blockSearch.classList.toggle('active');
-			if (btnSearch.classList.contains('isClose')) {
-				icon.src = icon.getAttribute('data-src');
-			} else {
-				icon.src = icon.getAttribute('data-src-close');
-			}
-		})
-	}
+    const blockSearch = document.querySelector('.search--form');
+    const btnSearch = document.querySelector('.search--btn');
+    const icon = document.querySelector('.search--btn img');
+    // CHECK BUTTON
+    if (blockSearch) {
+        btnSearch.addEventListener('click', () => {
+            btnSearch.classList.toggle('isClose');
+            blockSearch.classList.toggle('active');
+            if (btnSearch.classList.contains('isClose')) {
+                icon.src = icon.getAttribute('data-src');
+            } else {
+                icon.src = icon.getAttribute('data-src-close');
+            }
+        })
+    }
 }
 
 // INIT DATE PICKER
@@ -129,7 +129,22 @@ const checkBanner = () => {
     }
     //active menu
 const activeMenu = () => {
+    var link = "";
+    var url = window.location.pathname.split('/');
+    if (url[(url.length - 1)] == "") {
+        link = url[(url.length - 2)];
+    } else {
+        link = url[(url.length - 1)];
+    }
+    $('nav.navBar__itemWrapper .navBar--item a').each(function() {
+        var href = $(this).attr('href');
+        console.log(href);
+        if (href === link) {
+            $(this).addClass('active');
+            $(this).parent().addClass('active');
 
+        }
+    });
 }
 
 
@@ -145,6 +160,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSubMenu();
     // SHOW MENU MOBILE
     showMenuMobile();
+    //ACTIVE menu
+    activeMenu();
     // ACTIVE HEADER WHEN SCROLL
     activeHeader();
     // SHOW SEARCH
