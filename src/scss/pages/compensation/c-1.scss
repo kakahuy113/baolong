@@ -2,13 +2,17 @@ section.compensation {
     position: relative;
     .compensation__wrapper {
         margin: 0 auto;
-        width: calc(100% - 220px);
+        width: 100%;
+        @media (min-width: 1440px) {
+            width: calc(100% - 220px);
+        }
         height: 832px;
         @media (max-width: 575.98px) {
             height: 575px;
         }
         @media (max-width: 1024.98px) {
             display: block;
+            width: 100%;
         }
     }
     .compensation__img {
@@ -76,8 +80,9 @@ section.compensation {
         }
         p {
             margin-bottom: 20px;
-            font-size: 1rem;
+            font-size: 18px;
             font-family: Averta-Light;
+            color: map-get($mau, xam);
         }
     }
     .compensation__content-item {
@@ -85,9 +90,7 @@ section.compensation {
         background: #F1F0F0;
         border-radius: 10px;
         box-shadow: 0 3px 6px #0000001f;
-        padding: 45px 0;
-        padding-left: 73px;
-        padding-right: 95px;
+        padding: 45px 70px;
         @media (max-width: 575.98px) {
             padding: 20px;
             height: 100%;
@@ -97,6 +100,9 @@ section.compensation {
         position: relative;
         &:first-child {
             padding-bottom: 40px;
+            @media (max-width: 575.98px) {
+                padding-bottom: 10px;
+            }
             &::before {
                 position: absolute;
                 height: 1px;
@@ -119,9 +125,11 @@ section.compensation {
         }
         &:last-child {
             padding-top: 40px;
+            @media (max-width: 575.98px) {
+                padding-top: 10px;
+            }
         }
         h4 {
-            padding-right: 50px;
             font-family: Averta-Bold;
             font-size: 25px;
             text-transform: uppercase;
@@ -132,23 +140,27 @@ section.compensation {
             }
         }
         .compensation__item-pdf {
+            display: flex;
+            align-items: center;
             span {
-                font-size: 25px;
+                position: relative;
+                font-size: 20px;
                 padding-left: 15px;
                 color: map-get($mau, xam);
                 font-family: Averta-Light;
                 @media (max-width: 575.98px) {
-                    // padding-left: 0;
                     font-size: 15px;
                 }
-                img {
-                    margin-left: 15px;
-                    @media (max-width: 575.98px) {
-                        margin-left: 5px;
-                    }
-                    svg {
-                        color: map-get($mau, xam);
-                    }
+                &::before {
+                    position: absolute;
+                    content: "";
+                    background-image: url('../assets/icons/arrow-double.png');
+                    background-repeat: no-repeat;
+                    top: 60%;
+                    transform: translateY(-50%);
+                    right: -25px;
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }
