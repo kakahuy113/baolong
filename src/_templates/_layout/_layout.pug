@@ -12,7 +12,6 @@ html(lang="en")
 		link(rel="stylesheet", href="./css/main.min.css")
 	body
 		block loading
-		//- main content
 		block header
 			include _header
 		block banner,breadcrumb
@@ -21,12 +20,11 @@ html(lang="en")
 			#js-page-verify(class=bodyClass hidden)
 		block footer
 			include _footer
-		//- end main content
-		//- #go-top
-		//- 	img.svg(src="./assets/icons/gotop.svg")
-		//- include scripts
-		//- script(type="text/javascript", src='https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3')
-		script(type="text/javascript", src="https://maps.googleapis.com/maps/api/js?&libraries=places&key=AIzaSyAq6ag0zUMblc-Wk5Z5S8KWkHpT3ak1LzI")
+		#hot_line
+			a.hot_line--link(href="tel:02838266766")
+				.hot_line--icon
+					img.svg.lazyload.blur-up(data-src="./assets/icons/hot-line-fixed.svg")
+				.hot_line--text.cl-vang.ta-c 028. 38266766
 		script(type="text/javascript", src="./js/core.min.js")
 		script(type="text/javascript", src="./js/main.min.js")
 		block scripts
