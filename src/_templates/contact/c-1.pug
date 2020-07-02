@@ -34,16 +34,16 @@ section.contact-page
 					.contact__right-desc
 						p.lcl.lcl-2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia corrupti, provident qui ducimus blanditiis facilis nam quis beatae molestias sequi alias nulla ratione enim incidunt distinctio sunt rerum cumque veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa....
 					form.contact__right-form(action="")
-						.form-group.mb--2
-							input.input-control.input-control-sm(type="text",placeholder="Họ tên")
-						.row.form-group.mb--2
-							.col-6
-								input.input-control.input-control-sm.input.date-picker(type="text",placeholder="Ngày sinh")
-							.col-6
+						.form-row-contact.row
+							.form-group.col-12.mb--2
+								input.input-control.input-control-sm(type="text",placeholder="Họ tên")
+							.form-group.col-6.mb--2
+									input.input-control.input-control-sm.input.date-picker(type="text",placeholder="Ngày sinh")
+							.form-group.col-6.mb--2
 								input.input-control.input-control-sm(type="text",placeholder="Email")
-						.form-group
-							textarea.input-control.h-textarea(name="note", cols="30", rows="4",placeholder="Yêu cầu của bạn")
+							.form-group.col-12
+								textarea.input-control.h-textarea(name="note", cols="30", rows="4",placeholder="Yêu cầu của bạn")
 						.contact--sub
-							.btn.btn--submitForm.bg-vang.mt--0
+							button.btn.btn--submitForm.bg-vang.mt--0
 								img.icon.lazyload.blur-up(data-src="./assets/icons/icon-submit.svg", alt="")
 								h5.cl-trang GỬi
