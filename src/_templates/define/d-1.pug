@@ -1,11 +1,11 @@
 section.Define
-	.container
+	.tab-container.container
 		section.define__wrapper
-			.tab-container
+			.define__flex
 				.define__list
 					.define__list-tilte
 						.icon-list
-							img(src="./assets/images/define/icon-list.png", alt="icon-list")
+							img.lazyload.blur-up(src="./assets/images/define/icon-list.png", alt="icon-list")
 						h3 TÌM HIỂU THÊM VỀ UNG THƯ
 					.define__list-item
 						ul.list-tab
@@ -14,71 +14,75 @@ section.Define
 							li(toggle-for="3") Điều trị ung thư tốn kém ra sao ?
 							li(toggle-for="4") Các phương pháp điều trị ung thư tiên tiến ?
 			.tab-content
-				.define__content(tab-id="1")
-					.define__flex
-						.define__content-img
-							img(src="./assets/images/define/img-1.png", alt="UTLG")
-					.define__content-text
-						.define__text-title
-							h4 Ung thư là gì ?
-						.define__text-min
-							.define__min-title
-								h4.lcl.lcl-1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
-							.define__min-content
-								p.lcl.lcl-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero tenetur ad sed dolores earum aut, exercitationem est et qui provident ab cupiditate officia ipsam hic fugit voluptas harum incidunt cum.
-						.define__text-min
-							.define__min-title.pt--4
-								h4.lcl.lcl-1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
-							.define__min-content
-								p.lcl.lcl-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi harum incidunt maxime quaerat. Dolorem, debitis ut, libero obcaecati expedita voluptatum dolor maiores sapiente, dicta molestias ipsam. Quasi, consequatur? Tempore?
-				.define__content(tab-id="2")
-					.define__flex
-						.define__content-img
-							img(src="./assets/images/define/img-1.png", alt="UTLG")
-					.define__content-text
-						.define__text-title
-							h4 Tại sao ung thư nguy hiểm ?
-						.define__text-min
-							.define__min-title
-								h4.lcl.lcl-1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
-							.define__min-content
-								p.lcl.lcl-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero tenetur ad sed dolores earum aut, exercitationem est et qui provident ab cupiditate officia ipsam hic fugit voluptas harum incidunt cum.
-						.define__text-min
-							.define__min-title.pt--4
-								h4.lcl.lcl-1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
-							.define__min-content
-								p.lcl.lcl-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi harum incidunt maxime quaerat. Dolorem, debitis ut, libero obcaecati expedita voluptatum dolor maiores sapiente, dicta molestias ipsam. Quasi, consequatur? Tempore?
-				.define__content(tab-id="3")
-					.define__flex
-						.define__content-img
-							img(src="./assets/images/define/img-1.png", alt="UTLG")
-					.define__content-text
-						.define__text-title
-							h4 Điều trị ung thư tốn kém ra sao ?
-						.define__text-min
-							.define__min-title
-								h4.lcl.lcl-1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
-							.define__min-content
-								p.lcl.lcl-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero tenetur ad sed dolores earum aut, exercitationem est et qui provident ab cupiditate officia ipsam hic fugit voluptas harum incidunt cum.
-						.define__text-min
-							.define__min-title.pt--4
-								h4.lcl.lcl-1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
-							.define__min-content
-								p.lcl.lcl-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi harum incidunt maxime quaerat. Dolorem, debitis ut, libero obcaecati expedita voluptatum dolor maiores sapiente, dicta molestias ipsam. Quasi, consequatur? Tempore?
-				.define__content(tab-id="4")
-					.define__flex
-						.define__content-img
-							img(src="./assets/images/define/img-1.png", alt="UTLG")
-					.define__content-text
-						.define__text-title
-							h4 Các phương pháp điều trị ung thư tiên tiến ?
-						.define__text-min
-							.define__min-title
-								h4.lcl.lcl-1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
-							.define__min-content
-								p.lcl.lcl-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero tenetur ad sed dolores earum aut, exercitationem est et qui provident ab cupiditate officia ipsam hic fugit voluptas harum incidunt cum.
-						.define__text-min
-							.define__min-title.pt--4
-								h4.lcl.lcl-1 Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
-							.define__min-content
-								p.lcl.lcl-4 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi harum incidunt maxime quaerat. Dolorem, debitis ut, libero obcaecati expedita voluptatum dolor maiores sapiente, dicta molestias ipsam. Quasi, consequatur? Tempore?
+				.content(tab-id="1")
+					.define__content
+						.define__flex
+							.define__content-img
+								img.lazyload.blur-up(src="./assets/images/define/img-1.png", alt="UTLG")
+						.define__content-text
+							.define__text-title
+								h4 Ung thư là gì ?
+							.define__text-min
+								.define__min-title
+									h4  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+								.define__min-content
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero tenetur ad sed dolores earum aut, exercitationem est et qui provident ab cupiditate officia ipsam hic fugit voluptas harum incidunt cum.
+							.define__text-min
+								.define__min-title.pt--4
+									h4  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+								.define__min-content
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi harum incidunt maxime quaerat. Dolorem, debitis ut, libero obcaecati expedita voluptatum dolor maiores sapiente, dicta molestias ipsam. Quasi, consequatur? Tempore?
+				.content(tab-id="2")
+					.define__content
+						.define__flex
+							.define__content-img
+								img.lazyload.blur-up(src="./assets/images/define/img-1.png", alt="UTLG")
+						.define__content-text
+							.define__text-title
+								h4 Tại sao ung thư nguy hiểm ?
+							.define__text-min
+								.define__min-title
+									h4  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+								.define__min-content
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero tenetur ad sed dolores earum aut, exercitationem est et qui provident ab cupiditate officia ipsam hic fugit voluptas harum incidunt cum.
+							.define__text-min
+								.define__min-title.pt--4
+									h4  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+								.define__min-content
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi harum incidunt maxime quaerat. Dolorem, debitis ut, libero obcaecati expedita voluptatum dolor maiores sapiente, dicta molestias ipsam. Quasi, consequatur? Tempore?
+				.content(tab-id="3")
+					.define__content
+						.define__flex
+							.define__content-img
+								img.lazyload.blur-up(src="./assets/images/define/img-1.png", alt="UTLG")
+						.define__content-text
+							.define__text-title
+								h4 Điều trị ung thư tốn kém ra sao ?
+							.define__text-min
+								.define__min-title
+									h4  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+								.define__min-content
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero tenetur ad sed dolores earum aut, exercitationem est et qui provident ab cupiditate officia ipsam hic fugit voluptas harum incidunt cum.
+							.define__text-min
+								.define__min-title.pt--4
+									h4  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+								.define__min-content
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi harum incidunt maxime quaerat. Dolorem, debitis ut, libero obcaecati expedita voluptatum dolor maiores sapiente, dicta molestias ipsam. Quasi, consequatur? Tempore?
+				.content(tab-id="4")
+					.define__content
+						.define__flex
+							.define__content-img
+								img.lazyload.blur-up(src="./assets/images/define/img-1.png", alt="UTLG")
+						.define__content-text
+							.define__text-title
+								h4 Các phương pháp điều trị ung thư tiên tiến ?
+							.define__text-min
+								.define__min-title
+									h4  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+								.define__min-content
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero tenetur ad sed dolores earum aut, exercitationem est et qui provident ab cupiditate officia ipsam hic fugit voluptas harum incidunt cum.
+							.define__text-min
+								.define__min-title.pt--4
+									h4  Lorem ipsum dolor sit amet, consectetuer adipiscing elit.Aenean commodo
+								.define__min-content
+									p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur distinctio expedita officiis, facilis similique obcaecati in temporibus hic ab magni provident animi! Porro consectetur mollitia itaque, quo recusandae ab laudantium! Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati nisi harum incidunt maxime quaerat. Dolorem, debitis ut, libero obcaecati expedita voluptatum dolor maiores sapiente, dicta molestias ipsam. Quasi, consequatur? Tempore?
