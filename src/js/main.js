@@ -144,11 +144,24 @@ const checkBanner = () => {
 		document.querySelector("div.header__top").classList.add("template--2");
 	}
 }
-//active menu
-const activeMenu = () => {
 
+// ACTIVE LINK MENU
+const activeLinkMenu = () => {
+	var link = "";
+	var url = window.location.pathname.split('/');
+	if (url[(url.length - 1)] == "") {
+		link = url[(url.length - 2)];
+	} else {
+		link = url[(url.length - 1)];
+	}
+	$('nav.navBar__itemWrapper .navBar--item a').each(function () {
+		var href = $(this).attr('href');
+		if (href === link) {
+			$(this).addClass('active');
+			$(this).parent().addClass('active');
+		}
+	});
 }
-
 
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
@@ -164,6 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	initializeSubMenu();
 	// SHOW MENU MOBILE
 	showMenuMobile();
+	//ACTIVE LINK MENU
+	activeLinkMenu();
 	// ACTIVE HEADER WHEN SCROLL
 	activeHeader();
 	// SHOW SEARCH
