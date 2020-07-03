@@ -1,0 +1,76 @@
+.Programs {
+	padding: 70px 0 140px;
+}
+
+.programslistName__wrapper {
+	margin-top: 40px;
+}
+
+.programsTableContent__wrapper {
+	margin-top: 20px;
+	background: rgba($color: #777171, $alpha: .1);
+	border-radius: 10px;
+}
+
+.programsTableContent__aside {
+	border-radius: 10px;
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+	padding: 25px 15px;
+}
+
+.programsTableContent--title {
+	cursor: pointer;
+	display: grid;
+	align-content: center;
+	user-select: none;
+	padding-bottom: 20px;
+	padding-top: 20px;
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+
+	h3,
+	h5 {
+		font-size: 1.125rem;
+	}
+
+	p {
+		font-size: 0.875rem;
+	}
+
+	h5,
+	p {
+		font-family: Averta-Light;
+	}
+
+	&.bg-xanh-2 {
+
+		h3,
+		h5,
+		p {
+			color: #ffffff;
+		}
+	}
+}
+
+.programsTableContent--item {
+	border-bottom: 1px solid rgba($color: #707070, $alpha: .2);
+
+	&.no-border {
+		border-bottom: 0;
+	}
+
+	&.no-content {
+		background: rgba($color: #777171, $alpha: .1);
+	}
+
+	&:first-child {
+		.programsTableContent--title {
+			border-radius: 10px 10px 0 0;
+			padding-top: 35px;
+		}
+	}
+}
+
+.programsTableContent__Value--item {
+	padding-bottom: 20px;
+	padding-top: 20px;
+}

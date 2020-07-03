@@ -36,6 +36,10 @@
 		border-radius: 10px;
 		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
 
+		.btn--icon {
+			padding-right: 15px;
+		}
+
 		h5 {
 			font-size: 1.25rem;
 			font-family: Averta-Bold;
