@@ -1,5 +1,13 @@
 .BuyOnline {
 	padding: 80px 0 140px;
+
+	@media (max-width: 767.98px) {
+		padding: 50px 0;
+	}
+
+	@media (max-width: 767.98px) {
+		padding: 25px 0;
+	}
 }
 
 .buyOnline__wrapper {
@@ -32,10 +40,28 @@
 	@media (min-width: 1440px) {
 		margin-left: 140px;
 	}
+
+	@media (max-width: 767.98px) {
+		margin-top: 25px;
+	}
+}
+
+.area--item {
+	@media (max-width: 1024.98px) {
+		margin-bottom: 20px;
+	}
 }
 
 .area--note {
 	margin-top: 42px;
 	font-family: Averta-Thin-Italic;
 	font-size: 1.125rem;
+
+	@media (max-width: 1024.98px) {
+		margin-top: 22px;
+	}
+
+	@media (max-width: 767.98px) {
+		margin-top: 10px;
+	}
 }
