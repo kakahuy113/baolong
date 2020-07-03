@@ -133,9 +133,7 @@ const getMapContact = () => {
         }
     })
 }
-const readPdfFancyBox = () => {
-
-    }
+const readPdfFancyBox = () => {}
     // check banner => add class
 const checkBanner = () => {
     let banner = document.querySelector("section.TitlePage__Banners");
