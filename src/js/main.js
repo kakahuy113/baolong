@@ -131,9 +131,21 @@ const getMapContact = () => {
         iframe: {
             preload: false
         }
-    })
+    });
 }
-const readPdfFancyBox = () => {}
+const readPdfFancyBox = () => {
+        $('a.fancybox__getPDF').fancybox({
+            buttons: [
+                'download',
+                'close'
+            ],
+            thumbs: {
+                autoStart: true,
+                axis: 'x'
+            },
+            iframe: {}
+        })
+    }
     // check banner => add class
 const checkBanner = () => {
     let banner = document.querySelector("section.TitlePage__Banners");

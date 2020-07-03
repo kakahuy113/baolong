@@ -1,3 +1,37 @@
 section.Pay
 	.tab-container.container
-		a(href="https://sna.edu.vn/sites/sna.edu.vn/files/Calendar/SNA_calendar.pdf") Click
+		section.pay__wrapper
+			.pay__title
+				h2.tt-u.ta-c QUY TRÌNH MUA ONLINE 3 BƯỚC
+			.pay__list
+				ul.list-tab
+					li.tt-u(toggle-for="1") đơn yêu cầu bảo hiểm
+					li.tt-u(toggle-for="2") kiểm tra và xác nhận
+					li.tt-u.active(toggle-for="3") thực hiện thanh toán
+		.tab-content
+			.contect(tab-id="3")
+				.pay__method
+					h4.pay__p Vui lòng chọn phương thức thanh toán
+					.pay__methodList
+						.pay__listItem
+							img.lazyload.blur-up(data-src="./assets/images/pay/momo.png", alt="momo")
+						.pay__listItem.vnpayqr
+							img.lazyload.blur-up(data-src="./assets/images/pay/vn.png", alt="vn-pay-qr")
+						.pay__listItem.text
+							span.tt-u CHuyển khoản ngân hàng
+				.pay__row
+					.pay__boxContent
+						h4.pay__p Hãy chuyển khoản cho chúng tôi với nội dung:
+						p "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+						h4.pay__p Thông tin thụ hưởng:
+						.pay__infor
+							p Tên tài khoản: 
+								span 
+							p Số tài khoản: 
+								span 
+							p Ngân hàng:  
+								span 
+							p Chi nhánh:  
+								span 
+						h4.pay__p Số tiền cần chuyển:
+						h3.pay__total 20.000.000 VND

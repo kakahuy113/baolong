@@ -17,16 +17,18 @@
 			margin-right: 5px;
 		}
 
-		h4 {
-			font-family: Averta-Bold;
-			font-size: 20px;
-			text-transform: uppercase;
-		}
-
 		h5 {
 			font-family: Averta-Bold;
-			font-size: 15px;
+			font-size: 13px;
 			text-transform: uppercase;
+
+			&.fs-20 {
+				font-size: 20px;
+			}
+
+			&.fs-15 {
+				font-size: 15px;
+			}
 		}
 	}
 
