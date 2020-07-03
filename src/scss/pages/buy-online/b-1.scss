@@ -1,0 +1,14 @@
+.BuyOnline {
+	padding: 80px 0 140px;
+}
+
+.buyOnline__wrapper {
+	@media (min-width: 1440px) {
+		width: calc(100% - 220px);
+		margin: 0 auto;
+	}
+}
+
+.area__wrapper {
+	margin-top: 35px;
+}
