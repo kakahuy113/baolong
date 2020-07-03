@@ -9,6 +9,33 @@
 	}
 }
 
+.Area {
+	padding-top: 30px;
+}
+
 .area__wrapper {
 	margin-top: 35px;
+}
+
+.area--desc {
+	p {
+		font-size: 1.125rem;
+		color: #777171;
+	}
+
+	p+p {
+		margin-top: 10px;
+	}
+}
+
+.areaList__wrapper {
+	@media (min-width: 1440px) {
+		margin-left: 140px;
+	}
+}
+
+.area--note {
+	margin-top: 42px;
+	font-family: Averta-Thin-Italic;
+	font-size: 1.125rem;
 }
