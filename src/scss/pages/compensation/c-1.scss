@@ -1,4 +1,8 @@
 section.compensation {
+    .fancybox-button.fancybox-button--close {
+        background: map-get($mau, vang) !important;
+        color: white !important;
+    }
     position: relative;
     .compensation__wrapper {
         margin: 0 auto;
@@ -146,6 +150,7 @@ section.compensation {
             }
         }
         .compensation__item-pdf {
+            cursor: pointer;
             display: flex;
             align-items: center;
             span {
