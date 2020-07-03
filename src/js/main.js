@@ -139,9 +139,9 @@ const readPdfFancyBox = () => {
     // check banner => add class
 const checkBanner = () => {
     let banner = document.querySelector("section.TitlePage__Banners");
-    let slider_banner = document.querySelector("section.MainSlider__Banners");
+    let heightHeader = document.querySelector('header').offsetHeight;
     if ((!banner)) {
-        // console.log("null");
+        document.querySelector('main').style.paddingTop = heightHeader + 'px';
     } else {
         document.querySelector("div.header__top").classList.add("template--2");
     }
