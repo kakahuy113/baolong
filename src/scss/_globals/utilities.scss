@@ -67,8 +67,8 @@
 }
 
 body {
+	overflow-x: hidden;
 
-	// overflow-x: hidden;
 	&.disabled {
 		overflow: hidden;
 	}
@@ -397,12 +397,18 @@ textarea {
 			}
 		}
 
-		&.color-2 {
+		&.checked-xanh-1 {
 			input {
-				border: 2px solid #677bc4;
-
 				&:after {
-					color: #677bc4;
+					color: map-get($mau, xanh-1);
+				}
+			}
+		}
+
+		&.checked-xanh-2 {
+			input {
+				&:after {
+					color: map-get($mau, xanh-2);
 				}
 			}
 		}
