@@ -1,0 +1,10 @@
+.step-buy-online--1 {
+	padding: 58px 0 160px;
+}
+
+.step-buy-online--1__wrapper {
+	@media (min-width: 1440px) {
+		width: calc(100% - 220px);
+		margin-left: auto;
+	}
+}
