@@ -92,42 +92,54 @@
 }
 
 .aboutTab--content {
-    padding: 25px;
-    margin-top: 55px;
-    background: #F1F0F0;
-    max-height: 515px;
-    overflow-y: auto;
-    h3 {
-        font-size: 1.125rem;
-        margin-bottom: 35px;
-    }
-    h5,
-    p {
-        color: #707070;
-        font-size: 1.125rem;
-        margin: 10px 0;
-    }
-    p {
-        font-family: Averta-Light;
-    }
-    ul {
-        padding-left: 0;
-        list-style-type: none;
-        li {
-            position: relative;
-            font-family: Averta-Light;
-            font-size: 1.125rem;
-            color: #707070;
-        }
-        li+li {
-            margin-top: 10px;
-        }
-    }
-    @media (max-width: 1024.98px) {
-        margin-top: 50px;
-    }
-    @media (max-width: 767.98px) {
-        margin-top: 25px;
-        max-height: 650px;
-    }
+	padding: 25px;
+	margin-top: 55px;
+	background: #F1F0F0;
+	max-height: 515px;
+	overflow-y: auto;
+
+	h3 {
+		font-size: 1.125rem;
+		margin-bottom: 35px;
+	}
+
+	h5 {
+		font-size: 1.125rem;
+	}
+
+	h5,
+	p {
+		color: #707070;
+		margin: 10px 0;
+	}
+
+	p {
+		font-size: 1rem;
+		font-family: Averta-Light;
+	}
+
+	ul {
+		padding-left: 0;
+		list-style-type: none;
+
+		li {
+			position: relative;
+			font-family: Averta-Light;
+			font-size: 1rem;
+			color: #707070;
+		}
+
+		li+li {
+			margin-top: 10px;
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		margin-top: 50px;
+	}
+
+	@media (max-width: 767.98px) {
+		margin-top: 25px;
+		max-height: 650px;
+	}
 }
