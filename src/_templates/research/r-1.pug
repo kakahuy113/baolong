@@ -10,11 +10,18 @@ section.Research
 					.research__content-item
 						.research__item
 							h4 Giới thiệu chương trình Bảo hiểm điều trị ung thư quốc tế
-							a.research__item-pdf(href="http://")
+							a.fancybox__getPDF.research__item-pdf(data-fancybox, data-src="#trueModal",data-modal="true", href="javascript:;")
 								img.lazyload.blur-up(src="./assets/images/research/pdf.png", alt="pdf")
 								span Xem tài liệu
+							.popup__PDF#trueModal
+								.popup__PDF-inner
+									h2.tt-u Qui tắc Bảo hiểm Ung thư CancerShiel
+									.view__PDF
+										iframe(src="https://sna.edu.vn/sites/sna.edu.vn/files/Calendar/SNA_calendar.pdf", frameborder="0")
+									.btnClose__popup
+										button.btnClose__PDF.tt-u(data-fancybox-close) Xác nhận
 						.research__item
 							h4 XEM BẢNG NGUYÊN TẮC BẢO HIỂM
-							a.research__item-pdf(href="http://")
+							a.fancybox__getPDF.research__item-pdf(data-fancybox, data-type="iframe", data-src="https://mozilla.github.io/pdf.js/web/viewer.html", href="javascript:;")
 								img.lazyload.blur-up(src="./assets/images/research/pdf.png", alt="pdf")
 								span Xem tài liệu

@@ -151,18 +151,24 @@ const readPdfFancyBox = () => {
 			autoStart: true,
 			axis: 'x'
 		},
-		iframe: {}
+		iframe: {
+			width: 100,
+			height: 100
+		}
 	})
 }
 
 // check banner => add class
 const checkBanner = () => {
-	let banner = document.querySelector(".TitlePage__Banners");
+	let banner = document.querySelector("section.TitlePage__Banners");
 	let heightHeader = document.querySelector('header').offsetHeight;
+	let mainBanner = document.querySelector(".MainSlider__Banners");
 	if ((!banner)) {
-		document.querySelector('main').style.paddingTop = heightHeader + 'px';
+		if (!mainBanner) {
+			document.querySelector('main').style.paddingTop = heightHeader + 'px';
+		}
 	} else {
-		document.querySelector(".header__top").classList.add("template--2");
+		document.querySelector("div.header__top").classList.add("template--2");
 	}
 }
 
@@ -176,14 +182,16 @@ const activeLinkMenu = () => {
 		link = url[(url.length - 1)];
 	}
 	$('nav.navBar__itemWrapper .navBar--item a').each(function () {
-		var href = $(this).attr('href');
+		var getHref = $(this).attr('href');
+		var href = getHref.split('/').pop();
 		if (href === link) {
 			$(this).addClass('active');
 			$(this).parent().addClass('active');
 		}
 	});
 	$('a.footer__site-maps--link').each(function () {
-		var href = $(this).attr('href');
+		var getHref = $(this).attr('href');
+		var href = getHref.split('/').pop();
 		if (href === link) {
 			$(this).addClass('active');
 			$(this).parent().addClass('active');
@@ -192,9 +200,9 @@ const activeLinkMenu = () => {
 }
 
 // CHANGE CONTENT TABLE MOBILE
-const changeContentMobile = () => {
-	const contentsMobile = document.querySelectorAll('[data-content--mobile]');
-	const contentsPc = document.querySelectorAll('[data-content--pc]');
+const changeContentTableMobile = () => {
+	const contentsMobile = document.querySelectorAll('.Programs [data-content--mobile]');
+	const contentsPc = document.querySelectorAll('.Programs [data-content--pc]');
 	const isChange = window.innerWidth < 1025;
 	if (isChange == true) {
 		contentsMobile.forEach((item) => {
@@ -208,9 +216,8 @@ const changeContentMobile = () => {
 		})
 	}
 }
-
-// SHOW MORE CONTENT PROGRAMS
-const showMoreContentPrograms = () => {
+//slide toggle category
+const slideCategoryPrograms = () => {
 	const rowContent = document.querySelectorAll(".programsTableContent--item");
 	const noBorder = document.querySelectorAll(".no-border");
 	$(".programsTableContent--item").click(function (e) {
@@ -232,10 +239,16 @@ const showMoreContentPrograms = () => {
 			noBorder.forEach((item) => {
 				item.classList.remove("opacity--2");
 			})
+			//hidden all item list
 			$(this).removeClass("opacity--2");
+			// add class active => item => click 
 			$(this).addClass("active");
+			// show content category
 			$(this).find(".show--more").css("display", "flex");
+			// find chil col-9 add hidden
 			$(this).children(".row").eq(0).children(".col-9").hide();
+			// add border category
+			// $(this).children(".row").eq(1).
 		}
 	});
 
