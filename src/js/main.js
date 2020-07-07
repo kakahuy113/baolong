@@ -209,6 +209,38 @@ const changeContentMobile = () => {
 	}
 }
 
+// SHOW MORE CONTENT PROGRAMS
+const showMoreContentPrograms = () => {
+	const rowContent = document.querySelectorAll(".programsTableContent--item");
+	const noBorder = document.querySelectorAll(".no-border");
+	$(".programsTableContent--item").click(function (e) {
+		e.preventDefault();
+		if ($(this).hasClass("active")) {
+			rowContent.forEach((item) => {
+				// hd-20 => opacity 20%
+				item.classList.remove("opacity--2");
+			})
+			$(this).removeClass("active");
+			$(this).find(".show--more").css("display", "none");
+			$(this).children(".row").eq(0).children(".col-9").show();
+		} else {
+			rowContent.forEach((item) => {
+				// hd-20 => opacity 20%
+				item.classList.remove("active");
+				item.classList.add("opacity--2");
+			})
+			noBorder.forEach((item) => {
+				item.classList.remove("opacity--2");
+			})
+			$(this).removeClass("opacity--2");
+			$(this).addClass("active");
+			$(this).find(".show--more").css("display", "flex");
+			$(this).children(".row").eq(0).children(".col-9").hide();
+		}
+	});
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
@@ -239,6 +271,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	checkBanner();
 	// CHANGE CONTENT TABLE MOBILE
 	changeContentMobile();
+	// SHOW MORE CONTENT PROGRAMS
+	showMoreContentPrograms();
 	// TAB
 	const tabAbout = new Tab(".About .tab-container");
 	const pageDefine = new Tab('.Define .tab-container');
