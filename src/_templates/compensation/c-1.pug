@@ -11,11 +11,25 @@ section.compensation
 					.compensation__content-item
 						.compensation__item
 							h4 XEM HƯỚNG DẪN YÊU CẦU BỒI THƯỜNG
-							a.compensation__item-pdf.fancybox__getPDF(data-fancybox, data-type="iframe", data-src="https://sna.edu.vn/sites/sna.edu.vn/files/Calendar/SNA_calendar.pdf")
+							a.compensation__item-pdf.fancybox__getPDF(data-fancybox, data-src="#trueModal--3",data-modal="true", href="javascript:;")
 								img.lazyload.blur-up(src="./assets/pdf.png", alt="pdf")
 								span Xem tài liệu
+							.popup__PDF#trueModal--3
+								.popup__PDF-inner
+									h2.tt-u XEM HƯỚNG DẪN YÊU CẦU BỒI THƯỜNG
+									.view__PDF
+										iframe(src="", frameborder="0")
+									.btnClose__popup
+										button.btnClose__PDF.tt-u(data-fancybox-close) Xác nhận
 						.compensation__item
 							h4 Lorem ipsum dolor
-							a.compensation__item-pdf.fancybox__getPDF(data-fancybox, data-type="iframe", data-src="https://sna.edu.vn/sites/sna.edu.vn/files/Calendar/SNA_calendar.pdf")
+							a.compensation__item-pdf.fancybox__getPDF(data-fancybox, data-src="#trueModal--4",data-modal="true", href="javascript:;")
 								img.lazyload.blur-up(src="./assets/pdf.png", alt="pdf")
 								span Xem tài liệu
+							.popup__PDF#trueModal--4
+								.popup__PDF-inner
+									h2.tt-u Lorem ipsum dolor
+									.view__PDF
+										iframe(src="", frameborder="0")
+									.btnClose__popup
+										button.btnClose__PDF.tt-u(data-fancybox-close) Xác nhận
