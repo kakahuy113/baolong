@@ -33,7 +33,7 @@ section.Define {
         margin-bottom: 34px;
         h3 {
             font-size: 20px;
-            font-weight: bold;
+            font-family: Averta-Bold;
             color: white;
             padding-left: 9px;
         }
@@ -174,16 +174,4 @@ section.Define {
             }
         }
     }
-}
-
-.fancybox-slide--iframe .fancybox-content {
-    width: 800px;
-    height: 600px;
-    max-width: 80%;
-    max-height: 1006px;
-    margin: 0;
-}
-
-.fancybox-button.fancybox-button--close {
-    background: map-get($mau, vang);
 }
