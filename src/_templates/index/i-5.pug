@@ -2,10 +2,10 @@ section.HomeFormRegister
 	.container
 		section.homeFormRegister__wrapper
 			.row
-				.col-lg-6
+				.col-lg-12
 					.homeFormRegisterMainForm__wrapper
 						.homeFormRegister__title
-							h2.cl-vang.tt-u.lcl.lcl-1 ĐIỀN THÔNG TIN ĐỂ THAM GIA BẢO HIỂM
+							h2.cl-vang.tt-u.lcl.lcl-1.ta-c ĐIỀN THÔNG TIN ĐỂ THAM GIA BẢO HIỂM
 						.homeFormRegister__mainForm
 							.form-group
 								.input-group
@@ -31,20 +31,17 @@ section.HomeFormRegister
 										.input-group-icon
 											img.lazyload.blur-up(data-src="./assets/icons-form/phone-xam-nhat.svg", alt="")
 									input.input-control(placeholder="SỐ ĐIỆN THOẠI")
-				.col-lg-6
+				.col-lg-12
 					.homeFormRegisterSubForm__wrapper
 						.homeFormRegister__btnAddMore.bg-vang
 							h5.tt-u.cl-trang.lcl.lcl-1 ĐĂNG KÝ CHO THÀNH VIÊN TRONG GIA ĐÌNH
 							.btn-icon.btn-icon-plus__vang.bg-trang
-						.homeFormRegister__membersRegister
+						.homeFormRegister__membersRegister.ov-h
 							.memberRegister--list.row
-								-for(i=1;i<6;i++)
-									.memberRegister--item.col-6.col-md-4
-										.memberRegister--name.lcl.lcl-1 THÀNH VIÊN #{i}
 								.memberRegister--item.col-6.col-md-4.active
-									.memberRegister--name.lcl.lcl-1.tt-u THÀNH VIÊN 6
+									.memberRegister--name.lcl.lcl-1.tt-u THÀNH VIÊN 1
 						.homeFormRegister__subForm
-							.subForm--memberRegisterName.cl-vang.tt-u.ta-c.lcl.lcl-1 THÀNH VIÊN 6
+							.subForm--memberRegisterName.cl-vang.tt-u.ta-c.lcl.lcl-1 THÀNH VIÊN 1
 							.form-group
 								.input-group.input-group-sm
 									.input-group-prepend
@@ -63,5 +60,5 @@ section.HomeFormRegister
 									h5.cl-trang HOÀN TẤT
 								.btn-icon.btn-icon-minus__trang.bg-vang
 			.block-btn-submitForm.ta-c
-				.btn.btn--submitForm.bg-xanh-2
+				a(href="buy-online.html").btn.btn--submitForm.bg-xanh-2.h-38px
 					h5.cl-trang.fs-20.tt-u XEM PHÍ BẢO HIỂM

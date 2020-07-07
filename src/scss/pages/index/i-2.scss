@@ -72,7 +72,8 @@
 	margin-top: 30px;
 
 	p {
-		font-size: 1.125rem;
+		font-family: Averta-Light;
+		font-size: 1rem;
 		color: #ffffff;
 	}
 }
@@ -176,12 +177,6 @@
 
 		&:first-child {
 			padding-right: 5px;
-		}
-	}
-
-	@media (min-width: 1440px) {
-		li {
-			font-size: 1.125rem;
 		}
 	}
 

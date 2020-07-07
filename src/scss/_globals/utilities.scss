@@ -40,7 +40,7 @@
 	cursor: pointer;
 	position: fixed;
 	right: 15px;
-	bottom: 30%;
+	bottom: 10%;
 	z-index: 200;
 
 	.hot_line--icon {
@@ -454,11 +454,13 @@ textarea {
 			&:after {
 				content: '\2713';
 				position: absolute;
+				transform: translate(-50%, -50%);
+				top: -1%;
+				left: 40%;
 				width: 50%;
 				height: 50%;
-				transform: translate(-50%, -50%);
-				top: 35%;
-				left: 55%;
+				font-size: 30px;
+				font-weight: 700;
 				pointer-events: none;
 				opacity: 0;
 				color: map-get($mau, vang);
@@ -493,7 +495,7 @@ textarea {
 		padding: 20px;
 
 		p {
-			font-size: 1.125rem;
+			font-size: 1rem;
 			font-family: Averta-Light;
 			color: #777171;
 		}

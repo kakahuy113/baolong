@@ -157,12 +157,12 @@ const readPdfFancyBox = () => {
 
 // check banner => add class
 const checkBanner = () => {
-	let banner = document.querySelector("section.TitlePage__Banners");
+	let banner = document.querySelector(".TitlePage__Banners");
 	let heightHeader = document.querySelector('header').offsetHeight;
 	if ((!banner)) {
 		document.querySelector('main').style.paddingTop = heightHeader + 'px';
 	} else {
-		document.querySelector("div.header__top").classList.add("template--2");
+		document.querySelector(".header__top").classList.add("template--2");
 	}
 }
 
@@ -241,6 +241,19 @@ const showMoreContentPrograms = () => {
 
 }
 
+const activeHomeFormRegister = () => {
+	const btn = document.querySelector('.homeFormRegister__btnAddMore');
+	const cols = document.querySelectorAll('.homeFormRegister__wrapper .col-lg-12');
+	const wrapper = document.querySelector('.homeFormRegister__wrapper');
+	btn.addEventListener('click', () => {
+		cols.forEach((item) => {
+			item.classList.remove('col-lg-12');
+			item.classList.add('col-lg-6');
+			wrapper.classList.add('active');
+		})
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
@@ -273,6 +286,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	changeContentMobile();
 	// SHOW MORE CONTENT PROGRAMS
 	showMoreContentPrograms();
+	// ACTIVE HOME REGISTER
+	activeHomeFormRegister();
 	// TAB
 	const tabAbout = new Tab(".About .tab-container");
 	const pageDefine = new Tab('.Define .tab-container');

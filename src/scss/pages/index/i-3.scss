@@ -17,8 +17,8 @@
 
 .homeAboutProducts__wrapper {
 	@media (min-width: 1440px) {
-		width: calc(100% - 138px);
-		margin-left: auto;
+		width: calc(100% - 220px);
+		margin: 0 auto;
 	}
 }
 
@@ -28,18 +28,12 @@
 
 	p {
 		font-family: Averta-Light;
-		font-size: 1.125rem;
+		font-size: 1rem;
 		color: #707070;
 	}
 
 	p+p {
 		margin-top: 10px;
-	}
-
-	@media (max-width: 1024.98px) {
-		p {
-			font-size: 1rem;
-		}
 	}
 }
 
@@ -105,9 +99,8 @@
 
 		a {
 			position: relative;
-			display: inline-block;
 			color: #777171;
-			font-size: 1.25rem;
+			font-size: 1rem;
 			font-weight: 700;
 			padding-left: 10px;
 			transition: .3s all ease-in-out;
@@ -133,12 +126,6 @@
 	@media (max-width: 1024.98px) {
 		.info__title {
 			h3 {
-				font-size: 1rem;
-			}
-		}
-
-		.info__list {
-			a {
 				font-size: 1rem;
 			}
 		}
