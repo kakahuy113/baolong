@@ -200,7 +200,7 @@ const activeLinkMenu = () => {
 }
 
 // CHANGE CONTENT TABLE MOBILE
-const changeContentTableMobile = () => {
+const changeContentMobile = () => {
 	const contentsMobile = document.querySelectorAll('.Programs [data-content--mobile]');
 	const contentsPc = document.querySelectorAll('.Programs [data-content--pc]');
 	const isChange = window.innerWidth < 1025;
@@ -217,7 +217,7 @@ const changeContentTableMobile = () => {
 	}
 }
 //slide toggle category
-const slideCategoryPrograms = () => {
+const showMoreContentPrograms = () => {
 	const rowContent = document.querySelectorAll(".programsTableContent--item");
 	const noBorder = document.querySelectorAll(".no-border");
 	$(".programsTableContent--item").click(function (e) {
@@ -258,13 +258,15 @@ const activeHomeFormRegister = () => {
 	const btn = document.querySelector('.homeFormRegister__btnAddMore');
 	const cols = document.querySelectorAll('.homeFormRegister__wrapper .col-lg-12');
 	const wrapper = document.querySelector('.homeFormRegister__wrapper');
-	btn.addEventListener('click', () => {
-		cols.forEach((item) => {
-			item.classList.remove('col-lg-12');
-			item.classList.add('col-lg-6');
-			wrapper.classList.add('active');
+	if (btn) {
+		btn.addEventListener('click', () => {
+			cols.forEach((item) => {
+				item.classList.remove('col-lg-12');
+				item.classList.add('col-lg-6');
+				wrapper.classList.add('active');
+			})
 		})
-	})
+	}
 }
 
 document.addEventListener('DOMContentLoaded', () => {
