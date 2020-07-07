@@ -4,6 +4,7 @@ import {
 } from './util/utilities';
 import Cookie from './lib/Cookie';
 import Tab from './lib/Tab';
+import Swiper from 'swiper';
 
 // MAIN BANNER WEBSITE
 const mainBanner = () => {
@@ -24,6 +25,12 @@ const mainBanner = () => {
             type: 'bullets',
             clickable: true,
         },
+    })
+}
+
+const sliderMembers = () => {
+    let membersSlider = new Swiper('.ListMembers__Slider .swiper-container', {
+        slidesPerView: 5,
     })
 }
 
@@ -257,6 +264,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initDatePicker();
     // MAIN BANNER WEBSITE
     mainBanner();
+    // MEMBERS SLIDER
+    sliderMembers();
     // INITALIZE SUBMENU
     initializeSubMenu();
     // SHOW MENU MOBILE
@@ -274,8 +283,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // check banner
     checkBanner();
     // CHANGE CONTENT TABLE MOBILE
-    changeContentTableMobile();
-    slideCategoryPrograms();
+    changeContentMobile();
+    // SHOW MORE CONTENT PROGRAMS
+    showMoreContentPrograms();
     // TAB
     const tabAbout = new Tab(".About .tab-container");
     const pageDefine = new Tab('.Define .tab-container');
@@ -285,7 +295,7 @@ document.addEventListener('scroll', () => {});
 
 window.addEventListener('resize', () => {
     // CHANGE CONTENT TABLE MOBILE
-    changeContentTableMobile();
+    changeContentMobile();
 })
 
 // CHECK FORM VALID
