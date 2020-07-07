@@ -169,6 +169,14 @@
 	background: map-get($mau, xam);
 }
 
+.bg-xam-opacity-2 {
+	background: rgba(map-get($mau, xam), $alpha: .2)
+}
+
 .bg-trang {
 	background: map-get($mau, trang);
+}
+
+.border-vang-1px {
+	border: 1px solid map-get($mau, vang) !important;
 }

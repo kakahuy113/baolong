@@ -1,5 +1,94 @@
-section.step-buy-online--1
+section.StepBuyOnline__1
 	.container
-		.step-buy-online--1__wrapper
-			.Core__titlePage
-				h2.cl-xanh-2.tt-u.ta-c QUY TRÌNH MUA ONLINE 3 BƯỚC
+		.Core__titlePage
+			h2.cl-xanh-2.tt-u.ta-c QUY TRÌNH MUA ONLINE 3 BƯỚC
+		.overview_step_buy_online__wrapper
+			.overview_step_buy_online--list.row
+				.overview_step_buy_online--item.col-4.active
+					a(href="step-buy-online__1.html").btn.btn--lg.border-vang-1px.no-shadow.w-100
+						h5.tt-u.cl-vang.ta-c.lcl.lcl-2 đơn yêu cầu bảo hiểm
+				.overview_step_buy_online--item.col-4
+					a(href="step-buy-online__1.html").btn.btn--lg.border-vang-1px.no-shadow.w-100
+						h5.tt-u.cl-vang.ta-c.lcl.lcl-2 kiểm tra và xác nhận
+				.overview_step_buy_online--item.col-4
+					a(href="step-buy-online__1.html").btn.btn--lg.border-vang-1px.no-shadow.w-100
+						h5.tt-u.cl-vang.ta-c.lcl.lcl-2 thực hiện thanh toán
+		.step_buy_online_1__wrapper
+			.ListMembers__Slider
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide.memberSlider--item.active
+							h4.memberSlider--name.tt-u.fw-700 Chủ hợp đồng
+						.swiper-slide.memberSlider--item
+							h4.memberSlider--name.tt-u.fw-700 Thành viên 1
+						.swiper-slide.memberSlider--item
+							h4.memberSlider--name.tt-u.fw-700 thành viên 2
+						.swiper-slide.memberSlider--item
+							h4.memberSlider--name.tt-u.fw-700 thành viên 3
+						.swiper-slide.memberSlider--item
+							h4.memberSlider--name.tt-u.fw-700 thành viên 4
+			.step_buy_online_1--form
+				form(action="#")
+					.step_buy_online_1--formRow.row
+						.form-group.col-md-7
+							.input-group
+								.input-group-prepend.bg-xam-opacity-2
+									.input-group-icon
+										img.lazyload.blur-up(data-src="./assets/icons-form/user-trang.svg", alt="")
+								input.input-control(placeholder="- - - HỌ TÊN - - -")
+						.form-group.col-md-5
+							.input-group
+								.input-group-prepend.bg-xam-opacity-2
+									.input-group-icon
+										img.lazyload.blur-up(data-src="./assets/icons-form/date-trang.svg", alt="")
+								input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -")
+						.form-group.col-md-7
+							.input-group
+								.input-group-prepend.bg-xam-opacity-2
+									.input-group-icon
+										img.lazyload.blur-up(data-src="./assets/icons-form/mail-trang.svg", alt="")
+								input.input-control(placeholder="- - - EMAIL - - -")
+						.form-group.col-md-5
+							.input-group
+								.input-group-prepend.bg-xam-opacity-2
+									.input-group-icon
+										img.lazyload.blur-up(data-src="./assets/icons-form/phone-trang.svg", alt="")
+								input.input-control(placeholder="- - - ĐIỆN THOẠI - - -")
+						.form-group.col-lg-7
+							.row
+								.form-group.col-lg-6.col-md-7
+									.input-group
+										.input-group-prepend.bg-xam-opacity-2
+											.input-group-icon
+												img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
+										select.custom-select
+											option(selected disabled hidden) - - - QUỐC TỊCH - - -
+											option VIỆT NAM
+											option THÁI LAN
+								.form-group.col-lg-6.col-md-5
+									.input-group
+										.input-group-prepend.bg-xam-opacity-2
+											.input-group-icon
+												img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
+										select.custom-select
+											option(selected disabled hidden) - - - GIỚI TÍNH - - -
+											option NAM
+											option NỮ
+						.form-group.col-lg-5
+							.input-group.have-select-group-prepend.h-100.bg-trang
+								.select-group-prepend.bg-xam-opacity-2
+									.select-group-icon
+										img.lazyload.blur-up.mx-at.d-b(data-src="./assets/icons-form/card-trang.svg", alt="")
+									select.select-prepend
+										option(selected disabled hidden)
+											option(selected disabled hidden data-content--mobile="Chọn" data-content--pc="CMND/ID/PASSPORT") CMND/ID/PASSPORT
+											option CMND
+											option ID
+											option PASSPORT
+								input.input-control(placeholder="- - - Nhập số - - -")
+						.form-group.col-md-12
+							.input-group
+								.input-group-prepend.bg-xam-opacity-2
+									.input-group-icon
+										img.lazyload.blur-up(data-src="./assets/icons-form/location-trang.svg", alt="")
+								input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -")

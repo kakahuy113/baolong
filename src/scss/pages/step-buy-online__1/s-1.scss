@@ -1,10 +1,107 @@
-.step-buy-online--1 {
+.StepBuyOnline__1 {
 	padding: 58px 0 160px;
+
+	@media (max-width: 767.98px) {
+		padding: 50px 0;
+	}
+
+	@media (max-width: 575.98px) {
+		padding: 25px 0;
+	}
 }
 
-.step-buy-online--1__wrapper {
+.step_buy_online_1__wrapper {
 	@media (min-width: 1440px) {
 		width: calc(100% - 220px);
-		margin-left: auto;
+		margin: 0 auto;
+	}
+}
+
+.overview_step_buy_online--item {
+	&.active {
+		.btn--lg {
+			background: map-get($mau, vang);
+
+			h5 {
+				color: map-get($mau, trang);
+			}
+		}
+	}
+}
+
+.ListMembers__Slider {
+	margin-top: 40px;
+	border-radius: 10px 10px 0 0;
+	overflow: hidden;
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+}
+
+.memberSlider--item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 85px;
+	padding: 0 10px;
+	background: #ffffff;
+
+	&.active {
+		background: #09327E;
+
+		.memberSlider--name {
+			color: #ffffff;
+		}
+	}
+
+	+.memberSlider--item {
+		border-left: 1px solid rgba($color: #707070, $alpha: .2);
+	}
+}
+
+.memberSlider--name {
+	cursor: pointer;
+	user-select: none;
+	color: #09327E;
+	font-size: 1.25rem;
+}
+
+.step_buy_online_1--form {
+	border-radius: 0 0 10px 10px;
+	padding: 50px;
+	background: rgba($color: #777171, $alpha: .1);
+
+	@media (max-width: 1439.98px) {
+		padding: 30px;
+	}
+}
+
+.step_buy_online_1--formRow {
+	>.form-group+.form-group {
+		margin-top: 45px;
+	}
+
+	.form-group {
+		&:nth-child(2) {
+			margin-top: 0;
+		}
+	}
+
+	@media (max-width: 1439.98px) {
+		>.form-group+.form-group {
+			margin-top: 20px;
+		}
+
+		.form-group {
+			&:nth-child(2) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	@media (max-width: 767.98px) {
+		.form-group {
+			&:nth-child(2) {
+				margin-top: 20px;
+			}
+		}
 	}
 }
