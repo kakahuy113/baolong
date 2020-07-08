@@ -30,7 +30,22 @@ const mainBanner = () => {
 
 const sliderMembers = () => {
 	let membersSlider = new Swiper('.ListMembers__Slider .swiper-container', {
-		slidesPerView: 5,
+		slidesPerView: 2,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+			},
+			1025: {
+				slidesPerView: 4,
+			},
+			1440: {
+				slidesPerView: 5,
+			}
+		},
+		navigation: {
+			nextEl: '.ListMembers__Slider .swiper-button-next',
+			prevEl: '.ListMembers__Slider .swiper-button-prev',
+		},
 	})
 }
 
@@ -201,8 +216,8 @@ const activeLinkMenu = () => {
 
 // CHANGE CONTENT TABLE MOBILE
 const changeContentMobile = () => {
-	const contentsMobile = document.querySelectorAll('.Programs [data-content--mobile]');
-	const contentsPc = document.querySelectorAll('.Programs [data-content--pc]');
+	const contentsMobile = document.querySelectorAll('[data-content--mobile]');
+	const contentsPc = document.querySelectorAll('[data-content--pc]');
 	const isChange = window.innerWidth < 1025;
 	if (isChange == true) {
 		contentsMobile.forEach((item) => {
@@ -274,23 +289,23 @@ const addMember = () => {
 	// Complete AddMember
 	$('.btn--submitForm').click(() => {
 		const inputs = document.querySelectorAll('.homeFormRegister__subForm input');
-		
-			if (inputs[0].value != '' && inputs[1].value != '') {
-				btnAddMember = true;
-				document.querySelectorAll(".memberRegister--name").forEach(item => {
-					if(item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
-						item.setAttribute("data-name" , `${$('.homeFormRegister__subForm .input-for-name').val()}`)
-						item.setAttribute("data-birthday" , `${$('.homeFormRegister__subForm .date-picker').val()}`)
-					} else console.log("Error");
-					
-				})
-				$('.homeFormRegister__subForm').css('display', 'none');
-				inputs.forEach(item => {
-					item.value = ''
-				})
-			} else return;
-	
-		
+
+		if (inputs[0].value != '' && inputs[1].value != '') {
+			btnAddMember = true;
+			document.querySelectorAll(".memberRegister--name").forEach(item => {
+				if (item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
+					item.setAttribute("data-name", `${$('.homeFormRegister__subForm .input-for-name').val()}`)
+					item.setAttribute("data-birthday", `${$('.homeFormRegister__subForm .date-picker').val()}`)
+				} else console.log("Error");
+
+			})
+			$('.homeFormRegister__subForm').css('display', 'none');
+			inputs.forEach(item => {
+				item.value = ''
+			})
+		} else return;
+
+
 		document.querySelectorAll('.memberRegister--name').forEach((item) => {
 			item.parentNode.classList.remove('active');
 		});
@@ -300,20 +315,20 @@ const addMember = () => {
 	const memberItem = document.querySelector('.memberRegister--item');
 	const contentMember = document.querySelector('.memberRegister--name');
 	const btnRegisterMember = document.querySelector('.btn-icon');
-	
+
 	if (btnRegisterMember) {
 		btnRegisterMember.addEventListener('click', () => {
 			if (btnAddMember == true) {
 				const HowmanyMember = document.querySelectorAll(
 					'.memberRegister--item'
 				).length;
-				
+
 				const tempItem = memberItem.outerHTML.replace(
 					`${contentMember.innerHTML}`,
 					`THÀNH VIÊN ${HowmanyMember + 1}`
 				);
-				const anothertemp = tempItem.replace("data-name" , "")
-				const aaaa = anothertemp.replace("data-birthday" , "")
+				const anothertemp = tempItem.replace("data-name", "")
+				const aaaa = anothertemp.replace("data-birthday", "")
 				$('.memberRegister--list').append(`${aaaa}`);
 			}
 			btnAddMember = false;
@@ -335,7 +350,7 @@ const EditMember = () => {
 					});
 				item.parentNode.classList.add('active');
 				document.querySelector('.homeFormRegister__subForm')
-				let tempname= item.getAttribute("data-name")
+				let tempname = item.getAttribute("data-name")
 				let tempbirthDay = item.getAttribute("data-birthday")
 				$('.input-for-name').val(`${tempname}`);
 				$('.homeFormRegister__subForm .date-picker').val(`${tempbirthDay}`);

@@ -1,177 +1,213 @@
-section.Define {
-    .define__wrapper {
-        background-color: white;
-        padding: 100px 0;
-        display: flex;
-        @media (max-width: 1199.98px) {
-            display: block;
-            padding: 50px 0;
-        }
-        @media (max-width: 1024.98px) {}
-        @media (max-width: 575.98px) {
-            padding: 25px 0;
-        }
-    }
-    .define__list {
-        width: 327px;
-        background: #F1F0F0;
-        border-radius: 8px;
-        // padding: 0 16px;
-        @media (max-width: 1199.98px) {
-            width: 80%;
-            margin: auto;
-        }
-        @media (max-width: 575.98px) {
-            width: 100%;
-        }
-    }
-    .define__list-tilte {
-        padding: 13px 10px;
-        display: flex;
-        background: map-get($mau, vang);
-        border-radius: 8px;
-        margin-bottom: 34px;
-        h3 {
-            font-size: 20px;
-            font-family: Averta-Bold;
-            color: white;
-            padding-left: 9px;
-        }
-    }
-    .define__list-item {
-        padding: 0 16px;
-        padding-bottom: 40px;
-        ul {
-            padding-inline-start: 18px;
-            list-style: none;
-            li {
-                cursor: pointer;
-                position: relative;
-                padding: 10px 0;
-                padding-left: 19px;
-                border-bottom: solid #929292 1px;
-                font-size: 16px;
-                font-family: Averta-Bold;
-                margin-bottom: 10px;
-                color: map-get($mau, xam);
-                &:last-child {
-                    margin-bottom: 0;
-                }
-                &::before {
-                    position: absolute;
-                    width: 8px;
-                    height: 8px;
-                    background: map-get($mau, xam);
-                    left: 0;
-                    content: "";
-                    border-radius: 50%;
-                    top: 50%;
-                    transform: translateY(-50%);
-                }
-                &.active {
-                    color: #09327E;
-                    &::before {
-                        background: #09327E;
-                    }
-                }
-            }
-        }
-    }
-    .define__content {
-        transition: 1s all ease-in-out;
-        width: 100%;
-        background: #F1F0F0;
-        display: flex;
-        margin-left: 40px;
-        @media (max-width: 1199.98px) {
-            margin-top: 40px;
-            margin-left: 0;
-        }
-        @media (max-width: 768.98px) {
-            display: block;
-        }
-        @media (max-width: 575.98px) {
-            margin-top: 20px;
-        }
-    }
-    .define__content-img {
-        width: 462px;
-        height: 558px;
-        background: map-get($mau, xam);
-        @media (max-width: 1499.98px) {
-            width: 300px;
-        }
-        @media (max-width: 768.98px) {
-            width: 100%;
-            height: 768px;
-        }
-        @media (max-width: 575.98px) {
-            height: 300px;
-        }
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    }
-    .define__content-text {
-        padding: 45px;
-        max-height: 558px;
-        overflow-y: auto;
-        @media (max-width: 767.98px) {
-            padding: 20px;
-        }
-        @media (max-width: 1499.98px) {
-            padding: 20px;
-        }
-        .define__text-title {
-            margin-bottom: 20px;
-            h4 {
-                position: relative;
-                display: inline-block;
-                font-size: 30px;
-                font-family: Averta-Bold;
-                color: #09327E;
-                padding-bottom: 8.5px;
-                border-bottom: solid 1px #09327E;
-                &::before {
-                    position: absolute;
-                    width: 11px;
-                    height: 11px;
-                    border-radius: 50%;
-                    content: '';
-                    bottom: -6px;
-                    left: 0;
-                    background: #09327E;
-                }
-            }
-        }
-    }
-    .define__text-min {
-        .pt--4 {
-            margin-top: 40px;
-            @media (max-width: 767.98px) {
-                margin-top: 20px;
-            }
-        }
-        .define__min-title {
-            margin-bottom: 40px;
-            @media (max-width: 767.98px) {
-                margin-bottom: 20px;
-            }
-            h4 {
-                font-size: 20px;
-                font-family: Averta-Bold;
-                color: map-get($mau, xam);
-            }
-        }
-        .define__min-content {
-            p {
-                color: #707070;
-                font-size: 16px;
-                color: map-get($mau, xam);
-                font-family: Averta-Light;
-            }
-        }
-    }
+.Define {
+	padding: 100px 0;
+
+	@media (max-width: 1024.98px) {
+		padding: 50px 0;
+	}
+
+	@media (max-width: 575.98px) {
+		padding: 25px 0;
+	}
+}
+
+.define__wrapper {
+	background-color: white;
+	display: flex;
+
+	@media (max-width: 1199.98px) {
+		display: block;
+	}
+}
+
+.define__list {
+	width: 327px;
+	background: #F1F0F0;
+	border-radius: 8px;
+
+	@media (max-width: 1199.98px) {
+		width: 80%;
+		margin: auto;
+	}
+
+	@media (max-width: 575.98px) {
+		width: 100%;
+	}
+}
+
+.define__list-tilte {
+	padding: 13px 10px;
+	display: flex;
+	background: map-get($mau, vang);
+	border-radius: 8px;
+	margin-bottom: 30px;
+
+	h3 {
+		font-size: 20px;
+		font-family: Averta-Bold;
+		color: white;
+		padding-left: 9px;
+	}
+}
+
+.define__list-item {
+	padding: 0 16px;
+	padding-bottom: 40px;
+
+	ul {
+		padding-inline-start: 18px;
+		list-style: none;
+
+		li {
+			cursor: pointer;
+			position: relative;
+			padding: 10px 0;
+			padding-left: 19px;
+			border-bottom: solid #929292 1px;
+			font-size: 16px;
+			font-family: Averta-Bold;
+			margin-bottom: 10px;
+			color: map-get($mau, xam);
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+
+			&::before {
+				position: absolute;
+				width: 8px;
+				height: 8px;
+				background: map-get($mau, xam);
+				left: 0;
+				content: "";
+				border-radius: 50%;
+				top: 50%;
+				transform: translateY(-50%);
+			}
+
+			&.active {
+				color: #09327E;
+
+				&::before {
+					background: #09327E;
+				}
+			}
+		}
+	}
+}
+
+.define__content {
+	transition: 1s all ease-in-out;
+	width: 100%;
+	display: flex;
+	padding-left: 40px;
+
+	@media (max-width: 1199.98px) {
+		margin-top: 40px;
+		padding-left: 0;
+	}
+
+	@media (max-width: 768.98px) {
+		display: block;
+	}
+
+	@media (max-width: 575.98px) {
+		margin-top: 20px;
+	}
+}
+
+.define__content-img {
+	width: 462px;
+	height: 558px;
+	background: map-get($mau, xam);
+
+	@media (max-width: 1499.98px) {
+		width: 300px;
+	}
+
+	@media (max-width: 768.98px) {
+		width: 100%;
+		height: 768px;
+	}
+
+	@media (max-width: 575.98px) {
+		height: 300px;
+	}
+
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
+
+.define__content-text {
+	padding: 45px;
+	max-height: 558px;
+	overflow-y: auto;
+	background: #F1F0F0;
+
+	@media (max-width: 767.98px) {
+		padding: 20px;
+	}
+
+	@media (max-width: 1499.98px) {
+		padding: 20px;
+	}
+
+	.define__text-title {
+		margin-bottom: 20px;
+
+		h4 {
+			position: relative;
+			display: inline-block;
+			font-size: 30px;
+			font-family: Averta-Bold;
+			color: #09327E;
+			padding-bottom: 8.5px;
+			border-bottom: solid 1px #09327E;
+
+			&::before {
+				position: absolute;
+				width: 11px;
+				height: 11px;
+				border-radius: 50%;
+				content: '';
+				bottom: -6px;
+				left: 0;
+				background: #09327E;
+			}
+		}
+	}
+}
+
+.define__text-min {
+	.pt--4 {
+		margin-top: 40px;
+
+		@media (max-width: 767.98px) {
+			margin-top: 20px;
+		}
+	}
+
+	.define__min-title {
+		margin-bottom: 40px;
+
+		@media (max-width: 767.98px) {
+			margin-bottom: 20px;
+		}
+
+		h4 {
+			font-size: 1.25rem;
+			font-family: Averta-Bold;
+			color: map-get($mau, xam);
+		}
+	}
+
+	.define__min-content {
+		p {
+			font-family: Averta-Light;
+			color: #707070;
+			font-size: 1rem;
+		}
+	}
 }

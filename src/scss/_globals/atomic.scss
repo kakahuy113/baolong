@@ -149,6 +149,10 @@
 	color: map-get($mau, xanh-2);
 }
 
+.cl-xanh-2 {
+	color: map-get($mau, xanh-3);
+}
+
 .cl-vang {
 	color: map-get($mau, vang);
 }
@@ -167,6 +171,10 @@
 
 .bg-xanh-2 {
 	background: map-get($mau, xanh-2);
+}
+
+.bg-xanh-3 {
+	background: map-get($mau, xanh-3);
 }
 
 .bg-vang {
