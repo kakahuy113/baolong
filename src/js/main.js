@@ -269,6 +269,82 @@ const activeHomeFormRegister = () => {
 	}
 }
 
+const addMember = () => {
+	var btnAddMember = false;
+	// Complete AddMember
+	$('.btn--submitForm').click(() => {
+		const inputs = document.querySelectorAll('.homeFormRegister__subForm input');
+		
+			if (inputs[0].value != '' && inputs[1].value != '') {
+				btnAddMember = true;
+				document.querySelectorAll(".memberRegister--name").forEach(item => {
+					if(item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
+						item.setAttribute("data-name" , `${$('.homeFormRegister__subForm .input-for-name').val()}`)
+						item.setAttribute("data-birthday" , `${$('.homeFormRegister__subForm .date-picker').val()}`)
+					} else console.log("Error");
+					
+				})
+				$('.homeFormRegister__subForm').css('display', 'none');
+				inputs.forEach(item => {
+					item.value = ''
+				})
+			} else return;
+	
+		
+		document.querySelectorAll('.memberRegister--name').forEach((item) => {
+			item.parentNode.classList.remove('active');
+		});
+	});
+
+	// Add Member
+	const memberItem = document.querySelector('.memberRegister--item');
+	const contentMember = document.querySelector('.memberRegister--name');
+	const btnRegisterMember = document.querySelector('.btn-icon');
+	
+	if (btnRegisterMember) {
+		btnRegisterMember.addEventListener('click', () => {
+			if (btnAddMember == true) {
+				const HowmanyMember = document.querySelectorAll(
+					'.memberRegister--item'
+				).length;
+				
+				const tempItem = memberItem.outerHTML.replace(
+					`${contentMember.innerHTML}`,
+					`THÀNH VIÊN ${HowmanyMember + 1}`
+				);
+				const anothertemp = tempItem.replace("data-name" , "")
+				const aaaa = anothertemp.replace("data-birthday" , "")
+				$('.memberRegister--list').append(`${aaaa}`);
+			}
+			btnAddMember = false;
+			EditMember();
+		});
+	}
+};
+
+//EditMember
+const EditMember = () => {
+	document
+		.querySelectorAll('.memberRegister--name')
+		.forEach((item, index) => {
+			item.parentNode.classList.remove('active');
+			item.addEventListener('click', () => {
+				document.querySelectorAll('.memberRegister--name')
+					.forEach((item) => {
+						item.parentNode.classList.remove('active');
+					});
+				item.parentNode.classList.add('active');
+				document.querySelector('.homeFormRegister__subForm')
+				let tempname= item.getAttribute("data-name")
+				let tempbirthDay = item.getAttribute("data-birthday")
+				$('.input-for-name').val(`${tempname}`);
+				$('.homeFormRegister__subForm .date-picker').val(`${tempbirthDay}`);
+				document.querySelector('.subForm--memberRegisterName').innerHTML = item.innerHTML;
+				document.querySelector('.homeFormRegister__subForm').style.display = 'block';
+			});
+		});
+};
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
@@ -303,6 +379,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	showMoreContentPrograms();
 	// ACTIVE HOME REGISTER
 	activeHomeFormRegister();
+	//Add Member
+	addMember();
+	//Edit Member;
+	EditMember();
 	// TAB
 	const tabAbout = new Tab(".About .tab-container");
 	const pageDefine = new Tab('.Define .tab-container');
