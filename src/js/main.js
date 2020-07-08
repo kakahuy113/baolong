@@ -281,7 +281,7 @@ const addMember = () => {
 					if(item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
 						item.setAttribute("data-name" , `${$('.homeFormRegister__subForm .input-for-name').val()}`)
 						item.setAttribute("data-birthday" , `${$('.homeFormRegister__subForm .date-picker').val()}`)
-					} else console.log("Error");
+					} else return;
 					
 				})
 				$('.homeFormRegister__subForm').css('display', 'none');
@@ -317,6 +317,7 @@ const addMember = () => {
 				$('.memberRegister--list').append(`${aaaa}`);
 			}
 			btnAddMember = false;
+			deleteMember();
 			EditMember();
 		});
 	}
@@ -341,9 +342,37 @@ const EditMember = () => {
 				$('.homeFormRegister__subForm .date-picker').val(`${tempbirthDay}`);
 				document.querySelector('.subForm--memberRegisterName').innerHTML = item.innerHTML;
 				document.querySelector('.homeFormRegister__subForm').style.display = 'block';
+				//Delete Member
+				 deleteMember();
+				
 			});
 		});
 };
+
+const deleteMember = () => {
+	
+	
+	$(".subForm--listBtn .btn-icon").
+	click( () => {
+		document.querySelectorAll(".memberRegister--item").forEach(item => {
+			if(item.children[0].innerHTML ==  document.querySelector(".subForm--memberRegisterName").innerHTML) {
+				document.querySelector(".subForm--memberRegisterName").innerHTML = ""
+				item.remove();
+				document.querySelector('.homeFormRegister__subForm').style.display = 'none';
+			}
+			
+		})		
+		
+			// if(item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
+			// 	item.parentElement.remove()
+			// 	document.querySelector('.homeFormRegister__subForm').style.display = 'none';
+			// }
+		document.querySelectorAll(".memberRegister--name").forEach((item , index) => {
+			item.innerHTML = `THÀNH VIÊN ${index + 1}`
+	})
+		
+	})
+}
 
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
