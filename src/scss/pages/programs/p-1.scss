@@ -81,7 +81,8 @@
 
 .hasSubContent__programs {
     >.row:first-child {
-        >.col-3 {
+        >.col-3,
+        .col-6 {
             >.programsTableContent--title {
                 >h3:first-child {
                     position: relative;

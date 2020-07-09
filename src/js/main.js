@@ -284,7 +284,7 @@ const showMoreContentPrograms = () => {
             })
             $(this).removeClass("active");
             $(this).find(".show--more").css("display", "none");
-            $(this).children(".row").eq(0).children(".col-9").show();
+            $(this).children(".row").eq(0).children().eq(1).show();
         } else {
             rowContent.forEach((item) => {
                 // hd-20 => opacity 20%
@@ -304,7 +304,7 @@ const showMoreContentPrograms = () => {
             $(this).find(".show--more").css("display", "flex");
             // find chil col-9 add hidden
             if ($(this).hasClass("hasSubContent__programs")) {
-                $(this).children(".row").eq(0).children(".col-9").hide();
+                $(this).children(".row").eq(0).children().eq(1).hide();
             }
             // add border category
         }
