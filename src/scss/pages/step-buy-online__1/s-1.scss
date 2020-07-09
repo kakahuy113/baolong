@@ -36,6 +36,7 @@
 	overflow: hidden;
 	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
 	padding-right: 50px;
+	height: 85px;
 
 	.swiper-button-next {
 		height: 100%;
@@ -56,6 +57,7 @@
 
 	@media (max-width: 575.98px) {
 		padding-right: 35px;
+		height: 50px;
 
 		.swiper-button-next {
 			width: 35px;
@@ -67,6 +69,8 @@
 			}
 		}
 	}
+
+	@media (max-width: 575.98px) {}
 }
 
 .memberSlider--item {
@@ -74,7 +78,6 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 85px;
 	padding: 0 10px;
 	background: #ffffff;
 
@@ -88,10 +91,6 @@
 
 	+.memberSlider--item {
 		border-left: 1px solid rgba($color: #707070, $alpha: .2);
-	}
-
-	@media (max-width: 575.98px) {
-		height: 50px;
 	}
 }
 
