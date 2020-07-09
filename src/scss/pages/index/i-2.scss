@@ -78,6 +78,12 @@
 	}
 }
 
+.insuranceProgram__Items {
+	max-width: 746px;
+	width: 100%;
+	margin: 0 auto;
+}
+
 .insuranceProgram--item {
 	transition: .3s all ease-in-out;
 
@@ -86,17 +92,17 @@
 		margin-bottom: 40px;
 	}
 
-	@media (min-width: 1025px) {
-		&:hover {
-			transform: scale(1.025);
+	// @media (min-width: 1025px) {
+	// 	&:hover {
+	// 		transform: scale(1.025);
 
-			.insuranceProgram--title {
-				h3 {
-					color: map-get($mau, vang);
-				}
-			}
-		}
-	}
+	// 		.insuranceProgram--title {
+	// 			h3 {
+	// 				color: map-get($mau, vang);
+	// 			}
+	// 		}
+	// 	}
+	// }
 
 	@media (max-width: 1024.98px) {
 
@@ -185,4 +191,21 @@
 			text-align: center;
 		}
 	}
+}
+
+.update_form__wrapper {
+	margin-top: 33px;
+
+	.ListMembers__Slider {
+		max-width: 1088px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.update_form--desc {
+	font-size: 1rem;
+	color: #777171;
+	font-family: Averta-Bold;
+	margin-bottom: 25px;
 }

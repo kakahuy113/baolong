@@ -176,11 +176,15 @@ const readPdfFancyBox = () => {
 // check banner => add class
 const checkBanner = () => {
 	let banner = document.querySelector("section.TitlePage__Banners");
-	let heightHeader = document.querySelector('header').offsetHeight;
+	let header = document.querySelectorAll('header');
+	let heightHeader = header.offsetHeight;
+	let main = document.querySelector('main');
 	let mainBanner = document.querySelector(".MainSlider__Banners");
 	if ((!banner)) {
 		if (!mainBanner) {
-			document.querySelector('main').style.paddingTop = heightHeader + 'px';
+			if (main) {
+				main.style.paddingTop = heightHeader + 'px';
+			}
 		}
 	} else {
 		document.querySelector("div.header__top").classList.add("template--2");
@@ -289,22 +293,22 @@ const addMember = () => {
 	// Complete AddMember
 	$('.btn--submitForm').click(() => {
 		const inputs = document.querySelectorAll('.homeFormRegister__subForm input');
-			if (inputs[0].value != '' && inputs[1].value != '') {
-				btnAddMember = true;
-				document.querySelectorAll(".memberRegister--name").forEach(item => {
-					if(item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
-						item.setAttribute("data-name" , `${$('.homeFormRegister__subForm .input-for-name').val()}`)
-						item.setAttribute("data-birthday" , `${$('.homeFormRegister__subForm .date-picker').val()}`)
-					} else return;
-					
-				})
-				$('.homeFormRegister__subForm').css('display', 'none');
-				inputs.forEach(item => {
-					item.value = ''
-				})
-			} else return;
-	
-		
+		if (inputs[0].value != '' && inputs[1].value != '') {
+			btnAddMember = true;
+			document.querySelectorAll(".memberRegister--name").forEach(item => {
+				if (item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
+					item.setAttribute("data-name", `${$('.homeFormRegister__subForm .input-for-name').val()}`)
+					item.setAttribute("data-birthday", `${$('.homeFormRegister__subForm .date-picker').val()}`)
+				} else return;
+
+			})
+			$('.homeFormRegister__subForm').css('display', 'none');
+			inputs.forEach(item => {
+				item.value = ''
+			})
+		} else return;
+
+
 		document.querySelectorAll('.memberRegister--name').forEach((item) => {
 			item.parentNode.classList.remove('active');
 		});
@@ -357,34 +361,34 @@ const EditMember = () => {
 				document.querySelector('.subForm--memberRegisterName').innerHTML = item.innerHTML;
 				document.querySelector('.homeFormRegister__subForm').style.display = 'block';
 				//Delete Member
-				 deleteMember();
-				
+				deleteMember();
+
 			});
 		});
 };
 
 const deleteMember = () => {
-	
-	
+
+
 	$(".subForm--listBtn .btn-icon").
-	click( () => {
+	click(() => {
 		document.querySelectorAll(".memberRegister--item").forEach(item => {
-			if(item.children[0].innerHTML ==  document.querySelector(".subForm--memberRegisterName").innerHTML) {
+			if (item.children[0].innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
 				document.querySelector(".subForm--memberRegisterName").innerHTML = ""
 				item.remove();
 				document.querySelector('.homeFormRegister__subForm').style.display = 'none';
 			}
-			
-		})		
-		
-			// if(item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
-			// 	item.parentElement.remove()
-			// 	document.querySelector('.homeFormRegister__subForm').style.display = 'none';
-			// }
-		document.querySelectorAll(".memberRegister--name").forEach((item , index) => {
+
+		})
+
+		// if(item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
+		// 	item.parentElement.remove()
+		// 	document.querySelector('.homeFormRegister__subForm').style.display = 'none';
+		// }
+		document.querySelectorAll(".memberRegister--name").forEach((item, index) => {
 			item.innerHTML = `THÀNH VIÊN ${index + 1}`
-	})
-		
+		})
+
 	})
 }
 
@@ -427,9 +431,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	//Edit Member;
 	EditMember();
 	// TAB
-	const tabAbout = new Tab(".About .tab-container");
-	const pageDefine = new Tab('.Define .tab-container');
-	const buyOnlineStep1 = new Tab('.StepBuyOnline__1 .tab-container');
+	const About = new Tab(".About .tab-container");
+	const Define = new Tab('.Define .tab-container');
+	const StepBuyOnline__1 = new Tab('.StepBuyOnline__1 .tab-container');
+	const PopUp__UpdateForms = new Tab('.PopUp__UpdateForms .tab-container');
 });
 
 document.addEventListener('scroll', () => {});
