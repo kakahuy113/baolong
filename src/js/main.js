@@ -174,102 +174,104 @@ const readPdfFancyBox = () => {
 
 // check banner => add class
 const checkBanner = () => {
-	let banner = document.querySelector("section.TitlePage__Banners");
-	let header = document.querySelectorAll('header');
-	let heightHeader = header.offsetHeight;
-	let main = document.querySelector('main');
-	let mainBanner = document.querySelector(".MainSlider__Banners");
-	if ((!banner)) {
-		if (!mainBanner) {
-			if (main) {
-				main.style.paddingTop = heightHeader + 'px';
-			}
-		}
-	} else {
-		document.querySelector("div.header__top").classList.add("template--2");
-	}
+    let banner = document.querySelector("section.TitlePage__Banners");
+    let header = document.querySelectorAll('header');
+    let heightHeader = header.offsetHeight;
+    let main = document.querySelector('main');
+    let mainBanner = document.querySelector(".MainSlider__Banners");
+    if ((!banner)) {
+        if (!mainBanner) {
+            if (main) {
+                main.style.paddingTop = heightHeader + 'px';
+            }
+        }
+    } else {
+        document.querySelector("div.header__top").classList.add("template--2");
+    }
 }
 
 // ACTIVE LINK MENU
 const activeLinkMenu = () => {
-	var link = "";
-	var url = window.location.pathname.split('/');
-	if (url[(url.length - 1)] == "") {
-		link = url[(url.length - 2)];
-	} else {
-		link = url[(url.length - 1)];
-	}
-	$('nav.navBar__itemWrapper .navBar--item a').each(function () {
-		var getHref = $(this).attr('href');
-		var href = getHref.split('/').pop();
-		if (href === link) {
-			$(this).addClass('active');
-			$(this).parent().addClass('active');
-		}
-	});
-	$('a.footer__site-maps--link').each(function () {
-		var getHref = $(this).attr('href');
-		var href = getHref.split('/').pop();
-		if (href === link) {
-			$(this).addClass('active');
-			$(this).parent().addClass('active');
-		}
-	});
+    var link = "";
+    var url = window.location.pathname.split('/');
+    if (url[(url.length - 1)] == "") {
+        link = url[(url.length - 2)];
+    } else {
+        link = url[(url.length - 1)];
+    }
+    $('nav.navBar__itemWrapper .navBar--item a').each(function() {
+        var getHref = $(this).attr('href');
+        var href = getHref.split('/').pop();
+        if (href === link) {
+            $(this).addClass('active');
+            $(this).parent().addClass('active');
+        }
+    });
+    $('a.footer__site-maps--link').each(function() {
+        var getHref = $(this).attr('href');
+        var href = getHref.split('/').pop();
+        if (href === link) {
+            $(this).addClass('active');
+            $(this).parent().addClass('active');
+        }
+    });
 }
 
 // CHANGE CONTENT TABLE MOBILE
 const changeContentMobile = () => {
-	const contentsMobile = document.querySelectorAll('[data-content--mobile]');
-	const contentsPc = document.querySelectorAll('[data-content--pc]');
-	const isChange = window.innerWidth < 1025;
-	if (isChange == true) {
-		contentsMobile.forEach((item) => {
-			const valueContent = item.getAttribute('data-content--mobile');
-			item.innerHTML = valueContent;
-		})
-	} else {
-		contentsPc.forEach((item) => {
-			const valueContent = item.getAttribute('data-content--pc');
-			item.innerHTML = valueContent;
-		})
-	}
-}
-
-//slide toggle category
+        const contentsMobile = document.querySelectorAll('[data-content--mobile]');
+        const contentsPc = document.querySelectorAll('[data-content--pc]');
+        const isChange = window.innerWidth < 1025;
+        if (isChange == true) {
+            contentsMobile.forEach((item) => {
+                const valueContent = item.getAttribute('data-content--mobile');
+                item.innerHTML = valueContent;
+            })
+        } else {
+            contentsPc.forEach((item) => {
+                const valueContent = item.getAttribute('data-content--pc');
+                item.innerHTML = valueContent;
+            })
+        }
+    }
+    //slide toggle category
 const showMoreContentPrograms = () => {
-	const rowContent = document.querySelectorAll(".programsTableContent--item");
-	const noBorder = document.querySelectorAll(".no-border");
-	$(".programsTableContent--item").click(function (e) {
-		e.preventDefault();
-		if ($(this).hasClass("active")) {
-			rowContent.forEach((item) => {
-				// hd-20 => opacity 20%
-				item.classList.remove("opacity--2");
-			})
-			$(this).removeClass("active");
-			$(this).find(".show--more").css("display", "none");
-			$(this).children(".row").eq(0).children(".col-9").show();
-		} else {
-			rowContent.forEach((item) => {
-				// hd-20 => opacity 20%
-				item.classList.remove("active");
-				item.classList.add("opacity--2");
-			})
-			noBorder.forEach((item) => {
-				item.classList.remove("opacity--2");
-			})
-			//hidden all item list
-			$(this).removeClass("opacity--2");
-			// add class active => item => click 
-			$(this).addClass("active");
-			// show content category
-			$(this).find(".show--more").css("display", "flex");
-			// find chil col-9 add hidden
-			$(this).children(".row").eq(0).children(".col-9").hide();
-			// add border category
-			// $(this).children(".row").eq(1).
-		}
-	});
+    const rowContent = document.querySelectorAll(".programsTableContent--item");
+    const noBorder = document.querySelectorAll(".no-border");
+    $(noBorder).addClass("pe-n");
+    $(".programsTableContent--item").click(function(e) {
+        e.preventDefault();
+        if ($(this).hasClass("active")) {
+            rowContent.forEach((item) => {
+                // hd-20 => opacity 20%
+                item.classList.remove("opacity--2");
+            })
+            $(this).removeClass("active");
+            $(this).find(".show--more").css("display", "none");
+            $(this).children(".row").eq(0).children(".col-9").show();
+        } else {
+            rowContent.forEach((item) => {
+                // hd-20 => opacity 20%
+                item.classList.remove("active");
+                item.classList.add("opacity--2");
+            })
+            noBorder.forEach((item) => {
+                    item.classList.remove("opacity--2");
+                })
+                //hidden all item list
+            $(this).removeClass("opacity--2");
+            // add class active => item => click 
+            $(this).addClass("active");
+            // show content category
+            $(this).find(".show--more").css("display", "flex");
+            // find chil col-9 add hidden
+            if ($(this).hasClass("hasSubContent__programs")) {
+                $(this).children(".row").eq(0).children(".col-9").hide();
+            }
+            // add border category
+            // $(this).children(".row").eq(1).
+        }
+    });
 
 }
 
@@ -378,7 +380,7 @@ const deleteMember = () => {
 			item.innerHTML = `THÀNH VIÊN ${index + 1}`
 		})
 
-	})
+    })
 }
 
 document.addEventListener('DOMContentLoaded', () => {
