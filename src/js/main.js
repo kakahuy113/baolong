@@ -30,13 +30,28 @@ const mainBanner = () => {
 
 const sliderMembers = () => {
     let membersSlider = new Swiper('.ListMembers__Slider .swiper-container', {
-        slidesPerView: 5,
+        slidesPerView: 2,
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 4,
+            },
+            1440: {
+                slidesPerView: 5,
+            }
+        },
+        navigation: {
+            nextEl: '.ListMembers__Slider .swiper-button-next',
+            prevEl: '.ListMembers__Slider .swiper-button-prev',
+        },
     })
 }
 
 // ACTIVE HEADER WHEN SCROLL
 const activeHeader = () => {
-    $(window).scroll(function() {
+    $(window).scroll(function () {
         if ($(this).scrollTop() > 150) {
             $('header').addClass('scrolled');
         } else {
@@ -52,7 +67,7 @@ const initializeWow = () => {
         offset: 0, // distance to the element when triggering the animation (default is 0)
         mobile: true, // trigger animations on mobile devices (default is true)
         live: true, // act on asynchronously loaded content (default is true)
-        callback: function(box) {
+        callback: function (box) {
             // the callback is fired every time an animation is started
             // the argument that is passed in is the DOM node being animated
         },
@@ -109,25 +124,25 @@ const searchOnMenu = () => {
 
 // INIT DATE PICKER
 const initDatePicker = () => {
-    $(".date-picker").each(function() {
+    $(".date-picker").each(function () {
         $(this).flatpickr({
-                dateFormat: "Y-m-d H:i",
-                time_24hr: true,
-                disableMobile: "true"
-            })
-            // IF...ELSE
-            // if ($(this).val().length > 0) {
-            // 	$(this).flatpickr({
-            // 		dateFormat: "Y-m-d H:i",
-            // 		time_24hr: true,
-            // 	})
-            // } else {
-            // 	$(this).flatpickr({
-            // 		dateFormat: "Y-m-d H:i",
-            // 		time_24hr: true,
-            // 		defaultDate: new Date()
-            // 	})
-            // }
+            dateFormat: "Y-m-d H:i",
+            time_24hr: true,
+            disableMobile: "true"
+        })
+        // IF...ELSE
+        // if ($(this).val().length > 0) {
+        // 	$(this).flatpickr({
+        // 		dateFormat: "Y-m-d H:i",
+        // 		time_24hr: true,
+        // 	})
+        // } else {
+        // 	$(this).flatpickr({
+        // 		dateFormat: "Y-m-d H:i",
+        // 		time_24hr: true,
+        // 		defaultDate: new Date()
+        // 	})
+        // }
     })
 }
 
@@ -180,7 +195,7 @@ const activeLinkMenu = () => {
     } else {
         link = url[(url.length - 1)];
     }
-    $('nav.navBar__itemWrapper .navBar--item a').each(function() {
+    $('nav.navBar__itemWrapper .navBar--item a').each(function () {
         var getHref = $(this).attr('href');
         var href = getHref.split('/').pop();
         if (href === link) {
@@ -188,7 +203,7 @@ const activeLinkMenu = () => {
             $(this).parent().addClass('active');
         }
     });
-    $('a.footer__site-maps--link').each(function() {
+    $('a.footer__site-maps--link').each(function () {
         var getHref = $(this).attr('href');
         var href = getHref.split('/').pop();
         if (href === link) {
@@ -200,26 +215,26 @@ const activeLinkMenu = () => {
 
 // CHANGE CONTENT TABLE MOBILE
 const changeContentMobile = () => {
-        const contentsMobile = document.querySelectorAll('.Programs [data-content--mobile]');
-        const contentsPc = document.querySelectorAll('.Programs [data-content--pc]');
-        const isChange = window.innerWidth < 1025;
-        if (isChange == true) {
-            contentsMobile.forEach((item) => {
-                const valueContent = item.getAttribute('data-content--mobile');
-                item.innerHTML = valueContent;
-            })
-        } else {
-            contentsPc.forEach((item) => {
-                const valueContent = item.getAttribute('data-content--pc');
-                item.innerHTML = valueContent;
-            })
-        }
+    const contentsMobile = document.querySelectorAll('[data-content--mobile]');
+    const contentsPc = document.querySelectorAll('[data-content--pc]');
+    const isChange = window.innerWidth < 1025;
+    if (isChange == true) {
+        contentsMobile.forEach((item) => {
+            const valueContent = item.getAttribute('data-content--mobile');
+            item.innerHTML = valueContent;
+        })
+    } else {
+        contentsPc.forEach((item) => {
+            const valueContent = item.getAttribute('data-content--pc');
+            item.innerHTML = valueContent;
+        })
     }
-    //slide toggle category
+}
+//slide toggle category
 const showMoreContentPrograms = () => {
     const rowContent = document.querySelectorAll(".programsTableContent--item");
     const noBorder = document.querySelectorAll(".no-border");
-    $(".programsTableContent--item").click(function(e) {
+    $(".programsTableContent--item").click(function (e) {
         e.preventDefault();
         if ($(this).hasClass("active")) {
             rowContent.forEach((item) => {
@@ -236,9 +251,9 @@ const showMoreContentPrograms = () => {
                 item.classList.add("opacity--2");
             })
             noBorder.forEach((item) => {
-                    item.classList.remove("opacity--2");
-                })
-                //hidden all item list
+                item.classList.remove("opacity--2");
+            })
+            //hidden all item list
             $(this).removeClass("opacity--2");
             // add class active => item => click 
             $(this).addClass("active");
@@ -273,7 +288,6 @@ const addMember = () => {
     // Complete AddMember
     $('.btn--submitForm').click(() => {
         const inputs = document.querySelectorAll('.homeFormRegister__subForm input');
-
         if (inputs[0].value != '' && inputs[1].value != '') {
             btnAddMember = true;
             document.querySelectorAll(".memberRegister--name").forEach(item => {
@@ -414,6 +428,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // TAB
     const tabAbout = new Tab(".About .tab-container");
     const pageDefine = new Tab('.Define .tab-container');
+    const buyOnlineStep1 = new Tab('.StepBuyOnline__1 .tab-container');
 });
 
 document.addEventListener('scroll', () => {});
