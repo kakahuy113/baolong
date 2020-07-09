@@ -136,7 +136,7 @@ section.StepBuyOnline__2
 									.programsTableContent__Values.row
 										.programsTableContent__Value--item.col-12
 											p.fw-700.cl-xam.ta-c.w-70.mx-at 7.200.000.000
-						.programsTableContent--item.no-border
+						.programsTableContent--item
 							.row.h-100
 								.col-6
 									.programsTableContent--title.bg-trang.h-100
@@ -253,16 +253,46 @@ section.StepBuyOnline__2
 			.ListMembers__Slider
 				.swiper-container.h-100
 					.swiper-wrapper
-						a.swiper-slide.memberSlider--item.active(data-fancybox data-src="#PopUp__UpdateForms" href="javascript:;")
-							h4.memberSlider--name.tt-u.fw-700 Chủ hợp đồng
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" href="javascript:;")
-							h4.memberSlider--name.tt-u.fw-700 Thành viên 1
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" href="javascript:;")
-							h4.memberSlider--name.tt-u.fw-700 thành viên 2
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" href="javascript:;")
-							h4.memberSlider--name.tt-u.fw-700 thành viên 3
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" href="javascript:;")
-							h4.memberSlider--name.tt-u.fw-700 thành viên 4
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" href="javascript:;")
-							h4.memberSlider--name.tt-u.fw-700 thành viên 5
+						a.swiper-slide.memberSlider--item.active(data-fancybox data-src="#PopUp__UpdateForms" data-options='{"touch" : false}' href="javascript:;")
+							h4.memberSlider--name.tt-u.lcl.lcl-1 Chủ hợp đồng
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" data-options='{"touch" : false}' href="javascript:;")
+							h4.memberSlider--name.tt-u.lcl.lcl-1 Thành viên 1
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" data-options='{"touch" : false}' href="javascript:;")
+							h4.memberSlider--name.tt-u.lcl.lcl-1 thành viên 2
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" data-options='{"touch" : false}' href="javascript:;")
+							h4.memberSlider--name.tt-u.lcl.lcl-1 thành viên 3
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" data-options='{"touch" : false}' href="javascript:;")
+							h4.memberSlider--name.tt-u.lcl.lcl-1 thành viên 4
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__UpdateForms" data-options='{"touch" : false}' href="javascript:;")
+							h4.memberSlider--name.tt-u.lcl.lcl-1 thành viên 5
 				.swiper-button-next
+		.upload__file__wrapper
+			p.upload__file--desc.ta-c Phần dành cho đối tác tải Đơn yêu cầu bảo hiểm mà khách hàng đã ký
+			.upload__file--btn.mx-at
+				.form-group.ta-c
+					.custom-file-input.bg-xanh-3
+						label
+							h5.cl-trang.tt-u tải lên
+							input(type="file" hidden)
+		.confirm__wrapper
+			.form-group
+				label.d-f.ai-c
+					.text-label.cl-xam Tôi đã đọc và hiểu qui tắc bảo hiểm Global Cancer Care:
+					.form-group
+						.checkbox-custom
+							input(type="checkbox")
+			.form-group
+				label.d-f.ai-c
+					.text-label.cl-xam Tôi xác nhận và đồng ý rằng:
+					.form-group
+						.checkbox-custom
+							input(type="checkbox")
+		.step_buy_online_2_note--desc
+			ul
+				li Việc xác nhận tại mục này có giá trị tương đương như việc Tôi xác nhận bằng chữ kí  trên Đơn Yêu cầu Bảo hiểm.
+				li Tôi, được sự đồng ý của các thành viên gia đình, đại diện xác nhận đơn yêu cầu bảo hiểm thay mặt cho các thành viện gia đình.
+				li Tôi đồng ý hợp đồng bảo hiểm sẽ được phát hành dưới hình thức điện tử và nhận mọi thông tin liên quan đến hợp đồng bảo hiểm từ công ty bảo hiểm hoặc công ty Luma qua thư điện tử mà tôi đã cung cấp. Các yêu cầu, thông tin liên quan đến hợp đồng bảo hiểm được gửi từ địa chỉ thư điện tử mà Tôi đã cung cấp được xem là yêu cầu, thông tin chính thức của Tôi, thay thế yêu cầu bằng văn bản.
+		.step_buy_online--buttons.row
+			.item-buttons.col-12
+				a(href="step-buy-online__3.html").btn.btn--lg.bg-vang
+						h5.tt-u.cl-trang TỚI CỔNG THANH TOÁN
