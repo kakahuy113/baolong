@@ -9,15 +9,18 @@ section.Research
 						h3 TÌM HIỂU THÊM VỀ CHƯƠNG TRÌNH BẢO HIỂM GLOBAL CANCER CARE
 					.research__content-item
 						.research__item
-							h4 Giới thiệu chương trình Bảo hiểm điều trị ung thư quốc tế
-							a.fancybox__getPDF.research__item-pdf(data-fancybox, data-src="#trueModal--1",data-modal="true", href="javascript:;")
+							h4 Giới thiệu chương trình Bảo hiểm 
+								|
+								br
+								| điều trị ung thư quốc tế
+							a.fancybox__getPDF.research__item-pdf(ata-fancybox,data-type="iframe", data-src="./downloads/bao-long.pdf",href="javascript:;")
 								img.lazyload.blur-up(src="./assets/images/research/pdf.png", alt="pdf")
 								span Xem tài liệu
 							.popup__PDF#trueModal--1
 								.popup__PDF-inner
 									h2.tt-u GIỚI THIỆU CHƯƠNG TRÌNH BẢO HIỂM ĐIỀU TRỊ UNG THƯ QUỐC TẾ
 									.view__PDF
-										iframe(src="./downloads/bao-long.pdf", frameborder="0")
+										a.fancybox__getPDF(data-fancybox,data-type="iframe", data-src="./downloads/bao-long.pdf",href="javascript:;")
 									.btnClose__popup
 										button.btnClose__PDF.tt-u(data-fancybox-close) Xác nhận
 						.research__item
