@@ -429,6 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	// TAB
 	const tabAbout = new Tab(".About .tab-container");
 	const pageDefine = new Tab('.Define .tab-container');
+	const buyOnlineStep1 = new Tab('.StepBuyOnline__1 .tab-container');
 });
 
 document.addEventListener('scroll', () => {});
