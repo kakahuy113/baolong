@@ -29,7 +29,8 @@
 	}
 }
 
-.ListMembers__Slider {
+.ListMembers__Slider,
+.ListMembers__Slider_Popup {
 	position: relative;
 	margin-top: 40px;
 	border-radius: 10px 10px 0 0;
@@ -344,14 +345,4 @@
 
 .step_buy_online_1--save {
 	margin-top: 35px;
-}
-
-.step_buy_online_1--buttons {
-	margin-top: 30px;
-
-	.item-buttons {
-		&:last-child {
-			text-align: right;
-		}
-	}
 }

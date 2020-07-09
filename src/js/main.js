@@ -28,8 +28,9 @@ const mainBanner = () => {
     })
 }
 
-const sliderMembers = () => {
-    let membersSlider = new Swiper('.ListMembers__Slider .swiper-container', {
+// MEMBERS SLIDER
+const ListMembers__Slider = () => {
+    let ListMembers__Slider = new Swiper('.ListMembers__Slider .swiper-container', {
         slidesPerView: 2,
         breakpoints: {
             768: {
@@ -49,6 +50,40 @@ const sliderMembers = () => {
     })
 }
 
+// MEMBERS SLIDER POPUP
+const ListMembers__Slider_Popup = () => {
+    return new Swiper('.ListMembers__Slider_Popup .swiper-container', {
+        observer: true,
+        observeParents: true,
+        slidesPerView: 2,
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+            },
+            1025: {
+                slidesPerView: 4,
+            },
+            1440: {
+                slidesPerView: 5,
+            }
+        },
+        navigation: {
+            nextEl: '.ListMembers__Slider_Popup .swiper-button-next',
+            prevEl: '.ListMembers__Slider_Popup .swiper-button-prev',
+        },
+    })
+}
+
+// MEMBERS SLIDER POPUP
+const initializeListMembers__Slider_Popup = () => {
+    const btn = document.querySelectorAll('.memberSlider--item[data-fancybox]');
+    btn.forEach((item) => {
+        item.addEventListener('click', () => {
+            ListMembers__Slider_Popup();
+        })
+    })
+}
+
 // ACTIVE HEADER WHEN SCROLL
 const activeHeader = () => {
     $(window).scroll(function() {
@@ -60,7 +95,7 @@ const activeHeader = () => {
     });
 }
 
-const initializeWow = () => {
+const initializeWowJs = () => {
     var wow = new WOW({
         boxClass: 'wow', // animated element css class (default is wow)
         animateClass: 'animated', // animation css class (default is animated)
@@ -175,15 +210,11 @@ const readPdfFancyBox = () => {
 // check banner => add class
 const checkBanner = () => {
     let banner = document.querySelector("section.TitlePage__Banners");
-    let header = document.querySelectorAll('header');
-    let heightHeader = header.offsetHeight;
-    let main = document.querySelector('main');
+    let heightHeader = document.querySelector('header').offsetHeight;
     let mainBanner = document.querySelector(".MainSlider__Banners");
     if ((!banner)) {
         if (!mainBanner) {
-            if (main) {
-                main.style.paddingTop = heightHeader + 'px';
-            }
+            document.querySelector('main').style.paddingTop = heightHeader + 'px';
         }
     } else {
         document.querySelector("div.header__top").classList.add("template--2");
@@ -219,22 +250,23 @@ const activeLinkMenu = () => {
 
 // CHANGE CONTENT TABLE MOBILE
 const changeContentMobile = () => {
-        const contentsMobile = document.querySelectorAll('[data-content--mobile]');
-        const contentsPc = document.querySelectorAll('[data-content--pc]');
-        const isChange = window.innerWidth < 1025;
-        if (isChange == true) {
-            contentsMobile.forEach((item) => {
-                const valueContent = item.getAttribute('data-content--mobile');
-                item.innerHTML = valueContent;
-            })
-        } else {
-            contentsPc.forEach((item) => {
-                const valueContent = item.getAttribute('data-content--pc');
-                item.innerHTML = valueContent;
-            })
-        }
+    const contentsMobile = document.querySelectorAll('[data-content--mobile]');
+    const contentsPc = document.querySelectorAll('[data-content--pc]');
+    const isChange = window.innerWidth < 1025;
+    if (isChange == true) {
+        contentsMobile.forEach((item) => {
+            const valueContent = item.getAttribute('data-content--mobile');
+            item.innerHTML = valueContent;
+        })
+    } else {
+        contentsPc.forEach((item) => {
+            const valueContent = item.getAttribute('data-content--pc');
+            item.innerHTML = valueContent;
+        })
     }
-    //slide toggle category
+}
+
+//slide toggle category
 const showMoreContentPrograms = () => {
     const rowContent = document.querySelectorAll(".programsTableContent--item");
     const noBorder = document.querySelectorAll(".no-border");
@@ -393,13 +425,15 @@ document.addEventListener('DOMContentLoaded', () => {
     getSVGs();
     Loading();
     // INITALIZE WOW
-    initializeWow();
+    initializeWowJs();
     // INIT DATE PICKER
     initDatePicker();
     // MAIN BANNER WEBSITE
     mainBanner();
     // MEMBERS SLIDER
-    sliderMembers();
+    ListMembers__Slider();
+    // Initialize Members Slider Popup
+    initializeListMembers__Slider_Popup();
     // INITALIZE SUBMENU
     initializeSubMenu();
     // SHOW MENU MOBILE

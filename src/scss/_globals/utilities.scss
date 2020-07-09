@@ -239,6 +239,14 @@ textarea {
 		font-size: 1rem;
 	}
 
+	.text-label {
+		font-family: Averta-Bold;
+		font-size: 1.125rem;
+		user-select: none;
+		cursor: pointer;
+		padding-right: 10px;
+	}
+
 	// INPUT !!!!
 	.input-group {
 		display: flex;
@@ -555,6 +563,37 @@ textarea {
 		}
 	}
 
+	// UPLOAD FILE
+	.custom-file-input {
+		cursor: pointer;
+		user-select: none;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border: 0;
+		height: 77px;
+		padding: 0 20px;
+		border-radius: 10px;
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+		max-width: 188px;
+		width: 100%;
+
+		h5 {
+			font-family: Averta-Bold;
+			text-align: center;
+			font-size: 1.25rem;
+		}
+
+		@media (max-width: 575.98px) {
+			height: 50px;
+			padding: 0 10px;
+
+			h5 {
+				font-size: 1rem;
+			}
+		}
+	}
+
 	@media (max-width: 1024.98px) {
 
 		.input-control,
@@ -665,6 +704,22 @@ textarea {
 
 		p {
 			font-size: 1rem;
+		}
+	}
+}
+
+.fancybox-content {
+	@media (max-width: 575.98px) {
+		padding: 44px 22px;
+	}
+}
+
+.step_buy_online--buttons {
+	margin-top: 30px;
+
+	.item-buttons {
+		&:last-child {
+			text-align: right;
 		}
 	}
 }
