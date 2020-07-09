@@ -164,13 +164,21 @@ section.Research {
     }
 }
 
+.fancybox-is-open .fancybox-bg {
+    background: map-get($mau, xam);
+}
+
+.fancybox-content {
+    background: none;
+    padding: 0;
+    vertical-align: middle;
+}
+
 .popup__PDF {
     position: relative;
-    padding: 50px;
     display: none;
     width: 1640px;
     height: 100%;
-    background: #777171;
     .view__PDF {
         display: block;
         position: relative;
@@ -188,7 +196,6 @@ section.Research {
         >h2 {
             font-family: Averta-Black;
             padding: 32px 0;
-            padding-left: 68px;
             background: map-get($mau, xanh-1);
             color: white;
             border-top-left-radius: 10px;
