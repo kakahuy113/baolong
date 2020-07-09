@@ -639,3 +639,32 @@ textarea {
 		}
 	}
 }
+
+.overview_step_buy_online--item {
+	&.active {
+		.btn--lg {
+			background: map-get($mau, vang);
+
+			h5 {
+				color: map-get($mau, trang);
+			}
+		}
+	}
+}
+
+.overview_step_buy_online--desc {
+	margin-top: 30px;
+
+	p {
+		font-family: Averta-Bold;
+		font-size: 1.125rem;
+	}
+
+	@media (max-width: 767.98px) {
+		margin-top: 15px;
+
+		p {
+			font-size: 1rem;
+		}
+	}
+}
