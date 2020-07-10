@@ -306,10 +306,25 @@ const showMoreContentPrograms = () => {
             if ($(this).hasClass("hasSubContent__programs")) {
                 $(this).children(".row").eq(0).children().eq(1).hide();
             }
-            // add border category
         }
     });
 
+}
+
+const activeTabMember = () => {
+    $(".ListMembers__Slider .memberSlider--item").click(function() {
+        let active = $(this).attr("data-for");
+        let tabItem = [];
+        $(".ListMembers__Slider_Popup .memberSlider--item[toggle-for]").each(function(index, item) {
+            tabItem.push($(item).attr('toggle-for'));
+        });
+        $.each(tabItem, function(i, item) {
+            if (active == item) {
+                $(".ListMembers__Slider_Popup .memberSlider--item").removeClass("active");
+                $('.ListMembers__Slider_Popup .memberSlider--item[toggle-for=' + active + ']').addClass("active");
+            }
+        });
+    });
 }
 
 const activeHomeFormRegister = () => {
@@ -458,7 +473,8 @@ document.addEventListener('DOMContentLoaded', () => {
     activeHomeFormRegister();
     //Add Member
     addMember();
-
+    //
+    activeTabMember();
     // TAB
     const About = new Tab(".About .tab-container");
     const Define = new Tab('.Define .tab-container');
