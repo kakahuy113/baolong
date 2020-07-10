@@ -191,6 +191,15 @@
 			border-radius: 10px 10px 0 0;
 			padding-top: 35px;
 		}
+
+		&.hasSubContent__programs {
+			&.active {
+				.programsTableContent--title {
+					border-radius: 0;
+					padding-top: 0;
+				}
+			}
+		}
 	}
 
 	&:last-child {
@@ -216,8 +225,8 @@
 	.programsTableContent--title {
 		h3 {
 			text-align: left;
-			font-size: 1.125rem;
 			font-family: Averta-Light;
+			font-weight: 400;
 			text-transform: none;
 			padding: 0 47px;
 		}

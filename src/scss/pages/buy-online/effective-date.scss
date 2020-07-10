@@ -3,6 +3,13 @@
 }
 
 .effectiveDate__wrapper {
+	.form-group {
+		.input-group {
+			max-width: 535px;
+			width: 100%;
+		}
+	}
+
 	@media (min-width: 1440px) {
 		margin-left: 140px;
 	}
