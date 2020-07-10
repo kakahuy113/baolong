@@ -432,50 +432,50 @@ const deleteMember = () => {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    Cookie();
-    getSVGs();
-    Loading();
-    // INITALIZE WOW
-    initializeWowJs();
-    // INIT DATE PICKER
-    initDatePicker();
-    // MAIN BANNER WEBSITE
-    mainBanner();
-    // MEMBERS SLIDER
-    ListMembers__Slider();
-    // Initialize Members Slider Popup
-    initializeListMembers__Slider_Popup();
-    // INITALIZE SUBMENU
-    initializeSubMenu();
-    // SHOW MENU MOBILE
-    showMenuMobile();
-    //ACTIVE LINK MENU
-    activeLinkMenu();
-    // ACTIVE HEADER WHEN SCROLL
-    activeHeader();
-    // SHOW SEARCH
-    searchOnMenu();
-    //POPUP map contact
-    getMapContact();
-    // popup read pdf 
-    readPdfFancyBox();
-    // check banner
-    checkBanner();
-    // CHANGE CONTENT TABLE MOBILE
-    changeContentMobile();
-    // SHOW MORE CONTENT PROGRAMS
-    showMoreContentPrograms();
-    // ACTIVE HOME REGISTER
-    activeHomeFormRegister();
-    //Add Member
-    addMember();
-    //
-    activeTabMember();
-    // TAB
-    const About = new Tab(".About .tab-container");
-    const Define = new Tab('.Define .tab-container');
-    const StepBuyOnline__1 = new Tab('.StepBuyOnline__1 .tab-container');
-    const PopUp__UpdateForms = new Tab('.PopUp__UpdateForms .tab-container');
+	Cookie();
+	getSVGs();
+	Loading();
+	// INITALIZE WOW
+	initializeWowJs();
+	// INIT DATE PICKER
+	initDatePicker();
+	// MAIN BANNER WEBSITE
+	mainBanner();
+	// MEMBERS SLIDER
+	ListMembers__Slider();
+	// Initialize Members Slider Popup
+	initializeListMembers__Slider_Popup();
+	// INITALIZE SUBMENU
+	initializeSubMenu();
+	// SHOW MENU MOBILE
+	showMenuMobile();
+	//ACTIVE LINK MENU
+	activeLinkMenu();
+	// ACTIVE HEADER WHEN SCROLL
+	activeHeader();
+	// SHOW SEARCH
+	searchOnMenu();
+	//POPUP map contact
+	getMapContact();
+	// popup read pdf 
+	readPdfFancyBox();
+	// check banner
+	checkBanner();
+	// CHANGE CONTENT TABLE MOBILE
+	changeContentMobile();
+	// SHOW MORE CONTENT PROGRAMS
+	showMoreContentPrograms();
+	// ACTIVE HOME REGISTER
+	activeHomeFormRegister();
+	//Add Member
+	addMember();
+
+	// TAB
+	const About = new Tab(".About .tab-container");
+	const Define = new Tab('.Define .tab-container');
+	const StepBuyOnline__1 = new Tab('.StepBuyOnline__1 .tab-container');
+	const PopUp__CheckForms = new Tab('#PopUp__CheckForms .tab-container');
+	const PopUp__UpdateForms = new Tab('#PopUp__UpdateForms .tab-container');
 });
 
 document.addEventListener('scroll', () => {});

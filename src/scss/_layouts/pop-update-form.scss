@@ -1,7 +1,6 @@
-.PopUp__UpdateForms {
+.PopUp__CheckAndUpdateForms {
 	display: none;
 	position: relative;
-	max-width: 1360px;
 	width: 100%;
 	height: 80vh;
 	overflow-y: auto;
@@ -15,6 +14,6 @@
 	}
 }
 
-.PopUpUpdateForms__wrapper {
+.PopUpCheckAndUpdateForms__wrapper {
 	position: relative;
 }
