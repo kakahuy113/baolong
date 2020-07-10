@@ -4,7 +4,6 @@ import {
 } from './util/utilities';
 import Cookie from './lib/Cookie';
 import Tab from './lib/Tab';
-import Swiper from 'swiper';
 
 // MAIN BANNER WEBSITE
 const mainBanner = () => {
@@ -397,30 +396,27 @@ const addMember = () => {
 
 //EditMember
 const EditMember = () => {
-    document
-        .querySelectorAll('.memberRegister--name')
-        .forEach((item, index) => {
-            item.parentNode.classList.remove('active');
-            item.addEventListener('click', () => {
-                document.querySelectorAll('.memberRegister--name')
-                    .forEach((item) => {
-                        item.parentNode.classList.remove('active');
-                    });
-                item.parentNode.classList.add('active');
-                document.querySelector('.homeFormRegister__subForm')
-                let tempname = item.getAttribute("data-name")
-                let tempbirthDay = item.getAttribute("data-birthday")
-                $('.input-for-name').val(`${tempname}`);
-                $('.homeFormRegister__subForm .date-picker').val(`${tempbirthDay}`);
-                document.querySelector('.subForm--memberRegisterName').innerHTML = item.innerHTML;
-                document.querySelector('.homeFormRegister__subForm').style.display = 'block';
-            });
+    document.querySelectorAll('.memberRegister--name').forEach((item, index) => {
+        item.parentNode.classList.remove('active');
+        item.addEventListener('click', () => {
+            document.querySelectorAll('.memberRegister--name')
+                .forEach((item) => {
+                    item.parentNode.classList.remove('active');
+                });
+            item.parentNode.classList.add('active');
+            document.querySelector('.homeFormRegister__subForm')
+            let tempname = item.getAttribute("data-name")
+            let tempbirthDay = item.getAttribute("data-birthday")
+            $('.input-for-name').val(`${tempname}`);
+            $('.homeFormRegister__subForm .date-picker').val(`${tempbirthDay}`);
+            document.querySelector('.subForm--memberRegisterName').innerHTML = item.innerHTML;
+            document.querySelector('.homeFormRegister__subForm').style.display = 'block';
         });
+    });
 };
 
 const deleteMember = () => {
-    $(".subForm--listBtn .btn-icon").
-    click(() => {
+    $(".subForm--listBtn .btn-icon").click(() => {
         document.querySelectorAll(".memberRegister--item").forEach(item => {
             if (item.children[0].innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
                 document.querySelector(".subForm--memberRegisterName").innerHTML = ""
