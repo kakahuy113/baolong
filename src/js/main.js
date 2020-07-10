@@ -459,7 +459,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	const About = new Tab(".About .tab-container");
 	const Define = new Tab('.Define .tab-container');
 	const StepBuyOnline__1 = new Tab('.StepBuyOnline__1 .tab-container');
-	const PopUp__UpdateForms = new Tab('.PopUp__UpdateForms .tab-container');
+	const PopUp__CheckForms = new Tab('#PopUp__CheckForms .tab-container');
+	const PopUp__UpdateForms = new Tab('#PopUp__UpdateForms .tab-container');
 });
 
 document.addEventListener('scroll', () => {});

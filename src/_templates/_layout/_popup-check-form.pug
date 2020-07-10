@@ -1,6 +1,6 @@
-section#PopUp__UpdateForms.PopUp__UpdateForms
+section#PopUp__CheckForms.PopUp__CheckAndUpdateForms
 	.container-fluid
-		.PopUpUpdateForms__wrapper.tab-container
+		.PopUpCheckAndUpdateForms__wrapper.tab-container
 			.ListMembers__Slider_Popup.mt-0
 				.swiper-container.h-100
 					.swiper-wrapper
@@ -30,25 +30,25 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/user-trang.svg", alt="")
-										input.input-control(placeholder="- - - HỌ TÊN - - -")
+										input.input-control(readonly value="NGUYỄN VĂN A" placeholder="- - - HỌ TÊN - - -")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/date-trang.svg", alt="")
-										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -")
+										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -" readonly value="2018-07-22")
 								.form-group.col-md-7
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/mail-trang.svg", alt="")
-										input.input-control(placeholder="- - - EMAIL - - -")
+										input.input-control(placeholder="- - - EMAIL - - -" readonly value="nguyenvana@gmail.com")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/phone-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -")
+										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -" readonly value="0969912404")
 								.form-group.col-lg-7
 									.row
 										.form-group.col-lg-6.col-md-7
@@ -58,7 +58,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - QUỐC TỊCH - - -
-													option VIỆT NAM
+													option(selected) VIỆT NAM
 													option THÁI LAN
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -67,7 +67,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - GIỚI TÍNH - - -
-													option NAM
+													option(selected) NAM
 													option NỮ
 								.form-group.col-lg-5
 									.input-group.have-select-group-prepend.h-100.bg-trang
@@ -79,15 +79,15 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 													option(selected disabled hidden)
 														option(selected disabled hidden data-content--mobile="Chọn" data-content--pc="CMND/ID/PASSPORT") CMND/ID/PASSPORT
 														option CMND
-														option ID
+														option(selected) ID
 														option PASSPORT
-										input.input-control(placeholder="- - - Nhập số - - -")
+										input.input-control(placeholder="- - - Nhập số - - -" readonly value="11122333")
 								.form-group.col-lg-12
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/location-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -")
+										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -" readonly value="549/29 nguyen dinh chieu")
 								.form-group.col-lg-3.as-c
 									label Ai đã tư vấn cho bạn sản phẩm này?
 								.form-group.col-lg-9
@@ -99,7 +99,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Chi nhánh Bảo Long/.../ Tự tìm hiểu - - -
-													option Chi nhánh Bảo Long
+													option(selected) Chi nhánh Bảo Long
 													option Tự tìm hiểu
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -108,7 +108,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Hãy điền tên đơn vị vào đây - - -
-													option HỒ CHÍ MINH
+													option(selected) HỒ CHÍ MINH
 													option THÁI LAN
 						.step_buy_online_1_question__wrapper
 							h4.step_buy_online_1_question--title Vui lòng đọc kỹ và trả lời 5 câu hỏi y tế bên dưới
@@ -439,25 +439,25 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/user-trang.svg", alt="")
-										input.input-control(placeholder="- - - HỌ TÊN - - -")
+										input.input-control(readonly value="NGUYỄN VĂN A" placeholder="- - - HỌ TÊN - - -")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/date-trang.svg", alt="")
-										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -")
+										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -" readonly value="20-4-2020")
 								.form-group.col-md-7
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/mail-trang.svg", alt="")
-										input.input-control(placeholder="- - - EMAIL - - -")
+										input.input-control(placeholder="- - - EMAIL - - -" readonly value="nguyenvana@gmail.com")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/phone-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -")
+										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -" readonly value="0969912404")
 								.form-group.col-lg-7
 									.row
 										.form-group.col-lg-6.col-md-7
@@ -467,7 +467,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - QUỐC TỊCH - - -
-													option VIỆT NAM
+													option(selected) VIỆT NAM
 													option THÁI LAN
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -476,7 +476,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - GIỚI TÍNH - - -
-													option NAM
+													option(selected) NAM
 													option NỮ
 								.form-group.col-lg-5
 									.input-group.have-select-group-prepend.h-100.bg-trang
@@ -488,15 +488,15 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 													option(selected disabled hidden)
 														option(selected disabled hidden data-content--mobile="Chọn" data-content--pc="CMND/ID/PASSPORT") CMND/ID/PASSPORT
 														option CMND
-														option ID
+														option(selected) ID
 														option PASSPORT
-										input.input-control(placeholder="- - - Nhập số - - -")
+										input.input-control(placeholder="- - - Nhập số - - -" readonly value="11122333")
 								.form-group.col-lg-12
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/location-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -")
+										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -" readonly value="549/29 nguyen dinh chieu")
 								.form-group.col-lg-3.as-c
 									label Ai đã tư vấn cho bạn sản phẩm này?
 								.form-group.col-lg-9
@@ -508,7 +508,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Chi nhánh Bảo Long/.../ Tự tìm hiểu - - -
-													option Chi nhánh Bảo Long
+													option(selected) Chi nhánh Bảo Long
 													option Tự tìm hiểu
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -517,7 +517,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Hãy điền tên đơn vị vào đây - - -
-													option HỒ CHÍ MINH
+													option(selected) HỒ CHÍ MINH
 													option THÁI LAN
 						.step_buy_online_1_question__wrapper
 							h4.step_buy_online_1_question--title Vui lòng đọc kỹ và trả lời 5 câu hỏi y tế bên dưới
@@ -848,25 +848,25 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/user-trang.svg", alt="")
-										input.input-control(placeholder="- - - HỌ TÊN - - -")
+										input.input-control(readonly value="NGUYỄN VĂN A" placeholder="- - - HỌ TÊN - - -")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/date-trang.svg", alt="")
-										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -")
+										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -" readonly value="20-4-2020")
 								.form-group.col-md-7
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/mail-trang.svg", alt="")
-										input.input-control(placeholder="- - - EMAIL - - -")
+										input.input-control(placeholder="- - - EMAIL - - -" readonly value="nguyenvana@gmail.com")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/phone-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -")
+										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -" readonly value="0969912404")
 								.form-group.col-lg-7
 									.row
 										.form-group.col-lg-6.col-md-7
@@ -876,7 +876,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - QUỐC TỊCH - - -
-													option VIỆT NAM
+													option(selected) VIỆT NAM
 													option THÁI LAN
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -885,7 +885,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - GIỚI TÍNH - - -
-													option NAM
+													option(selected) NAM
 													option NỮ
 								.form-group.col-lg-5
 									.input-group.have-select-group-prepend.h-100.bg-trang
@@ -897,15 +897,15 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 													option(selected disabled hidden)
 														option(selected disabled hidden data-content--mobile="Chọn" data-content--pc="CMND/ID/PASSPORT") CMND/ID/PASSPORT
 														option CMND
-														option ID
+														option(selected) ID
 														option PASSPORT
-										input.input-control(placeholder="- - - Nhập số - - -")
+										input.input-control(placeholder="- - - Nhập số - - -" readonly value="11122333")
 								.form-group.col-lg-12
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/location-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -")
+										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -" readonly value="549/29 nguyen dinh chieu")
 								.form-group.col-lg-3.as-c
 									label Ai đã tư vấn cho bạn sản phẩm này?
 								.form-group.col-lg-9
@@ -917,7 +917,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Chi nhánh Bảo Long/.../ Tự tìm hiểu - - -
-													option Chi nhánh Bảo Long
+													option(selected) Chi nhánh Bảo Long
 													option Tự tìm hiểu
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -926,7 +926,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Hãy điền tên đơn vị vào đây - - -
-													option HỒ CHÍ MINH
+													option(selected) HỒ CHÍ MINH
 													option THÁI LAN
 						.step_buy_online_1_question__wrapper
 							h4.step_buy_online_1_question--title Vui lòng đọc kỹ và trả lời 5 câu hỏi y tế bên dưới
@@ -1257,25 +1257,25 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/user-trang.svg", alt="")
-										input.input-control(placeholder="- - - HỌ TÊN - - -")
+										input.input-control(readonly value="NGUYỄN VĂN A" placeholder="- - - HỌ TÊN - - -")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/date-trang.svg", alt="")
-										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -")
+										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -" readonly value="20-4-2020")
 								.form-group.col-md-7
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/mail-trang.svg", alt="")
-										input.input-control(placeholder="- - - EMAIL - - -")
+										input.input-control(placeholder="- - - EMAIL - - -" readonly value="nguyenvana@gmail.com")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/phone-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -")
+										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -" readonly value="0969912404")
 								.form-group.col-lg-7
 									.row
 										.form-group.col-lg-6.col-md-7
@@ -1285,7 +1285,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - QUỐC TỊCH - - -
-													option VIỆT NAM
+													option(selected) VIỆT NAM
 													option THÁI LAN
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -1294,7 +1294,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - GIỚI TÍNH - - -
-													option NAM
+													option(selected) NAM
 													option NỮ
 								.form-group.col-lg-5
 									.input-group.have-select-group-prepend.h-100.bg-trang
@@ -1306,15 +1306,15 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 													option(selected disabled hidden)
 														option(selected disabled hidden data-content--mobile="Chọn" data-content--pc="CMND/ID/PASSPORT") CMND/ID/PASSPORT
 														option CMND
-														option ID
+														option(selected) ID
 														option PASSPORT
-										input.input-control(placeholder="- - - Nhập số - - -")
+										input.input-control(placeholder="- - - Nhập số - - -" readonly value="11122333")
 								.form-group.col-lg-12
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/location-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -")
+										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -" readonly value="549/29 nguyen dinh chieu")
 								.form-group.col-lg-3.as-c
 									label Ai đã tư vấn cho bạn sản phẩm này?
 								.form-group.col-lg-9
@@ -1326,7 +1326,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Chi nhánh Bảo Long/.../ Tự tìm hiểu - - -
-													option Chi nhánh Bảo Long
+													option(selected) Chi nhánh Bảo Long
 													option Tự tìm hiểu
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -1335,7 +1335,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Hãy điền tên đơn vị vào đây - - -
-													option HỒ CHÍ MINH
+													option(selected) HỒ CHÍ MINH
 													option THÁI LAN
 						.step_buy_online_1_question__wrapper
 							h4.step_buy_online_1_question--title Vui lòng đọc kỹ và trả lời 5 câu hỏi y tế bên dưới
@@ -1666,25 +1666,25 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/user-trang.svg", alt="")
-										input.input-control(placeholder="- - - HỌ TÊN - - -")
+										input.input-control(readonly value="NGUYỄN VĂN A" placeholder="- - - HỌ TÊN - - -")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/date-trang.svg", alt="")
-										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -")
+										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -" readonly value="20-4-2020")
 								.form-group.col-md-7
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/mail-trang.svg", alt="")
-										input.input-control(placeholder="- - - EMAIL - - -")
+										input.input-control(placeholder="- - - EMAIL - - -" readonly value="nguyenvana@gmail.com")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/phone-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -")
+										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -" readonly value="0969912404")
 								.form-group.col-lg-7
 									.row
 										.form-group.col-lg-6.col-md-7
@@ -1694,7 +1694,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - QUỐC TỊCH - - -
-													option VIỆT NAM
+													option(selected) VIỆT NAM
 													option THÁI LAN
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -1703,7 +1703,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - GIỚI TÍNH - - -
-													option NAM
+													option(selected) NAM
 													option NỮ
 								.form-group.col-lg-5
 									.input-group.have-select-group-prepend.h-100.bg-trang
@@ -1715,15 +1715,15 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 													option(selected disabled hidden)
 														option(selected disabled hidden data-content--mobile="Chọn" data-content--pc="CMND/ID/PASSPORT") CMND/ID/PASSPORT
 														option CMND
-														option ID
+														option(selected) ID
 														option PASSPORT
-										input.input-control(placeholder="- - - Nhập số - - -")
+										input.input-control(placeholder="- - - Nhập số - - -" readonly value="11122333")
 								.form-group.col-lg-12
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/location-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -")
+										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -" readonly value="549/29 nguyen dinh chieu")
 								.form-group.col-lg-3.as-c
 									label Ai đã tư vấn cho bạn sản phẩm này?
 								.form-group.col-lg-9
@@ -1735,7 +1735,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Chi nhánh Bảo Long/.../ Tự tìm hiểu - - -
-													option Chi nhánh Bảo Long
+													option(selected) Chi nhánh Bảo Long
 													option Tự tìm hiểu
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -1744,7 +1744,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Hãy điền tên đơn vị vào đây - - -
-													option HỒ CHÍ MINH
+													option(selected) HỒ CHÍ MINH
 													option THÁI LAN
 						.step_buy_online_1_question__wrapper
 							h4.step_buy_online_1_question--title Vui lòng đọc kỹ và trả lời 5 câu hỏi y tế bên dưới
@@ -2075,25 +2075,25 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/user-trang.svg", alt="")
-										input.input-control(placeholder="- - - HỌ TÊN - - -")
+										input.input-control(readonly value="NGUYỄN VĂN A" placeholder="- - - HỌ TÊN - - -")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/date-trang.svg", alt="")
-										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -")
+										input.input-control.date-picker(type="date" placeholder="- - - NGÀY SINH - - -" readonly value="20-4-2020")
 								.form-group.col-md-7
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/mail-trang.svg", alt="")
-										input.input-control(placeholder="- - - EMAIL - - -")
+										input.input-control(placeholder="- - - EMAIL - - -" readonly value="nguyenvana@gmail.com")
 								.form-group.col-md-5
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/phone-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -")
+										input.input-control(placeholder="- - - ĐIỆN THOẠI - - -" readonly value="0969912404")
 								.form-group.col-lg-7
 									.row
 										.form-group.col-lg-6.col-md-7
@@ -2103,7 +2103,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - QUỐC TỊCH - - -
-													option VIỆT NAM
+													option(selected) VIỆT NAM
 													option THÁI LAN
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -2112,7 +2112,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - GIỚI TÍNH - - -
-													option NAM
+													option(selected) NAM
 													option NỮ
 								.form-group.col-lg-5
 									.input-group.have-select-group-prepend.h-100.bg-trang
@@ -2124,15 +2124,15 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 													option(selected disabled hidden)
 														option(selected disabled hidden data-content--mobile="Chọn" data-content--pc="CMND/ID/PASSPORT") CMND/ID/PASSPORT
 														option CMND
-														option ID
+														option(selected) ID
 														option PASSPORT
-										input.input-control(placeholder="- - - Nhập số - - -")
+										input.input-control(placeholder="- - - Nhập số - - -" readonly value="11122333")
 								.form-group.col-lg-12
 									.input-group
 										.input-group-prepend.bg-xam-opacity-2
 											.input-group-icon
 												img.lazyload.blur-up(data-src="./assets/icons-form/location-trang.svg", alt="")
-										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -")
+										input.input-control(placeholder="- - - ĐỊA CHỈ CƯ TRÚ - - -" readonly value="549/29 nguyen dinh chieu")
 								.form-group.col-lg-3.as-c
 									label Ai đã tư vấn cho bạn sản phẩm này?
 								.form-group.col-lg-9
@@ -2144,7 +2144,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/nationality-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Chi nhánh Bảo Long/.../ Tự tìm hiểu - - -
-													option Chi nhánh Bảo Long
+													option(selected) Chi nhánh Bảo Long
 													option Tự tìm hiểu
 										.form-group.col-lg-6.col-md-5
 											.input-group
@@ -2153,7 +2153,7 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 														img.lazyload.blur-up(data-src="./assets/icons-form/gender-trang.svg", alt="")
 												select.custom-select
 													option(selected disabled hidden) - - - Hãy điền tên đơn vị vào đây - - -
-													option HỒ CHÍ MINH
+													option(selected) HỒ CHÍ MINH
 													option THÁI LAN
 						.step_buy_online_1_question__wrapper
 							h4.step_buy_online_1_question--title Vui lòng đọc kỹ và trả lời 5 câu hỏi y tế bên dưới
@@ -2474,8 +2474,10 @@ section#PopUp__UpdateForms.PopUp__UpdateForms
 									li Tôi hiểu rằng hợp đồng bảo hiểm này sẽ được gia hạn ( tới năm 70 tuổi) bất kể tuổi tác và tình trạng sức khoẻ của người được bảo hiểm. Tôi ghi nhận rằng mức phí bảo hiểm áp dụng cho từng chương trình bảo hiểm sẽ căn cứ vào từng nhóm tuổi và phí bảo hiểm mỗi năm sẽ được bởi điều chỉnh công ty bảo hiểm Theo mức lạm phát của chi phí y tế và các yếu tố khác có ảnh hưởng đến việc đánh giá rủi ro của công ty bảo hiểm. Công ty sẽ thông báo cho Người được Bảo hiểm tất cả các thông tin quan trọng bao gồm bất kỳ thay đổi nào về điều khoản, điều kiện, loại trừ bảo hiểm trước ngày gia hạn bảo hiểm.
 									li Tôi hiểu rằng để đủ điều kiện tham gia Chương trình này, Người được Bảo hiểm phải không quá 65 tuổi vào ngày hiệu lực đầu tiên của bảo hiểm và phải sống ít nhất 185 ngày mỗi năm tại Việt Nam Tôi hiểu rằng nếu tôi sống ngoài phạm vi khu vực bảo hiểm chính nhiều hơn 185 ngày trong 1 năm thì công ty bảo hiểm có quyền chấm dứt hợp đồng bảo hiểm hoặc không chi trả bảo hiểm.
 									li Tôi đồng ý với những khai báo trên đây và hiểu rằng đơn yêu cầu bảo hiểm này là một phần của hợp đồng bảo hiểm bao gồm đơn yêu cầu bảo hiểm, giấy chứng nhận bảo hiểm, Quy tắc bảo hiểm.
-			.step_buy_online_1--buttons.row
+			.step_buy_online--buttons.row
 				.item-buttons.col-6
+					a(data-fancybox data-src="#PopUp__UpdateForms" data-options='{"touch" : false}' href="javascript:;" onclick='$.fancybox.close()').btn.btn--lg.bg-vang
+						h5.tt-u.cl-trang CÓ SAI SÓT, TÔI MUỐN SỬA
 				.item-buttons.col-6
-					a(href="step-buy-online__2.html").btn.btn--lg.bg-vang
-							h5.tt-u.cl-trang cập nhật
+					a(data-fancybox-close).btn.btn--lg.bg-vang
+						h5.tt-u.cl-trang XÁC NHẬN VÀ ĐÓNG
