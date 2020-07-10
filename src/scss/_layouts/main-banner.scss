@@ -1,6 +1,10 @@
 .MainSlider__Banners {
 	position: relative;
 
+	.main_banner--link {
+		display: block;
+	}
+
 	.swiper-pagination {
 		.swiper-pagination-bullet {
 			width: 18px;

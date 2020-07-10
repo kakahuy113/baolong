@@ -9,3 +9,71 @@
 		padding: 25px 0;
 	}
 }
+
+.update_form__wrapper {
+	margin-top: 33px;
+
+	.ListMembers__Slider {
+		max-width: 1088px;
+		width: 100%;
+		margin: 0 auto;
+	}
+}
+
+.update_form--desc {
+	font-size: 1rem;
+	color: #777171;
+	font-family: Averta-Bold;
+	margin-bottom: 25px;
+}
+
+.upload__file__wrapper {
+	margin-top: 30px;
+}
+
+.upload__file--desc {
+	font-size: 1rem;
+	color: #777171;
+	font-family: Averta-Bold;
+	margin-bottom: 25px;
+}
+
+.confirm__wrapper {
+	margin-top: 42px;
+
+	.form-group+.form-group {
+		margin-top: 25px;
+	}
+}
+
+.step_buy_online_2_note--desc {
+	margin-top: 40px;
+
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	li {
+		font-family: Averta-Light;
+		position: relative;
+		color: #525252;
+		font-size: 1rem;
+		padding-left: 15px;
+
+		&:after {
+			content: '';
+			position: absolute;
+			width: 5px;
+			height: 5px;
+			top: 10px;
+			left: 0;
+			border-radius: 50%;
+			background: #525252;
+		}
+	}
+
+	li+li {
+		margin-top: 10px;
+	}
+}

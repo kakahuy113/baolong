@@ -89,10 +89,24 @@ textarea {
 }
 
 .field-validation-error {
+	position: relative;
 	display: inline-block;
 	margin: .5rem 0;
 	font-size: 12px;
 	color: red;
+	padding-left: 20px;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 16px;
+		height: 16px;
+		background-image: url(../assets/icons/warning.svg);
+		background-size: 100% 100%;
+	}
 }
 
 .tab-container {
@@ -236,7 +250,16 @@ textarea {
 
 .form-group {
 	label {
+		cursor: pointer;
 		font-size: 1rem;
+	}
+
+	.text-label {
+		font-family: Averta-Bold;
+		font-size: 1.125rem;
+		user-select: none;
+		cursor: pointer;
+		padding-right: 10px;
 	}
 
 	// INPUT !!!!
@@ -305,6 +328,8 @@ textarea {
 		box-shadow: 0px 2px 6px rgba($color: #000000, $alpha: .16);
 		padding-left: 15px;
 		padding-right: 15px;
+		border: 1px solid transparent;
+		transition: .3s all ease-in-out;
 
 		&-sm {
 			font-size: 0.875rem;
@@ -317,7 +342,16 @@ textarea {
 		}
 
 		&::placeholder {
-			color: rgba($color: #777171, $alpha: .5)
+			color: rgba($color: #777171, $alpha: .5);
+			transition: .3s all ease-in-out;
+		}
+
+		&:focus {
+			border: 1px solid map-get($mau, xanh-3);
+
+			&::placeholder {
+				color: map-get($mau, xanh-3);
+			}
 		}
 	}
 
@@ -555,6 +589,37 @@ textarea {
 		}
 	}
 
+	// UPLOAD FILE
+	.custom-file-input {
+		cursor: pointer;
+		user-select: none;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border: 0;
+		height: 77px;
+		padding: 0 20px;
+		border-radius: 10px;
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+		max-width: 188px;
+		width: 100%;
+
+		h5 {
+			font-family: Averta-Bold;
+			text-align: center;
+			font-size: 1.25rem;
+		}
+
+		@media (max-width: 575.98px) {
+			height: 50px;
+			padding: 0 10px;
+
+			h5 {
+				font-size: 1rem;
+			}
+		}
+	}
+
 	@media (max-width: 1024.98px) {
 
 		.input-control,
@@ -665,6 +730,22 @@ textarea {
 
 		p {
 			font-size: 1rem;
+		}
+	}
+}
+
+.fancybox-content {
+	@media (max-width: 575.98px) {
+		padding: 44px 22px;
+	}
+}
+
+.step_buy_online--buttons {
+	margin-top: 30px;
+
+	.item-buttons {
+		&:last-child {
+			text-align: right;
 		}
 	}
 }

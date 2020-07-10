@@ -87,6 +87,34 @@
 	padding: 25px 15px;
 }
 
+.hasSubContent__programs {
+	>.row:first-child {
+
+		>.col-3,
+		.col-6 {
+			>.programsTableContent--title {
+				>h3:first-child {
+					position: relative;
+					width: fit-content;
+					margin: auto;
+
+					&::before {
+						position: absolute;
+						top: 50%;
+						right: -10px;
+						width: 9px;
+						height: 8px;
+						transform: translateY(-50%);
+						background-image: url(../assets/icons-form/arow-gray.png);
+						background-repeat: no-repeat;
+						content: "";
+					}
+				}
+			}
+		}
+	}
+}
+
 .programsTableContent--title {
 	cursor: pointer;
 	display: grid;
@@ -163,9 +191,28 @@
 			border-radius: 10px 10px 0 0;
 			padding-top: 35px;
 		}
+
+		&.hasSubContent__programs {
+			&.active {
+				.programsTableContent--title {
+					border-radius: 0;
+					padding-top: 0;
+				}
+			}
+		}
 	}
 
 	&:last-child {
+		border-bottom: 0;
+
+		&.hasSubContent__programs {
+			&.active {
+				.programsTableContent--title {
+					border-radius: 0;
+				}
+			}
+		}
+
 		.programsTableContent--title {
 			border-radius: 0 0 10px 10px;
 		}
@@ -174,6 +221,16 @@
 
 .show--more {
 	display: none;
+
+	.programsTableContent--title {
+		h3 {
+			text-align: left;
+			font-family: Averta-Light;
+			font-weight: 400;
+			text-transform: none;
+			padding: 0 47px;
+		}
+	}
 }
 
 .programsTableContent__Value--item {

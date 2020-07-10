@@ -1,37 +1,53 @@
-section.Pay
-	.tab-container.container
-		section.pay__wrapper
-			.pay__title
-				h2.tt-u.ta-c QUY TRÌNH MUA ONLINE 3 BƯỚC
-			.pay__list
-				ul.list-tab
-					li.tt-u(toggle-for="1") đơn yêu cầu bảo hiểm
-					li.tt-u(toggle-for="2") kiểm tra và xác nhận
-					li.tt-u.active(toggle-for="3") thực hiện thanh toán
-		.tab-content
-			.contect(tab-id="3")
-				.pay__method
-					h4.pay__p Vui lòng chọn phương thức thanh toán
-					.pay__methodList
-						.pay__listItem
-							img.lazyload.blur-up(data-src="./assets/images/pay/momo.png", alt="momo")
-						.pay__listItem.vnpayqr
-							img.lazyload.blur-up(data-src="./assets/images/pay/vn.png", alt="vn-pay-qr")
-						.pay__listItem.text
-							span.tt-u CHuyển khoản ngân hàng
-				.pay__row
-					.pay__boxContent
-						h4.pay__p Hãy chuyển khoản cho chúng tôi với nội dung:
-						p "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
-						h4.pay__p Thông tin thụ hưởng:
-						.pay__infor
-							p Tên tài khoản: 
-								span 
-							p Số tài khoản: 
-								span 
-							p Ngân hàng:  
-								span 
-							p Chi nhánh:  
-								span 
-						h4.pay__p Số tiền cần chuyển:
-						h3.pay__total 20.000.000 VND
+section.StepBuyOnline__3
+	.container
+		.Core__titlePage
+			h2.cl-xanh-2.tt-u.ta-c QUY TRÌNH MUA ONLINE 3 BƯỚC
+		.overview_step_buy_online__wrapper
+			.overview_step_buy_online--list.row
+				.overview_step_buy_online--item.col-4
+					a(href="step-buy-online__1.html").btn.btn--lg.border-vang-1px.no-shadow.w-100
+						h5.tt-u.cl-vang.ta-c.lcl.lcl-2 đơn yêu cầu bảo hiểm
+				.overview_step_buy_online--item.col-4
+					a(href="step-buy-online__1.html").btn.btn--lg.border-vang-1px.no-shadow.w-100
+						h5.tt-u.cl-vang.ta-c.lcl.lcl-2 kiểm tra và xác nhận
+				.overview_step_buy_online--item.col-4.active
+					a(href="step-buy-online__1.html").btn.btn--lg.border-vang-1px.no-shadow.w-100
+						h5.tt-u.cl-vang.ta-c.lcl.lcl-2 thực hiện thanh toán
+			.overview_step_buy_online--desc
+				p.cl-xam.ta-c Vui lòng chọn phương thức thanh toán
+		.step_buy_online_3__wrapper
+			.payment_methods
+				.item-method
+					.item--img
+						img(src="./assets/images/payment-methods/momo.png", alt="")
+				.item-method
+					.item--img
+						img(src="./assets/images/payment-methods/vn-pay.png", alt="")
+				.item-method
+					.item--img
+						img(src="./assets/images/payment-methods/atm.png", alt="")
+			.payment_content
+				.payment_content--text
+					p.ta-c.cl-xam Hãy chuyển khoản cho chúng tôi với nội dung:
+				.payment_content--quote
+					h4.ta-c.cl-xanh-3 "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+				.payment_content--text
+					p.ta-c.cl-xam Thông tin thụ hưởng:
+				.payment_content--info
+					ul
+						li
+							p.cl-xam Tên tài khoản:
+							span HOANG VIET HUNG
+						li
+							p.cl-xam Số tài khoản:
+							span 1122339922
+						li
+							p.cl-xam Ngân hàng:
+							span abc
+						li
+							p.cl-xam Chi nhánh:
+							span HỒ CHÍ MINH
+				.payment_content--text
+					p.ta-c.cl-xam Số tiền cần chuyển:
+				.payment--total
+					h4.ta-c.cl-xanh-3 20.000.000 VND
