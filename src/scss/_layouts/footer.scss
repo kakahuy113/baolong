@@ -82,15 +82,24 @@ footer {
 	}
 
 	.footerContact--item {
+		display: flex;
 		margin-bottom: 10px;
 	}
 
 	.footer-contact--icon {
-		float: left;
+		-ms-flex: 0 0 100%;
+		-webkit-box-flex: 0;
+		flex: 0 0 30px;
+		max-width: 30px;
 		padding-right: 10px;
 	}
 
 	.footerContact--link {
+		-ms-flex-preferred-size: 0;
+		flex-basis: 0;
+		-ms-flex-positive: 1;
+		flex-grow: 1;
+		max-width: 100%;
 		font-family: Averta-Light;
 		font-size: 1rem;
 		color: #777171;
