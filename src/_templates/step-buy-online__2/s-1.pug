@@ -327,17 +327,17 @@ section.StepBuyOnline__2
 			.ListMembers__Slider
 				.swiper-container.h-100
 					.swiper-wrapper
-						a.swiper-slide.memberSlider--item.active(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' href="javascript:;")
+						a.swiper-slide.memberSlider--item.active(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' data-for="item-1" href="javascript:;")
 							h4.memberSlider--name.tt-u.lcl.lcl-1 Chủ hợp đồng
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' href="javascript:;")
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' data-for="item-2" href="javascript:;")
 							h4.memberSlider--name.tt-u.lcl.lcl-1 Thành viên 1
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' href="javascript:;")
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' data-for="item-3" href="javascript:;")
 							h4.memberSlider--name.tt-u.lcl.lcl-1 thành viên 2
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' href="javascript:;")
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' data-for="item-4" href="javascript:;")
 							h4.memberSlider--name.tt-u.lcl.lcl-1 thành viên 3
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' href="javascript:;")
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' data-for="item-5" href="javascript:;")
 							h4.memberSlider--name.tt-u.lcl.lcl-1 thành viên 4
-						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' href="javascript:;")
+						a.swiper-slide.memberSlider--item(data-fancybox data-src="#PopUp__CheckForms" data-options='{"touch" : false}' data-for="item-6" href="javascript:;")
 							h4.memberSlider--name.tt-u.lcl.lcl-1 thành viên 5
 				.swiper-button-next
 		.upload__file__wrapper
@@ -350,12 +350,18 @@ section.StepBuyOnline__2
 							input(type="file" hidden)
 		.confirm__wrapper
 			.form-group
-				.d-f.ai-c
+				a.d-f.ai-c.fancybox__getPDF(data-fancybox, data-src="",data-modal="true", href="javascript:;")
 					.text-label.cl-xam Tôi đã đọc và hiểu qui tắc bảo hiểm Global Cancer Care:
 					.form-group
 						.checkbox-custom
-							input(type="checkbox")
-				.po
+							input(type="checkbox" id="rule")
+				.popup__PDF
+					.popup__PDF-inner
+						h2.tt-u 
+						.view__PDF
+							iframe(src="./downloads/bao-long.pdf", frameborder="0")
+						.btnClose__popup.btn.btn--lg.pad-0-15px.bg-vang.checked(data-fancybox-close)
+							h5.tt-u.cl-trang Xác nhận
 			.form-group
 				label.d-f.ai-c
 					.text-label.cl-xam Tôi xác nhận và đồng ý rằng:
