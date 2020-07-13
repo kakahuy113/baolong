@@ -92,6 +92,9 @@ section.compensation {
         padding: 45px 70px;
         max-height: 361px;
         overflow-y: auto;
+        @media (max-width: 1024.98px) {
+            padding: 20px;
+        }
         @media (max-width: 575.98px) {
             padding: 20px;
             max-height: 210px;
