@@ -372,19 +372,42 @@ const addMember = () => {
     var btnAddMember = false;
     // Complete AddMember
     $('.btn--submitForm').click(() => {
-        const inputs = document.querySelectorAll('.homeFormRegister__subForm input');
-        if (inputs[0].value != '' && inputs[1].value != '' && inputs[0].value != 'null' && inputs[1].value != 'null') {
+        const inputs = document.querySelectorAll(
+            '.homeFormRegister__subForm input'
+        );
+        if (
+            inputs[0].value != '' &&
+            inputs[1].value != '' &&
+            inputs[0].value != 'null' &&
+            inputs[1].value != 'null'
+        ) {
             btnAddMember = true;
-            document.querySelectorAll(".memberRegister--name").forEach(item => {
-                if (item.innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
-                    item.setAttribute("data-name", `${$('.homeFormRegister__subForm .input-for-name').val()}`)
-                    item.setAttribute("data-birthday", `${$('.homeFormRegister__subForm .date-picker').val()}`)
-                } else return;
-            })
+            document
+                .querySelectorAll('.memberRegister--name')
+                .forEach((item) => {
+                    if (
+                        item.innerHTML ==
+                        document.querySelector('.subForm--memberRegisterName')
+                        .innerHTML
+                    ) {
+                        item.setAttribute(
+                            'data-name',
+                            `${$(
+								'.homeFormRegister__subForm .input-for-name'
+							).val()}`
+                        );
+                        item.setAttribute(
+                            'data-birthday',
+                            `${$(
+								'.homeFormRegister__subForm .date-picker'
+							).val()}`
+                        );
+                    } else return;
+                });
             $('.homeFormRegister__subForm').css('display', 'none');
-            inputs.forEach(item => {
-                item.value = ''
-            })
+            inputs.forEach((item) => {
+                item.value = '';
+            });
         } else return;
         document.querySelectorAll('.memberRegister--name').forEach((item) => {
             item.parentNode.classList.remove('active');
@@ -393,7 +416,9 @@ const addMember = () => {
     // Add Member
     const memberItem = document.querySelector('.memberRegister--item');
     const contentMember = document.querySelector('.memberRegister--name');
-    const btnRegisterMember = document.querySelector('.homeFormRegister__btnAddMore .btn-icon');
+    const btnRegisterMember = document.querySelector(
+        '.homeFormRegister__btnAddMore .btn-icon'
+    );
     if (btnRegisterMember) {
         btnRegisterMember.addEventListener('click', () => {
             if (btnAddMember == true) {
@@ -404,59 +429,90 @@ const addMember = () => {
                     `${contentMember.innerHTML}`,
                     `THÀNH VIÊN ${HowmanyMember + 1}`
                 );
-                const anothertemp = tempItem.replace("data-name", "")
-                const aanothertemp = anothertemp.replace("data-birthday", "")
+                const anothertemp = tempItem.replace('data-name', '');
+                const aanothertemp = anothertemp.replace('data-birthday', '');
                 $('.memberRegister--list').append(`${aanothertemp}`);
             }
             btnAddMember = false;
             deleteMember();
             EditMember();
-            const contenMemberShow = document.querySelectorAll('.memberRegister--name')
-            const tempnamelength = contenMemberShow.length
-            const tempname = contenMemberShow[tempnamelength - 1].innerHTML
-            contenMemberShow[tempnamelength - 1].parentNode.classList.add('active');
-            document.querySelector(".subForm--memberRegisterName").innerHTML = tempname;
-            document.querySelector('.homeFormRegister__subForm').style.display = 'block'
+            const contenMemberShow = document.querySelectorAll(
+                '.memberRegister--name'
+            );
+            const tempnamelength = contenMemberShow.length;
+            const tempname = contenMemberShow[tempnamelength - 1].innerHTML;
+            contenMemberShow[tempnamelength - 1].parentNode.classList.add(
+                'active'
+            );
+            document.querySelector(
+                '.subForm--memberRegisterName'
+            ).innerHTML = tempname;
+            document.querySelector('.homeFormRegister__subForm').style.display =
+                'block';
         });
     }
 };
 
 //EditMember
 const EditMember = () => {
-    document.querySelectorAll('.memberRegister--name').forEach((item, index) => {
-        item.parentNode.classList.remove('active');
-        item.addEventListener('click', () => {
-            document.querySelectorAll('.memberRegister--name')
-                .forEach((item) => {
-                    item.parentNode.classList.remove('active');
-                });
-            item.parentNode.classList.add('active');
-            document.querySelector('.homeFormRegister__subForm')
-            let tempname = item.getAttribute("data-name")
-            let tempbirthDay = item.getAttribute("data-birthday")
-            $('.input-for-name').val(`${tempname}`);
-            $('.homeFormRegister__subForm .date-picker').val(`${tempbirthDay}`);
-            document.querySelector('.subForm--memberRegisterName').innerHTML = item.innerHTML;
-            document.querySelector('.homeFormRegister__subForm').style.display = 'block';
+    document
+        .querySelectorAll('.memberRegister--name')
+        .forEach((item, index) => {
+            item.parentNode.classList.remove('active');
+            item.addEventListener('click', () => {
+                document
+                    .querySelectorAll('.memberRegister--name')
+                    .forEach((item) => {
+                        item.parentNode.classList.remove('active');
+                    });
+                item.parentNode.classList.add('active');
+                document.querySelector('.homeFormRegister__subForm');
+                let tempname = item.getAttribute('data-name');
+                let tempbirthDay = item.getAttribute('data-birthday');
+                $('.input-for-name').val(`${tempname}`);
+                $('.homeFormRegister__subForm .date-picker').val(
+                    `${tempbirthDay}`
+                );
+                document.querySelector(
+                    '.subForm--memberRegisterName'
+                ).innerHTML = item.innerHTML;
+                document.querySelector(
+                    '.homeFormRegister__subForm'
+                ).style.display = 'block';
+            });
         });
-    });
 };
 
 const deleteMember = () => {
-    $(".subForm--listBtn .btn-icon").click(() => {
-        document.querySelectorAll(".memberRegister--item").forEach(item => {
-            if (item.children[0].innerHTML == document.querySelector(".subForm--memberRegisterName").innerHTML) {
-                document.querySelector(".subForm--memberRegisterName").innerHTML = ""
-                item.remove();
-                document.querySelector('.homeFormRegister__subForm').style.display = 'none';
-            }
-        })
-        document.querySelectorAll(".memberRegister--name").forEach((item, index) => {
-            item.innerHTML = `THÀNH VIÊN ${index + 1}`
-        })
 
-    })
-}
+
+    $('.subForm--listBtn .btn-icon').click(() => {
+        let tempItemMember = document.querySelectorAll('.memberRegister--item');
+        let tempNum = tempItemMember.length;
+        if (tempNum > 1) {
+            tempItemMember.forEach((item) => {
+                if (
+                    item.children[0].innerHTML ==
+                    document.querySelector('.subForm--memberRegisterName')
+                    .innerHTML
+                ) {
+                    document.querySelector(
+                        '.subForm--memberRegisterName'
+                    ).innerHTML = '';
+                    item.remove();
+                    document.querySelector(
+                        '.homeFormRegister__subForm'
+                    ).style.display = 'none';
+                }
+            });
+            document
+                .querySelectorAll('.memberRegister--name')
+                .forEach((item, index) => {
+                    item.innerHTML = `THÀNH VIÊN ${index + 1}`;
+                });
+        }
+    });
+};
 
 const checkFileUpload = () => {
     $('input[type="file"]').change(function(e) {
