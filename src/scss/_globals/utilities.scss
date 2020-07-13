@@ -250,6 +250,7 @@ textarea {
 
 .form-group {
 	label {
+		cursor: pointer;
 		font-size: 1rem;
 	}
 
@@ -737,6 +738,12 @@ textarea {
 	@media (max-width: 575.98px) {
 		padding: 44px 22px;
 	}
+}
+
+.step_buy_online--buttons__max-width-1088px {
+	max-width: 1088px;
+	margin: 0 auto;
+	width: 100%;
 }
 
 .step_buy_online--buttons {

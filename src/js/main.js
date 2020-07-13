@@ -1,7 +1,9 @@
-import { getSVGs, Loading } from './util/utilities';
+import {
+	getSVGs,
+	Loading
+} from './util/utilities';
 import Cookie from './lib/Cookie';
 import Tab from './lib/Tab';
-import Swiper from 'swiper';
 
 // MAIN BANNER WEBSITE
 const mainBanner = () => {
@@ -22,33 +24,30 @@ const mainBanner = () => {
 			type: 'bullets',
 			clickable: true,
 		},
-	});
-};
+	})
+}
 
 // MEMBERS SLIDER
 const ListMembers__Slider = () => {
-	let ListMembers__Slider = new Swiper(
-		'.ListMembers__Slider .swiper-container',
-		{
-			slidesPerView: 2,
-			breakpoints: {
-				768: {
-					slidesPerView: 3,
-				},
-				1025: {
-					slidesPerView: 4,
-				},
-				1440: {
-					slidesPerView: 5,
-				},
+	let ListMembers__Slider = new Swiper('.ListMembers__Slider .swiper-container', {
+		slidesPerView: 2,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
 			},
-			navigation: {
-				nextEl: '.ListMembers__Slider .swiper-button-next',
-				prevEl: '.ListMembers__Slider .swiper-button-prev',
+			1025: {
+				slidesPerView: 4,
 			},
-		}
-	);
-};
+			1440: {
+				slidesPerView: 5,
+			}
+		},
+		navigation: {
+			nextEl: '.ListMembers__Slider .swiper-button-next',
+			prevEl: '.ListMembers__Slider .swiper-button-prev',
+		},
+	})
+}
 
 // MEMBERS SLIDER POPUP
 const ListMembers__Slider_Popup = () => {
@@ -65,14 +64,14 @@ const ListMembers__Slider_Popup = () => {
 			},
 			1440: {
 				slidesPerView: 5,
-			},
+			}
 		},
 		navigation: {
 			nextEl: '.ListMembers__Slider_Popup .swiper-button-next',
 			prevEl: '.ListMembers__Slider_Popup .swiper-button-prev',
 		},
-	});
-};
+	})
+}
 
 // MEMBERS SLIDER POPUP
 const initializeListMembers__Slider_Popup = () => {
@@ -80,9 +79,9 @@ const initializeListMembers__Slider_Popup = () => {
 	btn.forEach((item) => {
 		item.addEventListener('click', () => {
 			ListMembers__Slider_Popup();
-		});
-	});
-};
+		})
+	})
+}
 
 // ACTIVE HEADER WHEN SCROLL
 const activeHeader = () => {
@@ -93,7 +92,7 @@ const activeHeader = () => {
 			$('header').removeClass('scrolled');
 		}
 	});
-};
+}
 
 const initializeWowJs = () => {
 	var wow = new WOW({
@@ -110,7 +109,7 @@ const initializeWowJs = () => {
 		resetAnimation: true, // reset animation on end (default is true)
 	});
 	wow.init();
-};
+}
 
 // INITALIZE SUBMENU
 const initializeSubMenu = () => {
@@ -127,18 +126,16 @@ const initializeSubMenu = () => {
 
 // SHOW MENU MOBILE
 const showMenuMobile = () => {
-	const btnMenuMobile = document.querySelector(
-		'.navBarHamburger__mainWrapper'
-	);
+	const btnMenuMobile = document.querySelector('.navBarHamburger__mainWrapper');
 	const navBarMenuMobile = document.querySelector('.navBar__itemWrapper');
 	// CHECK BUTTON
 	if (btnMenuMobile) {
 		btnMenuMobile.addEventListener('click', () => {
 			btnMenuMobile.classList.toggle('active');
 			navBarMenuMobile.classList.toggle('active');
-		});
+		})
 	}
-};
+}
 
 // SHOW SEARCH
 const searchOnMenu = () => {
@@ -155,18 +152,18 @@ const searchOnMenu = () => {
 			} else {
 				icon.src = icon.getAttribute('data-src');
 			}
-		});
+		})
 	}
-};
+}
 
 // INIT DATE PICKER
 const initDatePicker = () => {
-	$('.date-picker').each(function () {
+	$(".date-picker").each(function () {
 		$(this).flatpickr({
-			dateFormat: 'Y-m-d H:i',
+			dateFormat: "Y-m-d H:i",
 			time_24hr: true,
-			disableMobile: 'true',
-		});
+			disableMobile: "true"
+		})
 		// IF...ELSE
 		// if ($(this).val().length > 0) {
 		// 	$(this).flatpickr({
@@ -180,55 +177,84 @@ const initDatePicker = () => {
 		// 		defaultDate: new Date()
 		// 	})
 		// }
-	});
-};
+	})
+}
 
 const getMapContact = () => {
 	$('.fancybox__mapIframe').fancybox({
 		toolbar: false,
 		smallBtn: true,
 		iframe: {
-			preload: false,
-		},
+			preload: false
+		}
 	});
-};
+}
 
 const readPdfFancyBox = () => {
 	$('a.fancybox__getPDF').fancybox({
-		buttons: ['download', 'close'],
+		buttons: [
+			'download',
+			'close'
+		],
 		thumbs: {
 			autoStart: true,
-			axis: 'x',
+			axis: 'x'
 		},
 		iframe: {
-			preload: false,
-		},
-	});
-};
+			preload: false
+		}
+	})
+}
 
+//random code
+const randomCodePDF = () => {
+	let count = $(".popup__PDF");
+	var i,
+		code = [];
+	for (i = 0; i < $(".popup__PDF").length; i++) {
+		code[i] = (new Date().getTime()).toString(32).substring(4);
+		$(".popup__PDF").eq(i).attr("id", code[i]);
+		$(".fancybox__getPDF").eq(i).attr('data-src', '#' + code[i]);
+	}
+}
+const getTitlePopup = () => {
+	$(".fancybox__getPDF").click(function (e) {
+		let parent = $(this).parent();
+		let title = parent.children('h4').text();
+		if (title == "") {
+			title = "qui tắc bảo hiểm Global Cancer Care";
+		}
+		$(".popup__PDF-inner h2").text(title);
+	});
+}
+const checkedCheckbox = () => {
+	$(".checked").click(function (e) {
+		e.preventDefault();
+		$("#rule").attr('checked', true);
+	});
+}
 // check banner => add class
 const checkBanner = () => {
-	let banner = document.querySelector('section.TitlePage__Banners');
+	let banner = document.querySelector("section.TitlePage__Banners");
 	let heightHeader = document.querySelector('header').offsetHeight;
-	let mainBanner = document.querySelector('.MainSlider__Banners');
-	if (!banner) {
+	let mainBanner = document.querySelector(".MainSlider__Banners");
+	if ((!banner)) {
 		if (!mainBanner) {
-			document.querySelector('main').style.paddingTop =
-				heightHeader + 'px';
+			document.querySelector('main').style.paddingTop = heightHeader + 'px';
 		}
 	} else {
-		document.querySelector('div.header__top').classList.add('template--2');
+		document.querySelector("div.header__top").classList.add("template--2");
 	}
-};
+}
 
 // ACTIVE LINK MENU
 const activeLinkMenu = () => {
-	var link = '';
+	var link = "";
 	var url = window.location.pathname.split('/');
-	if (url[url.length - 1] == '') {
-		link = url[url.length - 2];
+	if (url[(url.length - 1)] == "") {
+		link = url[(url.length - 2)];
 	} else {
-		link = url[url.length - 1];
+		link = url[(url.length - 1)];
 	}
 	$('nav.navBar__itemWrapper .navBar--item a').each(function () {
 		var getHref = $(this).attr('href');
@@ -246,7 +272,7 @@ const activeLinkMenu = () => {
 			$(this).parent().addClass('active');
 		}
 	});
-};
+}
 
 // CHANGE CONTENT TABLE MOBILE
 const changeContentMobile = () => {
@@ -257,65 +283,79 @@ const changeContentMobile = () => {
 		contentsMobile.forEach((item) => {
 			const valueContent = item.getAttribute('data-content--mobile');
 			item.innerHTML = valueContent;
-		});
+		})
 	} else {
 		contentsPc.forEach((item) => {
 			const valueContent = item.getAttribute('data-content--pc');
 			item.innerHTML = valueContent;
-		});
+		})
 	}
-};
+}
 
 //slide toggle category
 const showMoreContentPrograms = () => {
-	const rowContent = document.querySelectorAll('.programsTableContent--item');
-	const noBorder = document.querySelectorAll('.no-border');
-	$(noBorder).addClass('pe-n');
-	$('.programsTableContent--item').click(function (e) {
+	const rowContent = document.querySelectorAll(".programsTableContent--item");
+	const noBorder = document.querySelectorAll(".no-border");
+	$(noBorder).addClass("pe-n");
+	$(".programsTableContent--item").click(function (e) {
 		e.preventDefault();
-		if ($(this).hasClass('active')) {
+		if ($(this).hasClass("active")) {
 			rowContent.forEach((item) => {
 				// hd-20 => opacity 20%
-				item.classList.remove('opacity--2');
-				item.classList.remove('pe-n');
-			});
+				item.classList.remove("opacity--2");
+				item.classList.remove("pe-n");
+			})
 			noBorder.forEach((item) => {
-				item.classList.add('pe-n');
-			});
-			$(this).removeClass('active');
-			$(this).find('.show--more').css('display', 'none');
-			$(this).children('.row').eq(0).children().eq(1).show();
+				item.classList.add("pe-n");
+			})
+			$(this).removeClass("active");
+			$(this).find(".show--more").css("display", "none");
+			$(this).children(".row").eq(0).children().eq(1).show();
 		} else {
 			rowContent.forEach((item) => {
 				// hd-20 => opacity 20%
-				item.classList.remove('active');
-				item.classList.add('opacity--2');
-				item.classList.add('pe-n');
-			});
+				item.classList.remove("active");
+				item.classList.add("opacity--2");
+				item.classList.add("pe-n");
+			})
 			noBorder.forEach((item) => {
-				item.classList.remove('opacity--2');
-			});
-			$(this).removeClass('pe-n');
+				item.classList.remove("opacity--2");
+			})
+			$(this).removeClass("pe-n");
 			//hidden all item list
-			$(this).removeClass('opacity--2');
-			// add class active => item => click
-			$(this).addClass('active');
+			$(this).removeClass("opacity--2");
+			// add class active => item => click 
+			$(this).addClass("active");
 			// show content category
-			$(this).find('.show--more').css('display', 'flex');
+			$(this).find(".show--more").css("display", "flex");
 			// find chil col-9 add hidden
-			if ($(this).hasClass('hasSubContent__programs')) {
-				$(this).children('.row').eq(0).children().eq(1).hide();
+			if ($(this).hasClass("hasSubContent__programs")) {
+				$(this).children(".row").eq(0).children().eq(1).hide();
 			}
-			// add border category
 		}
 	});
-};
+
+}
+
+const activeTabMember = () => {
+	$(".ListMembers__Slider .memberSlider--item").click(function () {
+		let active = $(this).attr("data-for");
+		let tabItem = [];
+		$(".ListMembers__Slider_Popup .memberSlider--item[toggle-for]").each(function (index, item) {
+			tabItem.push($(item).attr('toggle-for'));
+		});
+		$.each(tabItem, function (i, item) {
+			if (active == item) {
+				$(".ListMembers__Slider_Popup .memberSlider--item").removeClass("active");
+				$('.ListMembers__Slider_Popup .memberSlider--item[toggle-for=' + active + ']').addClass("active");
+			}
+		});
+	});
+}
 
 const activeHomeFormRegister = () => {
 	const btn = document.querySelector('.homeFormRegister__btnAddMore');
-	const cols = document.querySelectorAll(
-		'.homeFormRegister__wrapper .col-lg-12'
-	);
+	const cols = document.querySelectorAll('.homeFormRegister__wrapper .col-lg-12');
 	const wrapper = document.querySelector('.homeFormRegister__wrapper');
 	if (btn) {
 		btn.addEventListener('click', () => {
@@ -323,10 +363,10 @@ const activeHomeFormRegister = () => {
 				item.classList.remove('col-lg-12');
 				item.classList.add('col-lg-6');
 				wrapper.classList.add('active');
-			});
-		});
+			})
+		})
 	}
-};
+}
 
 const addMember = () => {
 	var btnAddMember = false;
@@ -500,7 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
 	searchOnMenu();
 	//POPUP map contact
 	getMapContact();
-	// popup read pdf
+	// popup read pdf 
 	readPdfFancyBox();
 	// check banner
 	checkBanner();
@@ -512,12 +552,20 @@ document.addEventListener('DOMContentLoaded', () => {
 	activeHomeFormRegister();
 	//Add Member
 	addMember();
-
+	//
+	activeTabMember();
+	//
+	randomCodePDF();
+	//
+	getTitlePopup();
+	//
+	checkedCheckbox();
 	// TAB
-	const About = new Tab('.About .tab-container');
+	const About = new Tab(".About .tab-container");
 	const Define = new Tab('.Define .tab-container');
 	const StepBuyOnline__1 = new Tab('.StepBuyOnline__1 .tab-container');
-	const PopUp__UpdateForms = new Tab('.PopUp__UpdateForms .tab-container');
+	const PopUp__CheckForms = new Tab('#PopUp__CheckForms .tab-container');
+	const PopUp__UpdateForms = new Tab('#PopUp__UpdateForms .tab-container');
 });
 
 document.addEventListener('scroll', () => {});
@@ -525,7 +573,7 @@ document.addEventListener('scroll', () => {});
 window.addEventListener('resize', () => {
 	// CHANGE CONTENT TABLE MOBILE
 	changeContentMobile();
-});
+})
 
 // CHECK FORM VALID
 
