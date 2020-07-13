@@ -3,12 +3,11 @@
 }
 
 .area__wrapper {
-	@media (min-width: 1440px) {
-		margin-left: 140px;
-	}
+	margin-left: 140px;
 
 	@media (max-width: 767.98px) {
 		margin-top: 25px;
+		margin-left: 0;
 	}
 }
 
