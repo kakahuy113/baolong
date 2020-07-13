@@ -145,6 +145,7 @@ section.Research {
                 padding-left: 15px;
                 color: map-get($mau, xam);
                 font-family: Averta-Light;
+                padding-right: 20px;
                 @media (max-width: 575.98px) {
                     font-size: 15px;
                 }
@@ -155,9 +156,10 @@ section.Research {
                     background-repeat: no-repeat;
                     top: 60%;
                     transform: translateY(-50%);
-                    right: -25px;
-                    width: 20px;
-                    height: 20px;
+                    right: 0;
+                    width: 13px;
+                    height: 13px;
+                    background-size: 100% 100%;
                 }
             }
         }
