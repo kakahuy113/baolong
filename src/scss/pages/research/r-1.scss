@@ -141,7 +141,7 @@ section.Research {
             padding-top: 7px;
             span {
                 position: relative;
-                font-size: 20px;
+                font-size: 18px;
                 padding-left: 15px;
                 color: map-get($mau, xam);
                 font-family: Averta-Light;
@@ -181,17 +181,40 @@ section.Research {
         height: 60vh;
     }
     .view__PDF {
-        height: 60vh;
-        @media (max-width: 1440.98px) {
-            height: 60vh;
-        }
-        @media (max-width: 575.98px) {
-            height: 40vh;
+        &--lg {
+            height: 70vh;
+            >iframe {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
         }
         >iframe {
             display: block;
             width: 100%;
             height: 100%;
+        }
+        height: 67vh;
+        @media (max-width: 1440.98px) {
+            height: 67vh;
+        }
+        @media (max-width: 575.98px) {
+            height: 40vh;
+        }
+    }
+    .position__btn-x {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        height: 60px;
+        width: 60px;
+        border-radius: 10px;
+        cursor: pointer;
+        >img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
     .popup__PDF-inner {
@@ -200,12 +223,12 @@ section.Research {
         border-radius: 10px;
         >h2 {
             font-family: Averta-Black;
-            padding: 32px 0;
+            padding: 30px 0;
             @media (max-width: 1440.98px) {
                 padding: 10px 0;
             }
             background: map-get($mau,
-            xanh-1);
+            xanh-2);
             color: white;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
@@ -216,9 +239,9 @@ section.Research {
         }
         .btnClose__popup {
             position: relative;
-            height: 18vh;
+            height: 96px;
             @media (max-width: 768.98px) {
-                height: 18vh;
+                height: 120px;
                 >.btn--lg {
                     height: 60px;
                 }

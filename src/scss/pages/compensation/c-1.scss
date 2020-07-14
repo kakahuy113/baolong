@@ -60,6 +60,7 @@ section.compensation {
             font-family: Averta-Bold;
             color: map-get($mau, vang);
             text-transform: uppercase;
+            margin-bottom: 20px;
             @media (max-width: 1439.98px) {
                 font-size: 25px;
             }
@@ -155,7 +156,7 @@ section.compensation {
             padding-top: 7px;
             span {
                 position: relative;
-                font-size: 20px;
+                font-size: 18px;
                 padding-left: 15px;
                 color: map-get($mau, xam);
                 font-family: Averta-Light;

@@ -1,118 +1,112 @@
 .btn {
-	cursor: pointer;
-	user-select: none;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
-	border: 0;
-	padding: 0;
-
-	&--submitForm {
-		height: 30px;
-		padding: 0 10px;
-		border-radius: 10px;
-		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
-
-		&.h-38px {
-			height: 38px;
-		}
-
-		.icon {
-			margin-right: 5px;
-		}
-
-		h5 {
-			font-family: Averta-Bold;
-			font-size: 13px;
-			text-transform: uppercase;
-
-			&.fs-20 {
-				font-size: 20px;
-
-				@media (max-width: 575.98px) {
-					font-size: 14px;
-				}
-			}
-
-			&.fs-15 {
-				font-size: 15px;
-			}
-		}
-	}
-
-	&--lg {
-		height: 77px;
-		padding: 0 20px;
-		border-radius: 10px;
-		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
-
-		&.pad-0-15px {
-			padding: 0 15px;
-		}
-
-		&.pad-0-10px {
-			padding: 0 10px;
-		}
-
-		&.no-shadow {
-			box-shadow: unset;
-		}
-
-		.btn--icon {
-			padding-right: 15px;
-		}
-
-		h5 {
-			text-align: center;
-			font-size: 1.25rem;
-			font-family: Averta-Bold;
-		}
-
-		@media (max-width: 575.98px) {
-			height: 50px;
-			padding: 0 10px;
-
-			h5 {
-				font-size: 1rem;
-			}
-		}
-
-		@media (max-width: 320.98px) {
-			h5 {
-				font-size: 0.75rem;
-			}
-		}
-	}
+    cursor: pointer;
+    user-select: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding: 0;
+    &--submitForm {
+        height: 30px;
+        padding: 0 10px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+        &.h-38px {
+            height: 38px;
+        }
+        .icon {
+            margin-right: 5px;
+        }
+        h5 {
+            font-family: Averta-Bold;
+            font-size: 13px;
+            text-transform: uppercase;
+            &.fs-20 {
+                font-size: 20px;
+                @media (max-width: 575.98px) {
+                    font-size: 14px;
+                }
+            }
+            &.fs-15 {
+                font-size: 15px;
+            }
+        }
+    }
+    &--confirm {
+        height: 77px;
+        width: 190px;
+        border-radius: 10px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+        background: #FEB200;
+        h5 {
+            text-align: center;
+            font-size: 1.5625rem;
+            font-family: Averta-Bold;
+        }
+    }
+    &--lg {
+        height: 77px;
+        padding: 0 20px;
+        border-radius: 10px;
+        box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+        &.pad-0-15px {
+            padding: 0 15px;
+        }
+        &.pad-0-10px {
+            padding: 0 10px;
+        }
+        &.no-shadow {
+            box-shadow: unset;
+        }
+        .btn--icon {
+            padding-right: 15px;
+        }
+        h5 {
+            text-align: center;
+            font-size: 1.25rem;
+            font-family: Averta-Bold;
+        }
+        @media (max-width: 575.98px) {
+            height: 50px;
+            padding: 0 10px;
+            h5 {
+                font-size: 1rem;
+            }
+        }
+        @media (max-width: 320.98px) {
+            h5 {
+                font-size: 0.75rem;
+            }
+        }
+    }
 }
 
 .btn-icon {
-	cursor: pointer;
-	position: relative;
-	width: 24px;
-	height: 24px;
-	border-radius: 6px;
-	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
-
-	&:before {
-		content: '';
-		position: absolute;
-		width: 40%;
-		height: 40%;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		background-size: 100% 100%;
-	}
-
-	&-plus__vang {
-		&:before {
-			background-image: url(../assets/icons/plus-vang.svg);
-		}
-	}
-
-	&-minus__trang {
-		&:before {
-			background-image: url(../assets/icons/minus-trang.svg);
-		}
-	}
+    cursor: pointer;
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+    &:before {
+        content: '';
+        position: absolute;
+        width: 40%;
+        height: 40%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-size: 100% 100%;
+    }
+    &-plus__vang {
+        &:before {
+            background-image: url(../assets/icons/plus-vang.svg);
+        }
+    }
+    &-minus__trang {
+        &:before {
+            background-image: url(../assets/icons/minus-trang.svg);
+        }
+    }
 }
