@@ -517,7 +517,7 @@ const checkFileUpload = () => {
 		var fileName = e.target.files[0].name;
 		if (fileName) {
 			$(".custom-file-input h5").text("Đã tải lên")
-			$("#step--2--fileUpload").text(`File đã tải lên: ${fileName}`);
+			$(".name_file-downloaded").text(`File đã tải lên: ${fileName}`);
 		}
 	})
 }
