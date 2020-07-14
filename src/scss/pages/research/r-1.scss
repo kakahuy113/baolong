@@ -87,7 +87,7 @@ section.Research {
         overflow-y: auto;
         @media (max-width: 575.98px) {
             padding: 10px;
-            height: 300px;
+            height: 220px;
         }
     }
     .research__item+.research__item {
@@ -130,6 +130,11 @@ section.Research {
             font-size: 25px;
             text-transform: uppercase;
             color: map-get($mau, xam);
+            @media (min-width: 1440px) {
+                &:first-child {
+                    padding-right: 90px;
+                }
+            }
             @media (max-width: 575.98px) {
                 font-size: 15px;
                 padding-right: 0;

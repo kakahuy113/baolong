@@ -1,49 +1,50 @@
 section.contact-page
 	img.map-bg(src="./assets/images/contact/background.png", alt="map")
 	.container-fluid
-		.contact-inner
-			.contact__left
-				.contact__left-inner
-					.contact__left-title
-						h2 LIÊN HỆ CHÚNG TÔI:
-					.contact__left-item
-						.contact__left-item-icon
-							img.lazyload.blur-up(src="./assets/images/contact/icons/5.png", alt="location")
-						.contact__left-content
-							h3.title__lt Địa chỉ:
-							p.des__lt 185 Điện Biên Phủ, P. Đa Kao, Q.1
-						a.contact__left-link.fancybox__mapIframe(data-fancybox,data-type="iframe",data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.318201598102!2d106.6921935641718!3d10.786922911951036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2f8e6e0757%3A0x27c72bef7fef3032!2zVOG7lW5nIEPDtG5nIHR5IEPhu5UgcGjhuqduIELhuqNvIGhp4buDbSBC4bqjbyBMb25n!5e0!3m2!1svi!2s!4v1593512587191!5m2!1svi!2s", href="javascript:;")
-							span ĐI ĐẾN BẢN ĐỒ
-							img.lazyload.blur-up(src="./assets/images/contact/icons/4.png", alt="", srcset="")
-					.contact__left-item
-						.contact__left-item-icon
-							img.lazyload.blur-up(src="./assets/images/contact/icons/1.png", alt="location")
-						.contact__left-content
-							h3.title__lt Điện thoại:
-							p.des__lt 028. 38266766 -  028. 38266766  
-					.contact__left-item
-						.contact__left-item-icon
-							img.lazyload.blur-up(src="./assets/images/contact/icons/3.png", alt="location")
-						.contact__left-content
-							h3.title__lt Thời gian làm việc:
-							p.des__lt  8:00 - 17:30, Thứ 2 đến thứ 6 hàng tuần
-			.contact__right
-				.contact__right-inner
-					.contact__right-title
-						h3 Bạn cần tư vấn ?
-					.contact__right-desc
-						p.lcl.lcl-2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia corrupti, provident qui ducimus blanditiis facilis nam quis beatae molestias sequi alias nulla ratione enim incidunt distinctio sunt rerum cumque veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa....
-					form.contact__right-form(action="")
-						.form-row-contact.row
-							.form-group.col-12.mb--2
-								input.input-control.input-control-sm(type="text",placeholder="Họ tên")
-							.form-group.col-6.mb--2
-									input.input-control.input-control-sm.date-picker(type="text",placeholder="Ngày sinh")
-							.form-group.col-6.mb--2
-								input.input-control.input-control-sm(type="text",placeholder="Email")
-							.form-group.col-12
-								textarea.input-control.h-textarea(name="note", cols="30", rows="4",placeholder="Yêu cầu của bạn")
-						.contact--sub
-							button.btn.btn--submitForm.bg-vang.mt--0
-								img.icon.lazyload.blur-up(data-src="./assets/icons/icon-submit.svg", alt="")
-								h5.cl-trang.tt-u.fs-15 GỬi
+		.contact-inner.col-xl-8.col-auto
+			.row
+				.contact__left.col-lg-5.col-auto
+					.contact__left-inner
+						.contact__left-title
+							h2 LIÊN HỆ CHÚNG TÔI:
+						.contact__left-item
+							.contact__left-item-icon
+								img.lazyload.blur-up(src="./assets/images/contact/icons/5.png", alt="location")
+							.contact__left-content
+								h3.title__lt Địa chỉ:
+								p.des__lt 185 Điện Biên Phủ, P. Đa Kao, Q.1
+							a.contact__left-link.fancybox__mapIframe(data-fancybox,data-type="iframe",data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.318201598102!2d106.6921935641718!3d10.786922911951036!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f2f8e6e0757%3A0x27c72bef7fef3032!2zVOG7lW5nIEPDtG5nIHR5IEPhu5UgcGjhuqduIELhuqNvIGhp4buDbSBC4bqjbyBMb25n!5e0!3m2!1svi!2s!4v1593512587191!5m2!1svi!2s", href="javascript:;")
+								span ĐI ĐẾN BẢN ĐỒ
+								img.lazyload.blur-up(src="./assets/images/contact/icons/4.png", alt="", srcset="")
+						.contact__left-item
+							.contact__left-item-icon
+								img.lazyload.blur-up(src="./assets/images/contact/icons/1.png", alt="location")
+							.contact__left-content
+								h3.title__lt Điện thoại:
+								p.des__lt 028. 38266766 -  028. 38266766  
+						.contact__left-item
+							.contact__left-item-icon
+								img.lazyload.blur-up(src="./assets/images/contact/icons/3.png", alt="location")
+							.contact__left-content
+								h3.title__lt Thời gian làm việc:
+								p.des__lt  8:00 - 17:30, Thứ 2 đến thứ 6 hàng tuần
+				.contact__right.col-lg-7.col-auto
+					.contact__right-inner
+						.contact__right-title
+							h3 Bạn cần tư vấn ?
+						.contact__right-desc
+							p.lcl.lcl-2 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia corrupti, provident qui ducimus blanditiis facilis nam quis beatae molestias sequi alias nulla ratione enim incidunt distinctio sunt rerum cumque veniam. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa....
+						form.contact__right-form(action="")
+							.form-row-contact.row
+								.form-group.col-12.mb--2
+									input.input-control.input-control-sm(type="text",placeholder="Họ tên")
+								.form-group.col-6.mb--2
+										input.input-control.input-control-sm.date-picker(type="text",placeholder="Ngày sinh")
+								.form-group.col-6.mb--2
+									input.input-control.input-control-sm(type="text",placeholder="Email")
+								.form-group.col-12
+									textarea.input-control.h-textarea(name="note", cols="30", rows="4",placeholder="Yêu cầu của bạn")
+							.contact--sub
+								button.btn.btn--submitForm.bg-vang.mt--0
+									img.icon.lazyload.blur-up(data-src="./assets/icons/icon-submit.svg", alt="")
+									h5.cl-trang.tt-u.fs-15 GỬi

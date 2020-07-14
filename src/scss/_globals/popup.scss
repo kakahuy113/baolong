@@ -4,21 +4,30 @@
 }
 
 .popup__PDF {
+    display: block;
     position: relative;
     display: none;
     max-width: 1640px;
     width: 95%;
-    height: 90vh;
-    @media (max-width: 575.98px) {
-        height: 60vh;
-    }
     .view__PDF {
         &--lg {
-            height: 70vh;
+            height: 80vh;
             >iframe {
                 display: block;
                 width: 100%;
                 height: 100%;
+            }
+            @media (max-width: 1719.98px) {
+                height: calc(100vh - 100px);
+            }
+            @media (max-width: 1440.98px) {
+                height: 570px;
+            }
+            @media (max-width: 1024.98px) {
+                height: calc(100vh - 100px);
+            }
+            @media (max-width: 575.98px) {
+                height: 52vh;
             }
         }
         >iframe {
@@ -26,12 +35,15 @@
             width: 100%;
             height: 100%;
         }
-        height: 67vh;
+        height: calc(80vh - 96px);
+        @media (max-width: 1719.98px) {
+            height: calc(100vh - 205px);
+        }
         @media (max-width: 1440.98px) {
-            height: 65vh;
+            height: calc(100vh - 155px);
         }
         @media (max-width: 575.98px) {
-            height: 40vh;
+            height: 52vh;
         }
     }
     .position__btn-x {
@@ -42,11 +54,16 @@
         width: 60px;
         border-radius: 10px;
         cursor: pointer;
-        @media (max-width: 1439.98px) {
+        @media (max-width: 1440.98px) {
             top: 5px;
             right: 5px;
             height: 40px;
             width: 40px;
+        }
+        @media (max-width: 575.98px) {
+            width: 30px;
+            top: 15px;
+            height: 30px;
         }
         >img {
             position: absolute;
@@ -64,6 +81,13 @@
             padding: 30px 0;
             @media (max-width: 1440.98px) {
                 padding: 10px 0;
+                font-size: 20px;
+            }
+            @media (max-width: 1024.98px) {
+                font-size: 16px;
+            }
+            @media (max-width: 575.98px) {
+                padding-right: 40px;
             }
             background: map-get($mau, xanh-2);
             color: white;
@@ -73,10 +97,16 @@
             @media (max-width: 575.98px) {
                 font-size: 15px;
             }
+            @media (max-width: 425.98px) {
+                font-size: 13px;
+            }
         }
         .btnClose__popup {
             position: relative;
             height: 96px;
+            @media (max-width: 1440.98px) {
+                height: 60px;
+            }
             @media (max-width: 768.98px) {
                 height: 120px;
                 >.btn--lg {
