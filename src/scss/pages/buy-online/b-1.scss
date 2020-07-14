@@ -1,53 +1,49 @@
 .BuyOnline {
-	padding: 80px 0 140px;
-
-	@media (max-width: 767.98px) {
-		padding: 50px 0;
-	}
-
-	@media (max-width: 575.98px) {
-		padding: 25px 0;
-
-	}
+    padding: 80px 0 140px;
+    @media (max-width: 767.98px) {
+        padding: 50px 0;
+    }
+    @media (max-width: 575.98px) {
+        padding: 25px 0;
+    }
 }
 
 .buyOnline__wrapper {
-	@media (min-width: 1440px) {
-		width: calc(100% - 220px);
-		margin: 0 auto;
-	}
+    @media (min-width: 1440px) {
+        width: calc(100% - 220px);
+        margin: 0 auto;
+    }
 }
 
 .buyOnline--desc {
-	p {
-		font-family: Averta-Light;
-		font-size: 1rem;
-		color: #777171;
-	}
-
-	p+p {
-		margin-top: 10px;
-	}
+    p {
+        font-family: Averta-Light;
+        font-size: 1rem;
+        color: #777171;
+        @media (max-width: 1024.98px) {
+            font-size: 15px;
+        }
+    }
+    p+p {
+        margin-top: 10px;
+    }
 }
 
 .buyOnlineSectionChild__wrapper {
-	margin-top: 35px;
-
-	@media (max-width: 575.98px) {
-		margin-top: 25px;
-	}
+    margin-top: 35px;
+    @media (max-width: 575.98px) {
+        margin-top: 25px;
+    }
 }
 
 .buyOnline__btnSubmit {
-	display: flex;
-	justify-content: flex-end;
-	margin-top: 30px;
-
-	@media (max-width: 1799.98px) {
-		margin-top: 0;
-	}
-
-	@media (max-width: 575.98px) {
-		justify-content: center;
-	}
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    @media (max-width: 1799.98px) {
+        margin-top: 0;
+    }
+    @media (max-width: 575.98px) {
+        justify-content: center;
+    }
 }

@@ -103,6 +103,9 @@
     }
     h5 {
         font-size: 1.125rem;
+        @media (min-width: 1440px) {
+            padding-right: 50px;
+        }
     }
     h5,
     p {
@@ -122,6 +125,21 @@
             font-size: 1rem;
             color: #707070;
             padding-left: 20px;
+            @media (max-width: 575.98px) {
+                padding-right: 20px;
+            }
+            @media (max-width: 414.98px) {
+                &:first-child {
+                    padding-right: 70px;
+                }
+                padding-right: 0px;
+            }
+            @media (max-width: 375.98px) {
+                &:first-child {
+                    padding-right: 40px;
+                }
+                padding-right: 0px;
+            }
             &::before {
                 position: absolute;
                 height: 10px;
