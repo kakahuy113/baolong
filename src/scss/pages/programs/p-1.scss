@@ -303,6 +303,10 @@
 .programs__btnSubmit {
 	margin-top: 20px;
 
+	.btn__desc {
+		font-size: 1rem;
+	}
+
 	@media (max-width: 1599.98px) {
 		.btn--lg {
 			h5 {

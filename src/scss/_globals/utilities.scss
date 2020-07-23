@@ -520,6 +520,12 @@ textarea {
 				border-radius: 30px;
 			}
 
+			&[checked] {
+				&:after {
+					opacity: 1;
+				}
+			}
+
 			&:after {
 				content: '\2713';
 				position: absolute;
@@ -656,8 +662,6 @@ textarea {
 		.custom-select {
 			height: 43px;
 			border-radius: 8px;
-
-
 		}
 
 		.input-group {

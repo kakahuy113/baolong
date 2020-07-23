@@ -525,6 +525,18 @@ const checkFileUpload = () => {
 	})
 }
 
+const formatCurrency = () => {
+	const formatCurrency = new Intl.NumberFormat("vi-VN", {
+		style: "currency",
+		currency: "VND",
+		minimumFractionDigits: 0,
+	});
+	const Prices = document.querySelectorAll('[formatCurrency="VND"]');
+	Prices.forEach((item) => {
+		item.innerHTML = formatCurrency.format(item.textContent)
+	})
+}
+
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
@@ -539,6 +551,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	ListMembers__Slider();
 	// Initialize Members Slider Popup
 	initializeListMembers__Slider_Popup();
+	// FORMAR CURRENT
+	formatCurrency();
 	// INITALIZE SUBMENU
 	initializeSubMenu();
 	// SHOW MENU MOBILE

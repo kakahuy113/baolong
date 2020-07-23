@@ -1,131 +1,172 @@
 .StepBuyOnline__3 {
-    padding: 60px 0 45px;
-    @media (max-width: 767.98px) {
-        padding: 50px 0;
-    }
-    @media (max-width: 575.98px) {
-        padding: 25px 0;
-    }
+	padding: 60px 0 45px;
+
+	@media (max-width: 767.98px) {
+		padding: 50px 0;
+	}
+
+	@media (max-width: 575.98px) {
+		padding: 25px 0;
+	}
 }
 
 .step_buy_online_3__wrapper {
-    max-width: 812px;
-    width: 100%;
-    margin: 0 auto;
+	max-width: 812px;
+	width: 100%;
+	margin: 0 auto;
 }
 
 .payment_methods {
-    display: flex;
-    justify-content: center;
-    margin-top: 38px;
-    .item-method {
-        +.item-method {
-            margin-left: 58px;
-        }
-        &.active {
-            .item--img {
-                box-shadow: 0 2px 6px rgba($color: #000000, $alpha: .16);
-            }
-        }
-    }
-    .item--img {
-        cursor: pointer;
-        user-select: none;
-        transition: .3s all ease-in-out;
-        border-radius: 20px;
-        @media (min-width: 1025px) {
-            &:hover {
-                box-shadow: 0 2px 6px rgba($color: #000000, $alpha: .16);
-            }
-        }
-    }
-    @media (max-width: 1024.98px) {
-        .item-method {
-            +.item-method {
-                margin-left: 25px;
-            }
-        }
-    }
-    @media (max-width: 575.98px) {
-        .item-method {
-            +.item-method {
-                margin-left: 15px;
-            }
-        }
-    }
+	display: flex;
+	justify-content: center;
+	margin-top: 38px;
+
+	.item-method {
+		+.item-method {
+			margin-left: 58px;
+		}
+
+		&.active {
+			.item--img {
+				box-shadow: 0 2px 6px rgba($color: #000000, $alpha: .16);
+			}
+		}
+	}
+
+	.item--img {
+		cursor: pointer;
+		user-select: none;
+		transition: .3s all ease-in-out;
+		border-radius: 20px;
+
+		@media (min-width: 1025px) {
+			&:hover {
+				box-shadow: 0 2px 6px rgba($color: #000000, $alpha: .16);
+			}
+		}
+	}
+
+	@media (max-width: 1024.98px) {
+		.item-method {
+			+.item-method {
+				margin-left: 25px;
+			}
+		}
+	}
+
+	@media (max-width: 575.98px) {
+		.item-method {
+			+.item-method {
+				margin-left: 15px;
+			}
+		}
+	}
 }
 
 .payment_content {
-    margin-top: 32px;
-    padding: 40px;
-    background: #F1F0F0;
-    border-radius: 10px;
-    @media (max-width: 767.98px) {
-        padding: 20px;
-    }
+	margin-top: 32px;
+	padding: 40px;
+	background: #F1F0F0;
+	border-radius: 10px;
+
+	@media (max-width: 767.98px) {
+		padding: 20px;
+	}
 }
 
 .payment_content--text {
-    p {
-        font-family: Averta-Bold;
-        font-size: 1.125rem;
-        margin-bottom: 10px;
-    }
-    @media (max-width: 575.98px) {
-        p {
-            font-size: 1rem;
-        }
-    }
+	p {
+		font-family: Averta-Bold;
+		font-size: 1.125rem;
+		margin-bottom: 10px;
+	}
+
+	@media (max-width: 575.98px) {
+		p {
+			font-size: 1rem;
+		}
+	}
 }
 
 .payment_content--quote,
 .payment--total {
-    margin: 10px 0;
-    h4 {
-        font-size: 1.375rem;
-        font-family: Averta-Bold-Italic;
-    }
-    @media (max-width: 575.98px) {
-        h4 {
-            font-size: 1.125rem;
-        }
-    }
+	margin: 10px 0;
+
+	h4 {
+		font-size: 1.375rem;
+		font-family: Averta-Bold-Italic;
+	}
+
+	@media (max-width: 575.98px) {
+		h4 {
+			font-size: 1.125rem;
+		}
+	}
 }
 
 .payment_content--info {
-    ul {
-        list-style-type: none;
-        padding-left: 0;
-        margin-bottom: 10px;
-    }
-    li {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-    li+li {
-        margin-top: 5px;
-    }
-    p {
-        padding-right: 10px;
-    }
-    p,
-    span {
-        font-family: Averta-Bold;
-        font-size: 1.125rem;
-    }
-    @media (max-width: 575.98px) {
-        p,
-        span {
-            font-size: 1rem;
-        }
-    }
+	ul {
+		list-style-type: none;
+		padding-left: 0;
+		margin-bottom: 10px;
+	}
+
+	li {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+	}
+
+	li+li {
+		margin-top: 5px;
+	}
+
+	p {
+		padding-right: 10px;
+	}
+
+	p,
+	span {
+		font-family: Averta-Bold;
+		font-size: 1.125rem;
+	}
+
+	@media (max-width: 575.98px) {
+
+		p,
+		span {
+			font-size: 1rem;
+		}
+	}
 }
 
 .payment_content--info,
 .payment_content--text,
 .payment--total {
-    max-width: 400px;
-    width: 100%;
-    margin: 0 auto;
+	max-width: 555px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.payment_content--note {
+	margin-top: 25px;
+
+	p {
+		font-size: 1rem;
+	}
+
+	p+p {
+		margin-top: 5px;
+	}
+}
+
+.PopUpCheckAndUpdateForms__wrapper {
+	.step_buy_online--buttons {
+		position: sticky;
+		bottom: 0;
+		left: 0;
+		background: #ffffff;
+		padding: 10px 0;
+		margin-top: 0;
+	}
 }
