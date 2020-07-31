@@ -30,13 +30,13 @@
 
 .programsTableContent__wrapper {
 	margin-top: 20px;
-	background: rgba($color: #777171, $alpha: .1);
+	background: rgba($color: #777171, $alpha: 0.1);
 	// border-radius: 10px;
 	border-bottom-left-radius: 10px;
 	border-bottom-right-radius: 10px;
 
 	&.active {
-		opacity: .2;
+		opacity: 0.2;
 	}
 }
 
@@ -85,17 +85,16 @@
 
 .programsTableContent__aside {
 	border-radius: 10px;
-	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 	padding: 25px 15px;
 }
 
 .hasSubContent__programs {
-	>.row:first-child {
-
-		>.col-3,
+	> .row:first-child {
+		> .col-3,
 		.col-6 {
-			>.programsTableContent--title {
-				>h3:first-child {
+			> .programsTableContent--title {
+				> h3:first-child {
 					position: relative;
 					width: fit-content;
 					max-width: 70%;
@@ -110,7 +109,7 @@
 						transform: translateY(-50%);
 						background-image: url(../assets/icons-form/arow-gray.png);
 						background-repeat: no-repeat;
-						content: "";
+						content: '';
 					}
 				}
 			}
@@ -125,7 +124,7 @@
 	user-select: none;
 	padding-bottom: 20px;
 	padding-top: 20px;
-	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+	box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 	word-break: break-word;
 
 	h3 {
@@ -149,7 +148,6 @@
 	}
 
 	&.bg-xanh-2 {
-
 		h3,
 		h5,
 		p {
@@ -158,7 +156,6 @@
 	}
 
 	@media (max-width: 1599.98px) {
-
 		h3,
 		h5 {
 			font-size: 1rem;
@@ -166,10 +163,9 @@
 	}
 
 	@media (max-width: 1440.98px) {
-
 		h3,
 		h5 {
-			font-size: .875rem;
+			font-size: 0.875rem;
 		}
 	}
 }
@@ -179,14 +175,14 @@
 		opacity: 1 !important;
 	}
 
-	border-bottom: 1px solid rgba($color: #707070, $alpha: .2);
+	border-bottom: 1px solid rgba($color: #707070, $alpha: 0.2);
 
 	&.no-border {
 		border-bottom: 0;
 	}
 
 	&.no-content {
-		background: rgba($color: #777171, $alpha: .1);
+		background: rgba($color: #777171, $alpha: 0.1);
 	}
 
 	&:first-child {
@@ -253,7 +249,7 @@
 
 	@media (max-width: 1440.98px) {
 		p {
-			font-size: .875rem;
+			font-size: 0.875rem;
 		}
 	}
 }
@@ -302,24 +298,7 @@
 
 .programs__btnSubmit {
 	margin-top: 20px;
-
 	.btn__desc {
 		font-size: 1rem;
-	}
-
-	@media (max-width: 1599.98px) {
-		.btn--lg {
-			h5 {
-				font-size: 1rem;
-			}
-		}
-	}
-
-	@media (max-width: 1440.98px) {
-		.btn--lg {
-			h5 {
-				font-size: 0.875rem;
-			}
-		}
 	}
 }
