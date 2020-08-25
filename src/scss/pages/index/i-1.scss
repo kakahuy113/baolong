@@ -60,14 +60,14 @@
 		}
 	}
 	@media (max-width: 575.98px) {
-		// -ms-flex: 0 0 100%;
-		// flex: 0 0 100%;
-		// max-width: 100%;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
 		padding-left: 5px;
 		padding-right: 5px;
-		// + .advantage--item {
-		// 	margin-top: 10px;
-		// }
+		+ .advantage--item {
+			margin-top: 10px;
+		}
 		&:last-child {
 			margin-top: 10px;
 		}
@@ -127,6 +127,11 @@
 		&:after {
 			content: none;
 		}
+	}
+	@media (max-width: 575.98px) {
+		max-width: 230px;
+		width: 100%;
+		margin: 0 auto;
 	}
 }
 
