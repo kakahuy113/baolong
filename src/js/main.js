@@ -212,7 +212,7 @@ const randomCodePDF = () => {
 	var i,
 		code = [];
 	for (i = 0; i < $(".popup__PDF").length; i++) {
-		code[i] = (new Date().getTime()).toString(32).substring(4);
+		code[i] = '_' + Math.random().toString(36).substr(2, 9);
 		$(".popup__PDF").eq(i).attr("id", code[i]);
 		$(".fancybox__getPDF").eq(i).attr('data-src', '#' + code[i]);
 	}
@@ -252,28 +252,35 @@ const checkBanner = () => {
 
 // ACTIVE LINK MENU
 const activeLinkMenu = () => {
-	var link = "";
-	var url = window.location.pathname.split('/');
-	if (url[(url.length - 1)] == "") {
-		link = url[(url.length - 2)];
-	} else {
-		link = url[(url.length - 1)];
-	}
+	// var link = "";
+	// var url = window.location.pathname.split('/');
+	// if (url[(url.length - 1)] == "") {
+	// 	link = url[(url.length - 2)];
+	// 	console.log(link);
+	// } else {
+	// 	link = url[(url.length - 1)];
+	// 	console.log(link);
+	// }
+	// var url = window.location.pathname
+	var link = window.location.href
 	$('nav.navBar__itemWrapper .navBar--item a').each(function () {
 		var getHref = $(this).attr('href');
-		var href = getHref.split('/').pop();
-		if (href === link) {
+		if (link.includes(`${getHref}`)) {
 			$(this).addClass('active');
 			$(this).parent().addClass('active');
 		}
 	});
 	$('a.footer__site-maps--link').each(function () {
 		var getHref = $(this).attr('href');
-		var href = getHref.split('/').pop();
-		if (href === link) {
+		// var href = getHref.split('/').pop();
+		if (link.includes(`${getHref}`)) {
 			$(this).addClass('active');
 			$(this).parent().addClass('active');
 		}
+		// if (href === link) {
+		// 	$(this).addClass('active');
+		// 	$(this).parent().addClass('active');
+		// }
 	});
 }
 
