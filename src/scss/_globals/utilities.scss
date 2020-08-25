@@ -20,19 +20,42 @@
 	visibility: hidden;
 	pointer-events: none;
 
-	background-color: rgba(0, 0, 0, .8);
+	background-color: rgba(0, 0, 0, 0.8);
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	top: 0;
 	left: 0;
 	z-index: 150;
-	transition: .3s all ease-in-out;
+	transition: 0.3s all ease-in-out;
 
 	&.active {
 		opacity: 1;
 		visibility: visible;
 		pointer-events: visible;
+	}
+}
+
+.lcl {
+	overflow: hidden;
+	display: -webkit-box;
+	text-overflow: ellipsis;
+	-webkit-box-orient: vertical;
+
+	&-1 {
+		-webkit-line-clamp: 1;
+	}
+
+	&-2 {
+		-webkit-line-clamp: 2;
+	}
+
+	&-3 {
+		-webkit-line-clamp: 3;
+	}
+
+	&-4 {
+		-webkit-line-clamp: 4;
 	}
 }
 
@@ -80,7 +103,7 @@ textarea {
 	&.input-validation-error {
 		color: red !important;
 		border: 1px solid red !important;
-		transition: .3s all ease-in-out;
+		transition: 0.3s all ease-in-out;
 
 		&::placeholder {
 			color: red !important;
@@ -91,7 +114,7 @@ textarea {
 .field-validation-error {
 	position: relative;
 	display: inline-block;
-	margin: .5rem 0;
+	margin: 0.5rem 0;
 	font-size: 12px;
 	color: red;
 	padding-left: 20px;
@@ -124,7 +147,7 @@ textarea {
 		.content {
 			display: none;
 			opacity: 0;
-			transition: all .3s cubic-bezier(.2, .5, .5, .8);
+			transition: all 0.3s cubic-bezier(0.2, 0.5, 0.5, 0.8);
 
 			&.show {
 				opacity: 1;
@@ -268,14 +291,13 @@ textarea {
 		position: relative;
 		overflow: hidden;
 		border-radius: 20px;
-		box-shadow: 0px 2px 6px rgba($color: #000000, $alpha: .16);
+		box-shadow: 0px 2px 6px rgba($color: #000000, $alpha: 0.16);
 
 		&.border-radius-10px {
 			border-radius: 10px;
 		}
 
 		&.have-select-group-prepend {
-
 			.input-control,
 			.custom-select {
 				padding-left: 40px;
@@ -283,7 +305,6 @@ textarea {
 			}
 
 			@media (max-width: 1439.98px) {
-
 				.input-control,
 				.custom-select {
 					padding-left: 15px;
@@ -325,11 +346,11 @@ textarea {
 		height: 68px;
 		border: 0;
 		border-radius: 20px;
-		box-shadow: 0px 2px 6px rgba($color: #000000, $alpha: .16);
+		box-shadow: 0px 2px 6px rgba($color: #000000, $alpha: 0.16);
 		padding-left: 15px;
 		padding-right: 15px;
 		border: 1px solid transparent;
-		transition: .3s all ease-in-out;
+		transition: 0.3s all ease-in-out;
 
 		&-sm {
 			font-size: 0.875rem;
@@ -342,8 +363,8 @@ textarea {
 		}
 
 		&::placeholder {
-			color: rgba($color: #777171, $alpha: .5);
-			transition: .3s all ease-in-out;
+			color: rgba($color: #777171, $alpha: 0.5);
+			transition: 0.3s all ease-in-out;
 		}
 
 		&:focus {
@@ -412,17 +433,17 @@ textarea {
 		height: 68px;
 		border: 0;
 		border-radius: 20px;
-		box-shadow: 0px 2px 6px rgba($color: #000000, $alpha: .16);
+		box-shadow: 0px 2px 6px rgba($color: #000000, $alpha: 0.16);
 		padding-left: 15px;
 		padding-right: 15px;
-		color: rgba($color: #777171, $alpha: .5);
+		color: rgba($color: #777171, $alpha: 0.5);
 		appearance: none;
 
 		option {
 			color: #000000;
 
 			&[hidden] {
-				color: rgba($color: #777171, $alpha: .5)
+				color: rgba($color: #777171, $alpha: 0.5);
 			}
 
 			&[selected] {
@@ -443,7 +464,7 @@ textarea {
 			color: #000000;
 
 			&[hidden] {
-				color: rgba($color: #777171, $alpha: .5)
+				color: rgba($color: #777171, $alpha: 0.5);
 			}
 
 			&[selected] {
@@ -458,7 +479,7 @@ textarea {
 
 	// CHECKBOX !!!!
 	.input-group-checkox {
-		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 		border-radius: 10px;
 	}
 
@@ -470,7 +491,7 @@ textarea {
 		align-items: center;
 		min-height: 77px;
 		border-radius: 10px;
-		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 		padding: 0 10px;
 
 		span {
@@ -513,7 +534,7 @@ textarea {
 			transition-duration: 0.3s;
 			cursor: pointer;
 			background: #ffffff;
-			box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+			box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 
 			&:active {
 				transform: scale(1.05);
@@ -539,7 +560,7 @@ textarea {
 				pointer-events: none;
 				opacity: 0;
 				color: map-get($mau, vang);
-				transition: .3s all ease-in-out;
+				transition: 0.3s all ease-in-out;
 			}
 		}
 
@@ -606,7 +627,7 @@ textarea {
 		height: 77px;
 		padding: 0 20px;
 		border-radius: 10px;
-		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: .16);
+		box-shadow: 0 3px 6px rgba($color: #000000, $alpha: 0.16);
 		max-width: 188px;
 		width: 100%;
 
@@ -631,14 +652,12 @@ textarea {
 	}
 
 	@media (max-width: 1024.98px) {
-
 		.input-control,
 		.custom-select {
 			height: 50px;
 		}
 
 		.input-group {
-
 			.input-control,
 			.custom-select {
 				padding-left: 75px;
@@ -657,7 +676,6 @@ textarea {
 	}
 
 	@media (max-width: 575.98px) {
-
 		.input-control,
 		.custom-select {
 			height: 43px;
@@ -668,7 +686,6 @@ textarea {
 			border-radius: 8px;
 
 			&.have-select-group-prepend {
-
 				.input-control,
 				.custom-select {
 					padding-left: 40px;
@@ -701,11 +718,11 @@ textarea {
 	margin-top: 30px;
 
 	@media (min-width: 1200px) {
-		>.row {
+		> .row {
 			margin-left: -30px;
 			margin-right: -30px;
 
-			>[class*='col-'] {
+			> [class*='col-'] {
 				padding-left: 30px;
 				padding-right: 30px;
 			}
