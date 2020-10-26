@@ -9,9 +9,23 @@
 		padding: 25px 0;
 	}
 }
-
+.srollBar--top {
+	@media (max-width: 767.98px) {
+		width: 100%;
+		overflow-x: auto;
+		padding-top: 5px;
+		height: 5px;
+		.srollBar--top__wrapper {
+			width: 800px;
+			overflow-x: auto;
+			padding-top: 5px;
+			height: 5px;
+		}
+	}
+}
 .Programs__table--overflow {
 	@media (max-width: 767.98px) {
+		
 		width: 100%;
 		overflow-x: auto;
 		padding-bottom: 25px;

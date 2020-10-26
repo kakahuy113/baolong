@@ -137,7 +137,10 @@
 	}
 
 	@media (max-width: 1024.98px) {
-		display: none;
+		max-height: 400px;
+		-ms-flex: 0 0 100%;
+		flex: 0 0 100%;
+		max-width: 100%;
 	}
 }
 

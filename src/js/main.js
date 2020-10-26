@@ -16,7 +16,7 @@ const mainBanner = () => {
 		speed: 1000,
 		loop: true,
 		autoplay: {
-			delay: 5000,
+			delay: 10000,
 			disableOnInteraction: false,
 		},
 		pagination: {
@@ -540,6 +540,26 @@ const formatCurrency = () => {
 	})
 }
 
+const doubleSrollBar = () => {
+	$(function(){
+		$(".test").scroll(function(){
+			$(".Programs__table--overflow")
+				.scrollLeft($(".test").scrollLeft());
+		});
+		$(".Programs__table--overflow").scroll(function(){
+			$(".test")
+				.scrollLeft($(".Programs__table--overflow").scrollLeft());
+		});
+	});
+}
+const popupWarning = () => {
+	if(document.querySelector(".Programs")) {
+		$.fancybox.open('<div class="message"><p>Trong trường hợp bạn đang xem bằng di động, hãy vuốt ngang để so sánh các chương trình bảo hiểm.</p></div>');
+		setTimeout(() => {
+			$.fancybox.close()
+		}, 8000);
+	}
+}
 document.addEventListener('DOMContentLoaded', () => {
 	Cookie();
 	getSVGs();
@@ -590,6 +610,10 @@ document.addEventListener('DOMContentLoaded', () => {
 	checkedCheckbox();
 	//
 	checkFileUpload();
+	//
+	doubleSrollBar();
+	//
+	popupWarning();
 	// TAB
 	const About = new Tab(".About .tab-container");
 	const Define = new Tab('.Define .tab-container');
