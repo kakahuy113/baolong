@@ -542,12 +542,12 @@ const formatCurrency = () => {
 
 const doubleSrollBar = () => {
 	$(function(){
-		$(".test").scroll(function(){
+		$(".srollBar--top").scroll(function(){
 			$(".Programs__table--overflow")
-				.scrollLeft($(".test").scrollLeft());
+				.scrollLeft($(".srollBar--top").scrollLeft());
 		});
 		$(".Programs__table--overflow").scroll(function(){
-			$(".test")
+			$(".srollBar--top")
 				.scrollLeft($(".Programs__table--overflow").scrollLeft());
 		});
 	});

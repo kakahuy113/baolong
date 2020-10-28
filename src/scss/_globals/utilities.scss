@@ -2,7 +2,6 @@
 	box-shadow: inset 0 0 6px rgba(255, 255, 255, 0);
 	background-color: #fff;
 }
-
 ::-webkit-scrollbar {
 	width: 5px;
 	height: 5px;
@@ -690,6 +689,9 @@ textarea {
 				.custom-select {
 					padding-left: 40px;
 					border-radius: 0 8px 8px 0;
+					@media (max-width: 575.98px) {
+						padding-left: 0;
+					}
 				}
 			}
 
